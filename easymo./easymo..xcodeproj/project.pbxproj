@@ -17,6 +17,7 @@
 		0474D76C2877635C00FAA5BA /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D76A2877635C00FAA5BA /* InputVC.swift */; };
 		0474D76D2877635C00FAA5BA /* InputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D76B2877635C00FAA5BA /* InputVC.xib */; };
 		0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D76E2877638A00FAA5BA /* PasswordState.swift */; };
+		0474D772287C0A2400FAA5BA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D771287C0A2400FAA5BA /* RoundButton.swift */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		0474D76A2877635C00FAA5BA /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
 		0474D76B2877635C00FAA5BA /* InputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputVC.xib; sourceTree = "<group>"; };
 		0474D76E2877638A00FAA5BA /* PasswordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordState.swift; sourceTree = "<group>"; };
+		0474D771287C0A2400FAA5BA /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,14 @@
 			path = InputVC;
 			sourceTree = "<group>";
 		};
+		0474D770287C0A0200FAA5BA /* SwiftFile */ = {
+			isa = PBXGroup;
+			children = (
+				0474D771287C0A2400FAA5BA /* RoundButton.swift */,
+			);
+			path = SwiftFile;
+			sourceTree = "<group>";
+		};
 		04762749284C1110003AE90F = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 		04762754284C1110003AE90F /* easymo. */ = {
 			isa = PBXGroup;
 			children = (
+				0474D770287C0A0200FAA5BA /* SwiftFile */,
 				04947CC2287345A400F01860 /* Protokol */,
 				04947B992860EC0900F01860 /* Enum */,
 				04947B8F285BB38000F01860 /* TableCell */,
@@ -543,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0474D772287C0A2400FAA5BA /* RoundButton.swift in Sources */,
 				04947CAC287096A400F01860 /* SegmentVC.swift in Sources */,
 				04762756284C1110003AE90F /* AppDelegate.swift in Sources */,
 				04947B972860D32700F01860 /* NotificationVC.swift in Sources */,

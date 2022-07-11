@@ -73,10 +73,8 @@ class SegmentVC: UIViewController {
         removeEmbeddedController()
         
         if sender.selectedSegmentIndex == 0 {
-            //            встраиваем сюда контроллер людей
             setupConstraintsFor(controller: historyVC)
         } else if sender.selectedSegmentIndex == 1 {
-            //           встраиваем контроллер групп
             setupConstraintsFor(controller: reportVC)
         } 
         self.view.endEditing(true)
