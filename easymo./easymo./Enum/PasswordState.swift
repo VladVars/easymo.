@@ -8,7 +8,7 @@
 import Foundation
 
 enum PasswordState: String {
-    case create = "Создайте пароль"
-    case repeatPassword = "Повторите пароль"
-    case enter = "Введите пароль"
+    case create = "Задайте ПИН-код"
+    case repeatPassword = "Повторите ПИН-код"
+    case enter = "Введите ПИН-код"
 }

@@ -9,18 +9,21 @@ import UIKit
 import LocalAuthentication
 
 class InputVC: UIViewController {
-
+    
+    
     @IBOutlet weak var biometricButton: RoundButton!
+    
     @IBOutlet weak var infoLabel: UILabel!
     
     let context = LAContext()
-
+    
     
     var passwordText = ""
     
     var controllerType: PasswordState = .enter
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "password") != nil {
             controllerType = .enter
@@ -30,12 +33,23 @@ class InputVC: UIViewController {
         infoLabel.text = controllerType.rawValue
         
         var error: NSError?
-         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-             biometricButton.alpha = 0
-         } else {
-             biometricButton.alpha = 1
-         }
-        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            biometricButton.alpha = 0
+        } else {
+            biometricButton.alpha = 1
+        }
+        setupUI()
+        faceID()
+    }
+    
+    private func setupUI() {
+        let passcode = Passcode()
+        passcode.frame = CGRect(x: 139, y: 282, width: 112, height: 16)
+        passcode.becomeFirstResponder()
+        passcode.didFinishedEnterCode = { code in
+            print("code is:\(code)")
+        }
+        view.addSubview(passcode)
     }
     
     @IBAction func tapAction(_ sender: UIButton) {
@@ -63,9 +77,29 @@ class InputVC: UIViewController {
                 }
             }
         }
+        
+        
     }
     
-    @IBAction func faceIDAction(_ sender: Any) {
+    @IBAction func deletAction(_ sender: Any) {
+    }
+    
+    
+    //    @IBAction func faceIDAction(_ sender: Any) {
+    //        if controllerType != .enter {
+    //            print("Пороль не создан, иди гуляй")
+    //        }
+    //        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Потому что мне нужно") { success, error in
+    //            if error != nil {
+    //                print(error?.localizedDescription)
+    //            } else if success {
+    //                print("Доступ разрешён")
+    //            }
+    //        }
+    //
+    //    }
+    
+    func faceID() {
         if controllerType != .enter {
             print("Пороль не создан, иди гуляй")
         }
@@ -76,7 +110,6 @@ class InputVC: UIViewController {
                 print("Доступ разрешён")
             }
         }
-        
     }
     
 }

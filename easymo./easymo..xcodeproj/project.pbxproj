@@ -18,6 +18,8 @@
 		0474D76D2877635C00FAA5BA /* InputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D76B2877635C00FAA5BA /* InputVC.xib */; };
 		0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D76E2877638A00FAA5BA /* PasswordState.swift */; };
 		0474D772287C0A2400FAA5BA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D771287C0A2400FAA5BA /* RoundButton.swift */; };
+		0474D778287C286200FAA5BA /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D777287C286200FAA5BA /* Passcode.swift */; };
+		0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D779287C28FD00FAA5BA /* Pin.swift */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		0474D76B2877635C00FAA5BA /* InputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputVC.xib; sourceTree = "<group>"; };
 		0474D76E2877638A00FAA5BA /* PasswordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordState.swift; sourceTree = "<group>"; };
 		0474D771287C0A2400FAA5BA /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0474D777287C286200FAA5BA /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
+		0474D779287C28FD00FAA5BA /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			children = (
 				0474D76A2877635C00FAA5BA /* InputVC.swift */,
 				0474D76B2877635C00FAA5BA /* InputVC.xib */,
+				0474D777287C286200FAA5BA /* Passcode.swift */,
+				0474D779287C28FD00FAA5BA /* Pin.swift */,
 			);
 			path = InputVC;
 			sourceTree = "<group>";
@@ -569,10 +575,12 @@
 				0440DC24285A62AC00D98BF1 /* TabBarController.swift in Sources */,
 				04947B9B2860EC2000F01860 /* SettingPoints.swift in Sources */,
 				04947CBB2871AE1100F01860 /* SpendPiggyVC.swift in Sources */,
+				0474D778287C286200FAA5BA /* Passcode.swift in Sources */,
 				0474D76728775B7800FAA5BA /* OverLayVC.swift in Sources */,
 				04762758284C1110003AE90F /* SceneDelegate.swift in Sources */,
 				04947CC4287345DE00F01860 /* Updatable.swift in Sources */,
 				04947B92285BB3B400F01860 /* DashBoardSettingCell.swift in Sources */,
+				0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */,
 				04947CC02871B2A900F01860 /* ConfirmationVC.swift in Sources */,
 				04947C3E286A37C900F01860 /* Categories.swift in Sources */,
 				0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */,
