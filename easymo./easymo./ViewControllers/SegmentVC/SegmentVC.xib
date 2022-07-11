@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SegmentVC" customModule="easymo_" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="Wvc-Ps-5wz" id="BVQ-4a-FX0"/>
+                <outlet property="filterImage" destination="nRa-R2-SCF" id="xNn-lU-tCH"/>
+                <outlet property="segmetControl" destination="TbA-vc-s2o" id="K34-Gw-RNz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отчет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8o-Jp-j5u">
+                    <rect key="frame" x="16" y="55.5" width="330" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRa-R2-SCF">
+                    <rect key="frame" x="354" y="54" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="hRX-fc-TWk"/>
+                        <constraint firstAttribute="height" constant="44" id="uhY-7v-43h"/>
+                    </constraints>
+                </imageView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-vc-s2o">
+                    <rect key="frame" x="16" y="128.5" width="382" height="32"/>
+                    <segments>
+                        <segment title="История"/>
+                        <segment title="Статистика"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="u6F-wV-PES"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-Ps-5wz">
+                    <rect key="frame" x="73" y="320" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TbA-vc-s2o" firstAttribute="top" secondItem="D8o-Jp-j5u" secondAttribute="bottom" constant="32" id="3zb-P6-nCC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TbA-vc-s2o" secondAttribute="trailing" constant="16" id="4Ro-B0-8eG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nRa-R2-SCF" secondAttribute="trailing" constant="16" id="Bhj-MM-cfy"/>
+                <constraint firstItem="D8o-Jp-j5u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="O6M-yp-585"/>
+                <constraint firstItem="nRa-R2-SCF" firstAttribute="leading" secondItem="D8o-Jp-j5u" secondAttribute="trailing" constant="8" id="Tk1-S2-ek3"/>
+                <constraint firstItem="TbA-vc-s2o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tRH-X9-8Hn"/>
+                <constraint firstItem="D8o-Jp-j5u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="uG2-eG-SgS"/>
+                <constraint firstItem="nRa-R2-SCF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="z9d-9S-LMv"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

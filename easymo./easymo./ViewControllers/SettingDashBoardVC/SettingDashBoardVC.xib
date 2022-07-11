@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingDashBoardVC" customModule="easymo_" customModuleProvider="target">
+            <connections>
+                <outlet property="saveButton" destination="GY7-mm-Pfo" id="yZc-5E-BXA"/>
+                <outlet property="settingTable" destination="w84-Fd-xdV" id="hdR-Sg-2TQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvE-uZ-O4b">
+                    <rect key="frame" x="16" y="68" width="382" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="w84-Fd-xdV">
+                    <rect key="frame" x="0.0" y="144.5" width="414" height="168"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="168" id="Wdv-GL-Vi0"/>
+                    </constraints>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GY7-mm-Pfo">
+                    <rect key="frame" x="121.5" y="344.5" width="171" height="48"/>
+                    <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="RIQ-Q2-aTs"/>
+                        <constraint firstAttribute="width" constant="171" id="lai-j3-aRq"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Применить"/>
+                    <connections>
+                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="yhu-Jl-ap8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w84-Fd-xdV" secondAttribute="trailing" id="A3d-fd-Oip"/>
+                <constraint firstItem="GY7-mm-Pfo" firstAttribute="top" secondItem="w84-Fd-xdV" secondAttribute="bottom" constant="32" id="BfO-z5-2ri"/>
+                <constraint firstItem="w84-Fd-xdV" firstAttribute="top" secondItem="TvE-uZ-O4b" secondAttribute="bottom" constant="35.5" id="Hqz-v2-Rl4"/>
+                <constraint firstItem="w84-Fd-xdV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LL8-ln-olc"/>
+                <constraint firstItem="TvE-uZ-O4b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="baB-mT-xam"/>
+                <constraint firstItem="TvE-uZ-O4b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="ffR-xO-34o"/>
+                <constraint firstItem="GY7-mm-Pfo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fyF-cl-8lu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TvE-uZ-O4b" secondAttribute="trailing" constant="16" id="tHV-x5-fHv"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
