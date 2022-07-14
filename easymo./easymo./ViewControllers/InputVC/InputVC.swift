@@ -21,7 +21,7 @@ class InputVC: UIViewController {
     var passwordText = "" {
         didSet {
             updateStack(by: passwordText)
-
+            
         }
     }
     var hasText: Bool {
@@ -45,12 +45,12 @@ class InputVC: UIViewController {
         }
         infoLabel.text = controllerType.rawValue
         
-//        var error: NSError?
-//        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-//            biometricButton.alpha = 0
-//        } else {
-//            biometricButton.alpha = 1
-//        }
+        //        var error: NSError?
+        //        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+        //            biometricButton.alpha = 0
+        //        } else {
+        //            biometricButton.alpha = 1
+        //        }
         faceID()
         setupPin()
     }
@@ -113,15 +113,24 @@ class InputVC: UIViewController {
         case .repeatPassword:
             if passwordText.count == 4 {
                 if let savedPassword = UserDefaults.standard.string(forKey: "password"), savedPassword == passwordText {
+                    NotificationCenter.default.post(name: .loginSuccess, object: nil)
+                    DefaultsManager.loginPassword = true
                     print("Новый пароль сохранён")
                 } else {
+                    passCode.shake()
+                    passwordText = ""
                     UserDefaults.standard.set(nil, forKey: "password")
                 }
             }
         case .enter:
             if passwordText.count == 4 {
                 if let savedPassword = UserDefaults.standard.string(forKey: "password"), savedPassword == passwordText {
+                    NotificationCenter.default.post(name: .loginSuccess, object: nil)
+                    DefaultsManager.loginPassword = true
                     print("Доступ разрешен")
+                } else {
+                    passCode.shake()
+                    passwordText = ""
                 }
             }
         }
@@ -130,18 +139,23 @@ class InputVC: UIViewController {
     
     
     @IBAction func deletAction(_ sender: Any) {
-                passwordText.removeLast()
+        passwordText.removeLast()
     }
     
     func faceID() {
-        if controllerType != .enter {
-            print("Пороль не создан, иди гуляй")
-        }
-        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Потому что мне нужно") { success, error in
-            if error != nil {
-                print(error?.localizedDescription)
-            } else if success {
-                print("Доступ разрешён")
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate to proceed.") { (success, error) in
+                if success {
+                    DispatchQueue.main.async {
+                        // Что-то сделать
+                        NotificationCenter.default.post(name: .loginSuccess, object: nil)
+                        DefaultsManager.loginPassword = true
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                } else {
+                    guard let error = error else { return }
+                    print(error.localizedDescription)
+                }
             }
         }
     }
@@ -162,4 +176,18 @@ extension UIStackView {
         removedSubviews.forEach({ $0.removeFromSuperview() })
     }
     
+}
+
+public extension UIView {
+    
+    func shake(count : Float = 3, duration : TimeInterval = 0.2, translation : Float = 5) {
+        
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.repeatCount = count
+        animation.duration = duration/TimeInterval(animation.repeatCount)
+        animation.autoreverses = true
+        animation.values = [translation, -translation]
+        layer.add(animation, forKey: "shake")
+    }
 }

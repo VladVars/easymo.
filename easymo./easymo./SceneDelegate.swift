@@ -17,13 +17,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        self.scene = windowScene
+        
+        if DefaultsManager.loginPassword {
+            changeMainScreen()
+        } else {
+        
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-        window?.rootViewController = InputVC()
+        window?.rootViewController = UINavigationController(rootViewController: InputVC(nibName: String(describing: InputVC.self), bundle: nil))
         window?.makeKeyAndVisible()
+        }
+        subscribeOnNofication()
         
         guard let scene = (scene as? UIWindowScene) else { return }
         self.scene = scene
+    }
+    
+    @objc private func changeMainScreen() {
+        guard let windowScene = scene else { return }
+        
+        window = UIWindow(windowScene: windowScene)
+        window?.windowScene = windowScene
+        window?.rootViewController = TabBarController()
+        window?.makeKeyAndVisible()
+        
+    }
+    
+    private func subscribeOnNofication() {
+        NotificationCenter.default.addObserver(self, selector: #selector(changeMainScreen), name: .loginSuccess, object: nil)
+        
     }
 
     private func createOvaerLayWindow() {
@@ -58,8 +81,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        window?.windowScene = windowScene
+        window?.rootViewController = InputVC()
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
