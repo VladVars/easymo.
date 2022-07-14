@@ -36,7 +36,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-6b-Zs2">
                     <rect key="frame" x="51" y="622" width="312" height="88"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-kg-Gcs" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-kg-Gcs" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="iP6-kg-Gcs" secondAttribute="height" multiplier="1:1" id="uEr-Vq-grq"/>
@@ -55,7 +55,7 @@
                                 <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="HaG-gB-Bz4"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxn-Ix-lxG" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxn-Ix-lxG" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="112" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Oxn-Ix-lxG" secondAttribute="height" multiplier="1:1" id="Gpz-fJ-cX1"/>
@@ -74,7 +74,7 @@
                                 <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="7Tk-f9-9uO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHE-1F-55F" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHE-1F-55F" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="224" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="PHE-1F-55F" secondAttribute="height" multiplier="1:1" id="Ws4-VC-4bO"/>
@@ -98,7 +98,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fVe-Qt-xUa">
                     <rect key="frame" x="51" y="510" width="312" height="88"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQk-Yr-Dzf" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQk-Yr-Dzf" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="DQk-Yr-Dzf" secondAttribute="height" multiplier="1:1" id="2p5-Gy-HS9"/>
@@ -117,7 +117,7 @@
                                 <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="Ku1-Bo-vGz"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-KI-Kys" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-KI-Kys" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="112" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="laZ-KI-Kys" secondAttribute="height" multiplier="1:1" id="Qa4-gM-THS"/>
@@ -136,7 +136,7 @@
                                 <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="CPN-ho-Exm"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp0-0p-lAx" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp0-0p-lAx" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="224" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Wp0-0p-lAx" secondAttribute="height" multiplier="1:1" id="S90-wD-U6s"/>
@@ -160,7 +160,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="kHK-Ve-DX7">
                     <rect key="frame" x="51" y="398" width="312" height="88"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCB-cT-cLc" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCB-cT-cLc" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="vCB-cT-cLc" secondAttribute="height" multiplier="1:1" id="4D3-2z-JiK"/>
@@ -179,7 +179,7 @@
                                 <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="4Jo-39-QWi"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-Hc-VkY" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-Hc-VkY" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="112" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="5kt-Hc-VkY" secondAttribute="height" multiplier="1:1" id="f1w-hm-ibj"/>
@@ -198,7 +198,7 @@
                                 <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="COh-NP-q33"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1da-KW-eXg" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1da-KW-eXg" customClass="RoundButton" customModule="easymo_" customModuleProvider="target">
                             <rect key="frame" x="224" y="0.0" width="88" height="88"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="1da-KW-eXg" secondAttribute="height" multiplier="1:1" id="Ve0-DM-xdX"/>

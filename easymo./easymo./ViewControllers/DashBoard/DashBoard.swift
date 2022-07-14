@@ -39,32 +39,8 @@ class DashBoard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIIcon()
+        setupUI()
         
-        limitsView.layer.cornerRadius = 16
-        statisticView.layer.cornerRadius = 16
-        pigguView.layer.cornerRadius = 16
-        
-        topUpButton.layer.cornerRadius = 12
-        spendButton.layer.cornerRadius = 12
-        piggyStartOutlet.layer.cornerRadius = 12
-        
-
-        
-        let notificationImageTap = UITapGestureRecognizer(target: self, action: #selector(notificationImageDidTap))
-        notificationImage.addGestureRecognizer(notificationImageTap)
-        notificationImage.isUserInteractionEnabled = true
-        
-        let settingImageTap = UITapGestureRecognizer(target: self, action: #selector(settingImageDidTap))
-        settingImage.addGestureRecognizer(settingImageTap)
-        settingImage.isUserInteractionEnabled = true
-        
-        
-//        currentBalance.textColor = #colorLiteral(red: 0.5894673467, green: 0.6044110656, blue: 0.638481915, alpha: 1)
-        currentBalance.textColor = UIColor(cgColor: CGColor(red: 0.59, green: 0.6, blue: 0.64, alpha: 1.0))
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.43
-        nameProgectLabel.attributedText = NSMutableAttributedString(string: "easymo.", attributes: [NSAttributedString.Key.kern: 0.37, NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
     @objc func notificationImageDidTap() {
         let notificationVC = NotificationVC(nibName: String(describing: NotificationVC.self), bundle: nil)
@@ -104,6 +80,33 @@ class DashBoard: UIViewController {
         present(createPiggyBank, animated: true)
     }
     
+    func setupUI() {
+        limitsView.layer.cornerRadius = 16
+        statisticView.layer.cornerRadius = 16
+        pigguView.layer.cornerRadius = 16
+        
+        topUpButton.layer.cornerRadius = 12
+        spendButton.layer.cornerRadius = 12
+        piggyStartOutlet.layer.cornerRadius = 12
+        
+
+        
+        let notificationImageTap = UITapGestureRecognizer(target: self, action: #selector(notificationImageDidTap))
+        notificationImage.addGestureRecognizer(notificationImageTap)
+        notificationImage.isUserInteractionEnabled = true
+        
+        let settingImageTap = UITapGestureRecognizer(target: self, action: #selector(settingImageDidTap))
+        settingImage.addGestureRecognizer(settingImageTap)
+        settingImage.isUserInteractionEnabled = true
+        
+        
+//        currentBalance.textColor = #colorLiteral(red: 0.5894673467, green: 0.6044110656, blue: 0.638481915, alpha: 1)
+        currentBalance.textColor = UIColor(cgColor: CGColor(red: 0.59, green: 0.6, blue: 0.64, alpha: 1.0))
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.43
+        nameProgectLabel.attributedText = NSMutableAttributedString(string: "easymo.", attributes: [NSAttributedString.Key.kern: 0.37, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+    }
     
 }
 //tabBarController?.selectedIndex = 2

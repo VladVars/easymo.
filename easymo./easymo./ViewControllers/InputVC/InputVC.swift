@@ -18,7 +18,20 @@ class InputVC: UIViewController {
     let context = LAContext()
     
     
-    var passwordText = ""
+    var passwordText = "" {
+        didSet {
+            updateStack(by: passwordText)
+
+        }
+    }
+    var hasText: Bool {
+        return passwordText.count > 0
+    }
+    
+    var maxLength = 4
+    let passCode = UIView()
+    
+    let stack = UIStackView()
     
     var controllerType: PasswordState = .enter
     
@@ -32,28 +45,63 @@ class InputVC: UIViewController {
         }
         infoLabel.text = controllerType.rawValue
         
-        var error: NSError?
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            biometricButton.alpha = 0
-        } else {
-            biometricButton.alpha = 1
-        }
-        setupUI()
+//        var error: NSError?
+//        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+//            biometricButton.alpha = 0
+//        } else {
+//            biometricButton.alpha = 1
+//        }
         faceID()
+        setupPin()
     }
     
-    private func setupUI() {
-        let passcode = Passcode()
-        passcode.frame = CGRect(x: 139, y: 282, width: 112, height: 16)
-        passcode.becomeFirstResponder()
-        passcode.didFinishedEnterCode = { code in
-            print("code is:\(code)")
+    private func setupPin() {
+        view.addSubview(passCode)
+        passCode.frame = CGRect(x: 139, y: 300, width: 112, height: 16)
+        passCode.addSubview(stack)
+        passCode.backgroundColor = .white
+        stack.backgroundColor = .white
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stack.leadingAnchor.constraint(equalTo: passCode.leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: passCode.trailingAnchor),
+            stack.topAnchor.constraint(equalTo: passCode.topAnchor),
+            stack.bottomAnchor.constraint(equalTo: passCode.bottomAnchor)
+        ])
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
+        updateStack(by: passwordText)
+    }
+    
+    private func emptyPin() -> UIView {
+        let pin = Pin()
+        pin.pin.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9568627451, alpha: 1)
+        return pin
+    }
+    
+    private func pin() -> UIView {
+        let pin = Pin()
+        pin.pin.backgroundColor = #colorLiteral(red: 0.9158933759, green: 0.2990999222, blue: 0.5363475084, alpha: 1)
+        return pin
+    }
+    
+    private func updateStack(by code: String) {
+        var emptyPins:[UIView] = Array(0..<maxLength).map{_ in emptyPin()}
+        let userPinLength = code.count
+        let pins:[UIView] = Array(0..<userPinLength).map{_ in pin()}
+        
+        for (index, element) in pins.enumerated() {
+            emptyPins[index] = element
         }
-        view.addSubview(passcode)
+        stack.remove()
+        for view in emptyPins {
+            stack.addArrangedSubview(view)
+        }
     }
     
     @IBAction func tapAction(_ sender: UIButton) {
         passwordText += "\(sender.tag)"
+        
         switch controllerType {
         case .create:
             if passwordText.count == 4 {
@@ -78,26 +126,12 @@ class InputVC: UIViewController {
             }
         }
         
-        
     }
+    
     
     @IBAction func deletAction(_ sender: Any) {
+                passwordText.removeLast()
     }
-    
-    
-    //    @IBAction func faceIDAction(_ sender: Any) {
-    //        if controllerType != .enter {
-    //            print("Пороль не создан, иди гуляй")
-    //        }
-    //        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Потому что мне нужно") { success, error in
-    //            if error != nil {
-    //                print(error?.localizedDescription)
-    //            } else if success {
-    //                print("Доступ разрешён")
-    //            }
-    //        }
-    //
-    //    }
     
     func faceID() {
         if controllerType != .enter {
@@ -110,6 +144,22 @@ class InputVC: UIViewController {
                 print("Доступ разрешён")
             }
         }
+    }
+    
+}
+
+extension UIStackView {
+    
+    func remove() {
+        
+        let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
+            self.removeArrangedSubview(subview)
+            return allSubviews + [subview]
+        }
+        
+        NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
+        
+        removedSubviews.forEach({ $0.removeFromSuperview() })
     }
     
 }
