@@ -89,7 +89,17 @@ class SpendVC: UIViewController {
         view.endEditing(true)
     }
     @IBAction func saveButtonAction(_ sender: Any) {
+        let saveMoney = Money()
+        saveMoney.spendMoney = summField.text ?? ""
+        saveMoney.time = selectedDate
+        saveMoney.category = categorieField.text ?? ""
+        RealmManager.save(object: saveMoney)
         
+        summField.text = ""
+        dateField.text = ""
+        categorieField.text = ""
+        
+        dismissKeyboard()
         
         
     }

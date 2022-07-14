@@ -22,6 +22,12 @@ class ReportCell: UITableViewCell {
         // Initialization code
     }
 
-   
+    func configureCell(summ: String, time: Date, category: String) {
+        sumLabel.text = summ
+        categorieLabel.text = category
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        dateLabel.text = formatter.string(from: time)
+    }
     
 }

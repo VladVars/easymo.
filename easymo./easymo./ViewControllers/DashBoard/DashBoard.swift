@@ -42,6 +42,13 @@ class DashBoard: UIViewController {
         setupUI()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if RealmManager.read().count > 0 {
+                    downIcnomeLabel.text = "\(RealmManager.read()[0].spendMoney)"
+                }
+    }
+    
     @objc func notificationImageDidTap() {
         let notificationVC = NotificationVC(nibName: String(describing: NotificationVC.self), bundle: nil)
         present(notificationVC, animated: true)
