@@ -6,5 +6,6 @@ target 'easymo.' do
   use_frameworks!
 
   pod 'PieCharts'
+pod 'RealmSwift'
 
 end

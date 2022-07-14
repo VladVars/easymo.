@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-easymo./Pods-easymo.-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/PieCharts/PieCharts.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework

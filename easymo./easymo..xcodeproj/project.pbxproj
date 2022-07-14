@@ -22,6 +22,8 @@
 		0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D779287C28FD00FAA5BA /* Pin.swift */; };
 		0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D79E2880945800FAA5BA /* DefaulsManager.swift */; };
 		0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */; };
+		0474D7AA2880ACA200FAA5BA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7A92880ACA200FAA5BA /* RealmManager.swift */; };
+		0474D7AD2880AD4200FAA5BA /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7AC2880AD4200FAA5BA /* Money.swift */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 		0474D779287C28FD00FAA5BA /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		0474D79E2880945800FAA5BA /* DefaulsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaulsManager.swift; sourceTree = "<group>"; };
 		0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		0474D7A92880ACA200FAA5BA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		0474D7AC2880AD4200FAA5BA /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				0474D79E2880945800FAA5BA /* DefaulsManager.swift */,
+				0474D7A92880ACA200FAA5BA /* RealmManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -229,6 +234,14 @@
 				0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0474D7AB2880ACBA00FAA5BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7AC2880AD4200FAA5BA /* Money.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04762749284C1110003AE90F = {
@@ -252,6 +265,7 @@
 		04762754284C1110003AE90F /* easymo. */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7AB2880ACBA00FAA5BA /* Model */,
 				0474D7A02880949A00FAA5BA /* Extension */,
 				0474D79D2880943D00FAA5BA /* Managers */,
 				0474D770287C0A0200FAA5BA /* SwiftFile */,
@@ -594,6 +608,7 @@
 				04947B7E285BA42B00F01860 /* SettingVC.swift in Sources */,
 				04947B88285BAE5300F01860 /* PiggyBankVC.swift in Sources */,
 				0474D76C2877635C00FAA5BA /* InputVC.swift in Sources */,
+				0474D7AD2880AD4200FAA5BA /* Money.swift in Sources */,
 				0440DC24285A62AC00D98BF1 /* TabBarController.swift in Sources */,
 				04947B9B2860EC2000F01860 /* SettingPoints.swift in Sources */,
 				04947CBB2871AE1100F01860 /* SpendPiggyVC.swift in Sources */,
@@ -607,6 +622,7 @@
 				0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */,
 				04947CC02871B2A900F01860 /* ConfirmationVC.swift in Sources */,
 				04947C3E286A37C900F01860 /* Categories.swift in Sources */,
+				0474D7AA2880ACA200FAA5BA /* RealmManager.swift in Sources */,
 				0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */,
 				04947CB62870B2B000F01860 /* CreatePiggyBankVC.swift in Sources */,
 				04947CA62870902B00F01860 /* ReportVC.swift in Sources */,
