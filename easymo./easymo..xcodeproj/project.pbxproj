@@ -20,6 +20,8 @@
 		0474D772287C0A2400FAA5BA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D771287C0A2400FAA5BA /* RoundButton.swift */; };
 		0474D778287C286200FAA5BA /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D777287C286200FAA5BA /* Passcode.swift */; };
 		0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D779287C28FD00FAA5BA /* Pin.swift */; };
+		0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D79E2880945800FAA5BA /* DefaulsManager.swift */; };
+		0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -75,6 +77,8 @@
 		0474D771287C0A2400FAA5BA /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0474D777287C286200FAA5BA /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		0474D779287C28FD00FAA5BA /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		0474D79E2880945800FAA5BA /* DefaulsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaulsManager.swift; sourceTree = "<group>"; };
+		0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +215,22 @@
 			path = SwiftFile;
 			sourceTree = "<group>";
 		};
+		0474D79D2880943D00FAA5BA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0474D79E2880945800FAA5BA /* DefaulsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0474D7A02880949A00FAA5BA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		04762749284C1110003AE90F = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +252,8 @@
 		04762754284C1110003AE90F /* easymo. */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7A02880949A00FAA5BA /* Extension */,
+				0474D79D2880943D00FAA5BA /* Managers */,
 				0474D770287C0A0200FAA5BA /* SwiftFile */,
 				04947CC2287345A400F01860 /* Protokol */,
 				04947B992860EC0900F01860 /* Enum */,
@@ -576,6 +598,8 @@
 				04947B9B2860EC2000F01860 /* SettingPoints.swift in Sources */,
 				04947CBB2871AE1100F01860 /* SpendPiggyVC.swift in Sources */,
 				0474D778287C286200FAA5BA /* Passcode.swift in Sources */,
+				0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */,
+				0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */,
 				0474D76728775B7800FAA5BA /* OverLayVC.swift in Sources */,
 				04762758284C1110003AE90F /* SceneDelegate.swift in Sources */,
 				04947CC4287345DE00F01860 /* Updatable.swift in Sources */,
