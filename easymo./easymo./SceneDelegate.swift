@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = UINavigationController(rootViewController: InputVC(nibName: String(describing: InputVC.self), bundle: nil))
         window?.makeKeyAndVisible()
         }
-        subscribeOnNofication()
+        subscribeOnNotification()
         
         guard let scene = (scene as? UIWindowScene) else { return }
         self.scene = scene
@@ -44,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
     
-    private func subscribeOnNofication() {
+    private func subscribeOnNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(changeMainScreen), name: .loginSuccess, object: nil)
         
     }

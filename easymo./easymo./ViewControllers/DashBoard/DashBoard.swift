@@ -12,7 +12,7 @@ class DashBoard: UIViewController {
 
     @IBOutlet weak var nameProgectView: UIView!
     @IBOutlet weak var limitsView: UIView!
-    @IBOutlet weak var curentLimit: UIView!
+    @IBOutlet weak var curentLimitView: UIView!
     @IBOutlet weak var statisticView: UIView!
     @IBOutlet weak var pigguView: UIView!
     
@@ -45,7 +45,12 @@ class DashBoard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if DefaultsManager.createLimit {
+            addCurentLimitView()
+        } else {
+            curentLimitView.isHidden = true
+
+        }
         setUIIcon()
         setupUI()
         
@@ -97,7 +102,7 @@ class DashBoard: UIViewController {
     
     func setupUI() {
         limitsView.layer.cornerRadius = 16
-        curentLimit.layer.cornerRadius = 16
+        curentLimitView.layer.cornerRadius = 16
         statisticView.layer.cornerRadius = 16
         pigguView.layer.cornerRadius = 16
         
@@ -105,7 +110,7 @@ class DashBoard: UIViewController {
         spendButton.layer.cornerRadius = 12
         piggyStartOutlet.layer.cornerRadius = 12
         
-
+        limitProgress.progressTintColor = #colorLiteral(red: 0.9158933759, green: 0.2990999222, blue: 0.5363475084, alpha: 1)
         
         let notificationImageTap = UITapGestureRecognizer(target: self, action: #selector(notificationImageDidTap))
         notificationImage.addGestureRecognizer(notificationImageTap)
@@ -122,6 +127,13 @@ class DashBoard: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.43
         nameProgectLabel.attributedText = NSMutableAttributedString(string: "easymo.", attributes: [NSAttributedString.Key.kern: 0.37, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+    }
+    private func subscribeOnNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(addCurentLimitView), name: .createLimit, object: nil)
+        
+    }
+    @objc func addCurentLimitView() {
+        curentLimitView.isHidden = false
     }
     
 }
@@ -142,3 +154,7 @@ extension DashBoard: Updaeble {
     
     
 }
+//let moneyPercent = Float(person.money * 100 / 3000) / 100
+//moneyProgress.setProgress(moneyPercent, animated: true)
+//
+//salaryLabel.text = "Зарплата за день: \(person.salary) руб."

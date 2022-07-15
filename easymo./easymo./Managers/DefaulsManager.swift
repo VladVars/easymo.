@@ -19,4 +19,12 @@ class DefaultsManager {
         }
     }
     
+    static var createLimit: Bool {
+        get {
+            return defaults.value(forKey: #function) as? Bool ?? false
+        }
+        set {
+            defaults.set(newValue, forKey: #function)
+        }
+    }
 }

@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashBoard" customModule="easymo_" customModuleProvider="target">
             <connections>
                 <outlet property="balance" destination="roo-TM-Gir" id="Dqn-CS-Zlg"/>
-                <outlet property="curentLimit" destination="oNs-DD-dKq" id="Db5-KG-FX4"/>
+                <outlet property="curentLimitView" destination="oNs-DD-dKq" id="uKb-k1-lr9"/>
                 <outlet property="curentSummLimitLabel" destination="NV8-8p-LQR" id="aQY-e7-ArK"/>
                 <outlet property="currentBalance" destination="vET-kT-QoS" id="eKn-c0-rZG"/>
                 <outlet property="downIcnomeLabel" destination="WDa-xF-LOb" id="uXN-71-HoD"/>

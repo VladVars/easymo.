@@ -9,4 +9,6 @@ import Foundation
 
 extension Notification.Name {
     static let loginSuccess = Notification.Name("loginSuccess")
+    static let createLimit = Notification.Name("createLimit")
+
 }
