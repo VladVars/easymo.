@@ -50,9 +50,9 @@ class SpendVC: UIViewController {
         categoriesPicker.delegate = self
         categorieField.inputView = categoriesPicker
         
-        
         saveButton.layer.cornerRadius = 12
         cancellationButton.layer.cornerRadius = 12
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         

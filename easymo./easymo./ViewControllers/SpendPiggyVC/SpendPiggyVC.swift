@@ -21,11 +21,19 @@ class SpendPiggyVC: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var spendButton: UIButton!
     
+    private var piker = UIDatePicker()
+    private var selectedDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         summField.delegate = self
         dateField.delegate = self
+        
+        dateField.inputView = piker
+        piker.datePickerMode = .dateAndTime
+        piker.locale = Locale(identifier: "ru_RU")
+        piker.preferredDatePickerStyle = .wheels
+        piker.addTarget(self, action: #selector(dateDidPiked), for: .allEvents)
         
         imagePiggy.image = UIImage.init(named: "ass-pig")
         
@@ -53,6 +61,13 @@ class SpendPiggyVC: UIViewController {
         dateField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: summField.frame.height))
         dateField.leftViewMode = .always
         
+    }
+    
+    @objc func dateDidPiked() {
+        self.selectedDate = piker.date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        dateField.text = formatter.string(from: piker.date)
     }
     
     @IBAction func cancelAction(_ sender: Any) {

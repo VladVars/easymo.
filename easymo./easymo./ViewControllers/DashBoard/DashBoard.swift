@@ -82,7 +82,7 @@ class DashBoard: UIViewController {
     func setupPiggyView() {
         
         if DefaultsManager.createPiggy {
-            addCurentLimitView()
+            addPiggyView()
         } else {
             piggyView.isHidden = true
 
@@ -129,9 +129,22 @@ class DashBoard: UIViewController {
     
     
     @IBAction func piggyStartButton(_ sender: Any) {
-        
         let createPiggyBank = CreatePiggyBankVC(nibName: String(describing: CreatePiggyBankVC.self), bundle: nil)
         present(createPiggyBank, animated: true)
+    }
+    
+    @IBAction func changeLimitAction(_ sender: Any) {
+        let limit = CreateLimitVC(nibName: String(describing: CreateLimitVC.self), bundle: nil)
+        present(limit, animated: true)
+    }
+    
+    @IBAction func statisticAllAction(_ sender: Any) {
+        tabBarController?.selectedIndex = 1
+        
+    }
+    
+    @IBAction func lookPiggyBankAction(_ sender: Any) {
+        tabBarController?.selectedIndex = 2
     }
     
     func setupUI() {
