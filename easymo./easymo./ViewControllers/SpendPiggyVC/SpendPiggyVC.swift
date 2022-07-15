@@ -10,8 +10,14 @@ import UIKit
 class SpendPiggyVC: UIViewController {
     
     @IBOutlet weak var imagePiggy: UIImageView!
+    
     @IBOutlet weak var summField: UITextField!
+    @IBOutlet weak var dateField: UITextField!
+    
+    
     @IBOutlet weak var imageField: UIImageView!
+    @IBOutlet weak var imageDateField: UIImageView!
+    
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var spendButton: UIButton!
     
@@ -19,6 +25,7 @@ class SpendPiggyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         summField.delegate = self
+        dateField.delegate = self
         
         imagePiggy.image = UIImage.init(named: "ass-pig")
         
@@ -36,12 +43,15 @@ class SpendPiggyVC: UIViewController {
     
     func textFieldMargen() {
         imageField.image = UIImage.init(named: "BYN")
-        
-        
+        imageDateField.image = UIImage.init(named: "ic-calendar")
+
         summField.layer.cornerRadius = 8
+        dateField.layer.cornerRadius = 8
         
         summField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: summField.frame.height))
         summField.leftViewMode = .always
+        dateField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: summField.frame.height))
+        dateField.leftViewMode = .always
         
     }
     
@@ -63,9 +73,17 @@ extension SpendPiggyVC: UITextFieldDelegate {
             summField.backgroundColor = .none
             summField.layer.borderColor = #colorLiteral(red: 0.9158933759, green: 0.2990999222, blue: 0.5363475084, alpha: 1)
         }
+        
+        if textField == dateField {
+            imageDateField.image = UIImage(named: "ic-calendar-active")
+            dateField.layer.borderWidth = 2
+            dateField.backgroundColor = .none
+            dateField.layer.borderColor = #colorLiteral(red: 0.9158933759, green: 0.2990999222, blue: 0.5363475084, alpha: 1)
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        imageDateField.image = UIImage.init(named: "ic-calendar")
         textField.layer.borderWidth = 0
         textField.layer.borderColor = .none
         textField.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9568627451, alpha: 1)

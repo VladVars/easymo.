@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="addButton" destination="GtT-rM-adI" id="xPZ-n6-pPe"/>
                 <outlet property="cancelButton" destination="YPy-go-HeU" id="ba2-k7-nXV"/>
-                <outlet property="cinteinerView" destination="DuJ-y2-DB2" id="Gll-ix-yJA"/>
+                <outlet property="conteinerView" destination="DuJ-y2-DB2" id="TuJ-40-SdE"/>
                 <outlet property="goalField" destination="7BE-Ox-Wwa" id="BfJ-PV-64Y"/>
                 <outlet property="imageView" destination="3xc-Jy-Tr8" id="rsB-Md-nSD"/>
                 <outlet property="periodField" destination="1aW-3Y-NUe" id="mu6-h5-Bhe"/>
@@ -20,6 +20,7 @@
                 <outlet property="saveButton" destination="oiy-YG-p08" id="hDf-WL-46i"/>
                 <outlet property="summField" destination="Uoh-6W-uku" id="Whb-iI-C8G"/>
                 <outlet property="summImage" destination="JpJ-Qk-FG3" id="qO5-gV-5PA"/>
+                <outlet property="summLabel" destination="bJj-ng-YLA" id="cat-oy-gkl"/>
                 <outlet property="switchOutlet" destination="6SZ-gp-W8Q" id="SMT-ER-0ev"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -99,7 +100,7 @@
                         <constraint firstAttribute="height" constant="48" id="YcK-Uj-www"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок накоплений указывается в месяцах" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVe-Ay-X2d">
                     <rect key="frame" x="16" y="488" width="382" height="16"/>

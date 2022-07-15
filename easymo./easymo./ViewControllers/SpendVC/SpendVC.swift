@@ -91,7 +91,7 @@ class SpendVC: UIViewController {
     @IBAction func saveButtonAction(_ sender: Any) {
         let saveMoney = Money()
         saveMoney.spendMoney = summField.text ?? ""
-        saveMoney.time = selectedDate
+        saveMoney.spendTime = selectedDate
         saveMoney.category = categorieField.text ?? ""
         RealmManager.save(object: saveMoney)
         

@@ -38,7 +38,9 @@ extension HistoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
         
-        cell.configureCell(summ: RealmManager.read()[indexPath.row].spendMoney, time: RealmManager.read()[indexPath.row].time!, category: RealmManager.read()[indexPath.row].category)
+        cell.configureCell(summ: RealmManager.read()[indexPath.row].spendMoney,
+                           time: RealmManager.read()[indexPath.row].spendTime!,
+                           category: RealmManager.read()[indexPath.row].category)
         
         return cell
     }

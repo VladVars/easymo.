@@ -35,6 +35,16 @@ class ConfirmationVC: UIViewController {
 
     }
     @IBAction func saveAction(_ sender: Any) {
+        let savePiggy = Money()
+        savePiggy.summPiggyBank = summLabel.text ?? ""
+        savePiggy.namePiggyBank = goalLabel.text ?? ""
+        
+        RealmManager.save(object: savePiggy)
+        
+        if savePiggy.spendMoney == summLabel.text, savePiggy.namePiggyBank == goalLabel.text {
+            NotificationCenter.default.post(name: .createPiggy, object: nil)
+            DefaultsManager.createPiggy = true
+        }
     }
     
 

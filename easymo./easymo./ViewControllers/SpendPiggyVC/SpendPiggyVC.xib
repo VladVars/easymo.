@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpendPiggyVC" customModule="easymo_" customModuleProvider="target">
             <connections>
                 <outlet property="cancelButton" destination="dUO-jj-pce" id="xtE-uN-KA3"/>
+                <outlet property="dateField" destination="E1l-wn-MBE" id="zkw-Nb-mcK"/>
+                <outlet property="imageDateField" destination="HPR-Xe-jLi" id="Xqd-3I-N7U"/>
                 <outlet property="imageField" destination="iPU-gj-Kdr" id="bq4-3F-Sl9"/>
                 <outlet property="imagePiggy" destination="R6K-yb-DgJ" id="PIM-w7-HPR"/>
                 <outlet property="spendButton" destination="C19-jl-eY0" id="orL-Yl-eNm"/>
@@ -36,7 +38,7 @@
                         <constraint firstAttribute="width" constant="200" id="jd3-PG-0S8"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oy3-Ma-BJT">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сумма" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oy3-Ma-BJT">
                     <rect key="frame" x="16" y="396.5" width="382" height="48"/>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -46,7 +48,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUO-jj-pce">
-                    <rect key="frame" x="16" y="500.5" width="171" height="48"/>
+                    <rect key="frame" x="16" y="564.5" width="171" height="48"/>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="LFd-0P-Unk"/>
@@ -60,7 +62,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C19-jl-eY0">
-                    <rect key="frame" x="227" y="500.5" width="171" height="48"/>
+                    <rect key="frame" x="227" y="564.5" width="171" height="48"/>
                     <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="PpB-aR-FSX"/>
@@ -80,24 +82,45 @@
                         <constraint firstAttribute="width" constant="24" id="l4c-Mm-NeO"/>
                     </constraints>
                 </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Выберите дату" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1l-wn-MBE">
+                    <rect key="frame" x="16" y="460.5" width="382" height="48"/>
+                    <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="MA9-Zp-0l1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPR-Xe-jLi">
+                    <rect key="frame" x="358" y="472.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="Ljz-Ld-BZR"/>
+                        <constraint firstAttribute="height" constant="24" id="Weo-Ap-bxo"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="jX0-7R-Lid" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1rv-xZ-Vb8"/>
                 <constraint firstItem="dUO-jj-pce" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7aY-oX-tpq"/>
+                <constraint firstItem="E1l-wn-MBE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="C9M-eg-odI"/>
                 <constraint firstItem="oy3-Ma-BJT" firstAttribute="top" secondItem="R6K-yb-DgJ" secondAttribute="bottom" constant="56" id="Cbv-MP-GPH"/>
                 <constraint firstItem="oy3-Ma-BJT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="E1k-kx-vG7"/>
+                <constraint firstItem="HPR-Xe-jLi" firstAttribute="centerY" secondItem="E1l-wn-MBE" secondAttribute="centerY" id="GQk-5r-WLO"/>
+                <constraint firstItem="dUO-jj-pce" firstAttribute="top" secondItem="E1l-wn-MBE" secondAttribute="bottom" constant="56" id="J6c-AC-iBn"/>
                 <constraint firstItem="C19-jl-eY0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dUO-jj-pce" secondAttribute="trailing" constant="16" id="Jgs-Zl-2Sr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C19-jl-eY0" secondAttribute="trailing" constant="16" id="MYG-qX-0nJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iPU-gj-Kdr" secondAttribute="trailing" constant="32" id="Nq3-Uh-jDg"/>
-                <constraint firstItem="C19-jl-eY0" firstAttribute="top" secondItem="oy3-Ma-BJT" secondAttribute="bottom" constant="56" id="O9N-F4-JAM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HPR-Xe-jLi" secondAttribute="trailing" constant="32" id="RMn-Pq-xxh"/>
                 <constraint firstItem="R6K-yb-DgJ" firstAttribute="top" secondItem="jX0-7R-Lid" secondAttribute="bottom" constant="75.5" id="ayL-oC-UTM"/>
-                <constraint firstItem="dUO-jj-pce" firstAttribute="top" secondItem="oy3-Ma-BJT" secondAttribute="bottom" constant="56" id="dNF-w0-3oK"/>
+                <constraint firstItem="C19-jl-eY0" firstAttribute="top" secondItem="E1l-wn-MBE" secondAttribute="bottom" constant="56" id="b5j-MK-882"/>
                 <constraint firstItem="R6K-yb-DgJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="htN-Jz-ULg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jX0-7R-Lid" secondAttribute="trailing" constant="16" id="jeD-fm-q7J"/>
                 <constraint firstItem="jX0-7R-Lid" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="jv4-mA-00H"/>
                 <constraint firstItem="iPU-gj-Kdr" firstAttribute="centerY" secondItem="oy3-Ma-BJT" secondAttribute="centerY" id="mWu-Ue-duV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E1l-wn-MBE" secondAttribute="trailing" constant="16" id="p5R-uU-16S"/>
+                <constraint firstItem="E1l-wn-MBE" firstAttribute="top" secondItem="oy3-Ma-BJT" secondAttribute="bottom" constant="16" id="uS3-R6-9mt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oy3-Ma-BJT" secondAttribute="trailing" constant="16" id="wkS-fj-VgX"/>
             </constraints>
             <point key="canvasLocation" x="-39.130434782608695" y="-11.383928571428571"/>

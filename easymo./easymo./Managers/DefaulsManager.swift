@@ -27,4 +27,13 @@ class DefaultsManager {
             defaults.set(newValue, forKey: #function)
         }
     }
+    
+    static var createPiggy: Bool {
+        get {
+            return defaults.value(forKey: #function) as? Bool ?? false
+        }
+        set {
+            defaults.set(newValue, forKey: #function)
+        }
+    }
 }

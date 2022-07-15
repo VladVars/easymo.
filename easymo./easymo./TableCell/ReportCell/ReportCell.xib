@@ -17,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tic-Mv-Jz0">
-                        <rect key="frame" x="0.0" y="12" width="32" height="32"/>
+                        <rect key="frame" x="16" y="12" width="32" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="F1R-it-GFy"/>
                             <constraint firstAttribute="width" constant="32" id="P62-9d-ruI"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qu7-it-9Vq">
-                        <rect key="frame" x="40" y="12" width="76" height="18"/>
+                        <rect key="frame" x="56" y="12" width="76" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="ftw-9h-GIi"/>
                         </constraints>
@@ -33,19 +33,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCv-mr-8rX">
-                        <rect key="frame" x="40" y="32" width="24.5" height="13"/>
+                        <rect key="frame" x="56" y="32" width="24.5" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.58431372549019611" green="0.60392156862745094" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac2-pd-kRF">
-                        <rect key="frame" x="293" y="22" width="27" height="16"/>
+                        <rect key="frame" x="277" y="22" width="27" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                         <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-H8-PdF">
-                        <rect key="frame" x="253" y="18" width="32" height="21"/>
+                        <rect key="frame" x="237" y="18" width="32" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,13 +58,13 @@
                     <constraint firstItem="Ac2-pd-kRF" firstAttribute="bottom" secondItem="d9B-H8-PdF" secondAttribute="bottom" constant="-1" id="EQB-PU-faD"/>
                     <constraint firstItem="tCv-mr-8rX" firstAttribute="top" secondItem="qu7-it-9Vq" secondAttribute="bottom" constant="2" id="F29-Jf-0cu"/>
                     <constraint firstAttribute="bottom" secondItem="tic-Mv-Jz0" secondAttribute="bottom" constant="12" id="IIg-YB-Hxz"/>
-                    <constraint firstItem="tic-Mv-Jz0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OaD-xn-81f"/>
+                    <constraint firstItem="tic-Mv-Jz0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OaD-xn-81f"/>
                     <constraint firstAttribute="bottom" secondItem="tCv-mr-8rX" secondAttribute="bottom" constant="12" id="P8f-6w-Es7"/>
                     <constraint firstItem="d9B-H8-PdF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qu7-it-9Vq" secondAttribute="trailing" constant="16" id="PaK-30-f09"/>
                     <constraint firstItem="tCv-mr-8rX" firstAttribute="leading" secondItem="tic-Mv-Jz0" secondAttribute="trailing" constant="8" id="ggc-rh-cPG"/>
                     <constraint firstItem="qu7-it-9Vq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="gkO-N6-bBJ"/>
                     <constraint firstItem="tic-Mv-Jz0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="iDJ-rB-LOW"/>
-                    <constraint firstAttribute="trailing" secondItem="Ac2-pd-kRF" secondAttribute="trailing" id="jBV-wr-iyX"/>
+                    <constraint firstAttribute="trailing" secondItem="Ac2-pd-kRF" secondAttribute="trailing" constant="16" id="jBV-wr-iyX"/>
                     <constraint firstItem="qu7-it-9Vq" firstAttribute="leading" secondItem="tic-Mv-Jz0" secondAttribute="trailing" constant="8" id="vhw-KB-sGk"/>
                 </constraints>
             </tableViewCellContentView>

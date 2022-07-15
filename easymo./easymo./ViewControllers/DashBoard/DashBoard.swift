@@ -55,12 +55,8 @@ class DashBoard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if DefaultsManager.createLimit {
-            addCurentLimitView()
-        } else {
-            curentLimitView.isHidden = true
-
-        }
+        
+        setupDefaultsManager()
         setUIIcon()
         setupUI()
         
@@ -70,6 +66,23 @@ class DashBoard: UIViewController {
         if RealmManager.read().count > 0 {
                     downIcnomeLabel.text = "\(RealmManager.read()[0].spendMoney)"
                 }
+    }
+    
+    
+    func setupDefaultsManager() {
+        if DefaultsManager.createLimit {
+            addCurentLimitView()
+        } else {
+            curentLimitView.isHidden = true
+
+        }
+        
+        if DefaultsManager.createPiggy {
+            addCurentLimitView()
+        } else {
+            piggyView.isHidden = true
+
+        }
     }
     
     @objc func notificationImageDidTap() {
@@ -138,8 +151,6 @@ class DashBoard: UIViewController {
         settingImage.addGestureRecognizer(settingImageTap)
         settingImage.isUserInteractionEnabled = true
         
-        
-//        currentBalance.textColor = #colorLiteral(red: 0.5894673467, green: 0.6044110656, blue: 0.638481915, alpha: 1)
         currentBalance.textColor = UIColor(cgColor: CGColor(red: 0.59, green: 0.6, blue: 0.64, alpha: 1.0))
         
         let paragraphStyle = NSMutableParagraphStyle()
@@ -149,9 +160,13 @@ class DashBoard: UIViewController {
     private func subscribeOnNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(addCurentLimitView), name: .createLimit, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(addCurentLimitView), name: .createPiggy, object: nil)
+        
     }
+    
     @objc func addCurentLimitView() {
         curentLimitView.isHidden = false
+        piggyView.isHidden = false
     }
     
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class CreatePiggyBankVC: UIViewController {
     
-    @IBOutlet weak var cinteinerView: UIView!
+    @IBOutlet weak var conteinerView: UIView!
     
     @IBOutlet weak var goalField: UITextField!
     @IBOutlet weak var summField: UITextField!
@@ -19,6 +19,7 @@ class CreatePiggyBankVC: UIViewController {
     @IBOutlet weak var summImage: UIImageView!
     @IBOutlet weak var periodImage: UIImageView!
     
+    @IBOutlet weak var summLabel: UILabel!
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -38,13 +39,23 @@ class CreatePiggyBankVC: UIViewController {
         
         textFieldMargen()
         setupUI()
+//        summBank()
+    }
+    
+    func summBank() {
+        guard let summ = summField.text else { return }
+        let totSumm = Int(summ) ?? 0
+        guard let period = periodField.text else { return }
+        let totPeriod = Int(period) ?? 0
+        let result = totSumm / totPeriod
+        summLabel.text = "\(result)"
     }
     
     func setupUI() {
         cancelButton.layer.cornerRadius = 12
         saveButton.layer.cornerRadius = 12
         
-        cinteinerView.layer.cornerRadius = 16
+        conteinerView.layer.cornerRadius = 16
         imageView.layer.cornerRadius = 16
         
         imagePicker.delegate = self
