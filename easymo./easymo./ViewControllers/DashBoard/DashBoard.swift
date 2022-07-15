@@ -14,22 +14,29 @@ class DashBoard: UIViewController {
     @IBOutlet weak var limitsView: UIView!
     @IBOutlet weak var curentLimitView: UIView!
     @IBOutlet weak var statisticView: UIView!
-    @IBOutlet weak var pigguView: UIView!
+    @IBOutlet weak var createPiggyView: UIView!
+    @IBOutlet weak var piggyView: UIView!
     
     @IBOutlet weak var settingImage: UIImageView!
     @IBOutlet weak var notificationImage: UIImageView!
     @IBOutlet weak var limitImage: UIImageView!
-    
     @IBOutlet weak var statisticUPImage: UIImageView!
     @IBOutlet weak var statisticDownImage: UIImageView!
+    @IBOutlet weak var piggyImage: UIImageView!
     
+    
+    @IBOutlet weak var namePiggy: UILabel!
     @IBOutlet weak var nameProgectLabel: UILabel!
     
     @IBOutlet weak var curentSummLimitLabel: UILabel!
     @IBOutlet weak var totalSummLimitLabel: UILabel!
     
     @IBOutlet weak var limitProgress: UIProgressView!
+    @IBOutlet weak var piggyProgress: UIProgressView!
     
+    
+    @IBOutlet weak var totalSummPiggy: UILabel!
+    @IBOutlet weak var currentSummPiggy: UILabel!
     @IBOutlet weak var currentBalance: UILabel!
     @IBOutlet weak var balance: UILabel!
     @IBOutlet weak var upIncomeLabel: UILabel!
@@ -37,11 +44,14 @@ class DashBoard: UIViewController {
     
     @IBOutlet weak var statisticLabel: UILabel!
     
+    @IBOutlet weak var topUpPiggyButton: UIButton!
     @IBOutlet weak var topUpButton: UIButton!
     @IBOutlet weak var spendButton: UIButton!
     @IBOutlet weak var piggyStartOutlet: UIButton!
     
     @IBOutlet weak var chartView: PieChart!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,11 +85,17 @@ class DashBoard: UIViewController {
         statisticDownImage.image = UIImage.init(named: "downIncome")
         settingImage.image = UIImage.init(named: "SettingIcon")
         notificationImage.image = UIImage.init(named: "Notifications")
-        
+        piggyImage.image = UIImage.init(named: "ass-pig")
     }
     
     @IBAction func topUpButtonAction(_ sender: Any) {
     }
+    
+    @IBAction func topUpPiggyAction(_ sender: Any) {
+        let spendPiggyVC = SpendPiggyVC(nibName: String(describing: SpendPiggyVC.self), bundle: nil)
+        present(spendPiggyVC, animated: true)
+    }
+    
     
     @IBAction func spendButtonAction(_ sender: Any) {
         
@@ -104,8 +120,10 @@ class DashBoard: UIViewController {
         limitsView.layer.cornerRadius = 16
         curentLimitView.layer.cornerRadius = 16
         statisticView.layer.cornerRadius = 16
-        pigguView.layer.cornerRadius = 16
+        createPiggyView.layer.cornerRadius = 16
+        piggyView.layer.cornerRadius = 16
         
+        topUpPiggyButton.layer.cornerRadius = 12
         topUpButton.layer.cornerRadius = 12
         spendButton.layer.cornerRadius = 12
         piggyStartOutlet.layer.cornerRadius = 12
