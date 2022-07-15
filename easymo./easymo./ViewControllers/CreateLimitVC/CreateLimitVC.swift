@@ -76,12 +76,12 @@ class CreateLimitVC: UIViewController {
     
     @IBAction func saveAction(_ sender: Any) {
         
-        let saveMoney = Money()
-        saveMoney.limit = summField.text ?? ""
-        saveMoney.limitTime = selectedDate
-        RealmManager.save(object: saveMoney)
+        let saveLimit = Limit()
+        saveLimit.limit = summField.text ?? ""
+        saveLimit.limitTime = selectedDate
+        RealmManager.save2(object: saveLimit)
         
-        if saveMoney.spendMoney == summField.text, saveMoney.limitTime == selectedDate {
+        if saveLimit.limit == summField.text {
             NotificationCenter.default.post(name: .createLimit, object: nil)
             DefaultsManager.createLimit = true
         }

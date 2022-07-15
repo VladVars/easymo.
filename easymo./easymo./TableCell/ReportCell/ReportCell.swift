@@ -19,7 +19,8 @@ class ReportCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
 
     func configureCell(summ: String, time: Date, category: String) {

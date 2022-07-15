@@ -93,7 +93,7 @@ class SpendVC: UIViewController {
         saveMoney.spendMoney = summField.text ?? ""
         saveMoney.spendTime = selectedDate
         saveMoney.category = categorieField.text ?? ""
-        RealmManager.save(object: saveMoney)
+        RealmManager.save1(object: saveMoney)
         
         summField.text = ""
         dateField.text = ""

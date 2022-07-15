@@ -11,7 +11,7 @@ class HistoryVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var money = RealmManager.read(){
+    var money = RealmManager.read1().self {
         didSet {
             tableView.reloadData()
         }
@@ -38,9 +38,9 @@ extension HistoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
         
-        cell.configureCell(summ: RealmManager.read()[indexPath.row].spendMoney,
-                           time: RealmManager.read()[indexPath.row].spendTime!,
-                           category: RealmManager.read()[indexPath.row].category)
+        cell.configureCell(summ: RealmManager.read1()[indexPath.row].spendMoney,
+                           time: RealmManager.read1()[indexPath.row].spendTime!,
+                           category: RealmManager.read1()[indexPath.row].category)
         
         return cell
     }

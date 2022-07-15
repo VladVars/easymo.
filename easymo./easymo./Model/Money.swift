@@ -10,16 +10,20 @@ import RealmSwift
 
 
 @objc final class Money: Object {
+//    Money
     @objc dynamic var replenishMoney: String = ""
-    
     @objc dynamic var spendMoney: String = ""
     @objc dynamic var spendTime: Date?
     @objc dynamic var category: String = ""
-    
+}
+
+@objc final class Limit: Object {
 //    Limt
     @objc dynamic var limit: String = ""
     @objc dynamic var limitTime: Date?
-    
+}
+
+@objc final class PiggyBank: Object {
 //    PiggyBank
     @objc dynamic var summPiggyBank: String = ""
     @objc dynamic var spendPiggyBank: String = ""

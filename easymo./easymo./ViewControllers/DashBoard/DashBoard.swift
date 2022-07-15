@@ -56,26 +56,30 @@ class DashBoard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupDefaultsManager()
+        setupCurentLimitView()
+        setupPiggyView()
         setUIIcon()
         setupUI()
-        
+        notification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if RealmManager.read().count > 0 {
-                    downIcnomeLabel.text = "\(RealmManager.read()[0].spendMoney)"
+        if RealmManager.read1().count > 0 {
+                    downIcnomeLabel.text = "\(RealmManager.read1()[0].spendMoney)"
                 }
     }
     
     
-    func setupDefaultsManager() {
+    func setupCurentLimitView() {
         if DefaultsManager.createLimit {
             addCurentLimitView()
         } else {
             curentLimitView.isHidden = true
 
         }
+        
+    }
+    func setupPiggyView() {
         
         if DefaultsManager.createPiggy {
             addCurentLimitView()
@@ -84,6 +88,7 @@ class DashBoard: UIViewController {
 
         }
     }
+    
     
     @objc func notificationImageDidTap() {
         let notificationVC = NotificationVC(nibName: String(describing: NotificationVC.self), bundle: nil)
@@ -157,15 +162,17 @@ class DashBoard: UIViewController {
         paragraphStyle.lineHeightMultiple = 1.43
         nameProgectLabel.attributedText = NSMutableAttributedString(string: "easymo.", attributes: [NSAttributedString.Key.kern: 0.37, NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
-    private func subscribeOnNotification() {
+    private func notification() {
         NotificationCenter.default.addObserver(self, selector: #selector(addCurentLimitView), name: .createLimit, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(addCurentLimitView), name: .createPiggy, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(addPiggyView), name: .createPiggy, object: nil)
         
     }
     
     @objc func addCurentLimitView() {
         curentLimitView.isHidden = false
+    }
+    @objc func addPiggyView() {
         piggyView.isHidden = false
     }
     
