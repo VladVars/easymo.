@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportVC" customModule="easymo_" customModuleProvider="target">
             <connections>
+                <outlet property="spendView" destination="2aL-Ba-HL0" id="Ebq-uf-Yum"/>
+                <outlet property="summLabel" destination="hhf-7v-h7h" id="RzK-U0-UOr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

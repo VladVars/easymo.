@@ -36,6 +36,11 @@ class CreatePiggyBankVC: UIViewController {
         periodField.delegate = self
         goalField.delegate = self
         
+        textFieldMargen()
+        setupUI()
+    }
+    
+    func setupUI() {
         cancelButton.layer.cornerRadius = 12
         saveButton.layer.cornerRadius = 12
         
@@ -47,9 +52,6 @@ class CreatePiggyBankVC: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        textFieldMargen()
-
     }
     
     func textFieldMargen() {
@@ -130,7 +132,7 @@ extension CreatePiggyBankVC: UIImagePickerControllerDelegate, UINavigationContro
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.images = image
             imageView.image = images
-            addButton.isHidden = true
+//            addButton.isHidden = true
         }
         picker.dismiss(animated: true)
     }

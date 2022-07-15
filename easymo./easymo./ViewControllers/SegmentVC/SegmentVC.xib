@@ -44,9 +44,8 @@
                         <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="u6F-wV-PES"/>
                     </connections>
                 </segmentedControl>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-Ps-5wz">
-                    <rect key="frame" x="73" y="320" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-Ps-5wz">
+                    <rect key="frame" x="0.0" y="159.5" width="414" height="702.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -56,8 +55,12 @@
                 <constraint firstItem="TbA-vc-s2o" firstAttribute="top" secondItem="D8o-Jp-j5u" secondAttribute="bottom" constant="32" id="3zb-P6-nCC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TbA-vc-s2o" secondAttribute="trailing" constant="16" id="4Ro-B0-8eG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nRa-R2-SCF" secondAttribute="trailing" constant="16" id="Bhj-MM-cfy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Wvc-Ps-5wz" secondAttribute="bottom" id="Gw1-2v-fwQ"/>
+                <constraint firstItem="Wvc-Ps-5wz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JmQ-ui-1dD"/>
+                <constraint firstItem="Wvc-Ps-5wz" firstAttribute="top" secondItem="TbA-vc-s2o" secondAttribute="bottom" id="Juf-a6-fFR"/>
                 <constraint firstItem="D8o-Jp-j5u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="O6M-yp-585"/>
                 <constraint firstItem="nRa-R2-SCF" firstAttribute="leading" secondItem="D8o-Jp-j5u" secondAttribute="trailing" constant="8" id="Tk1-S2-ek3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wvc-Ps-5wz" secondAttribute="trailing" id="Wa2-uv-t2j"/>
                 <constraint firstItem="TbA-vc-s2o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tRH-X9-8Hn"/>
                 <constraint firstItem="D8o-Jp-j5u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="uG2-eG-SgS"/>
                 <constraint firstItem="nRa-R2-SCF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="z9d-9S-LMv"/>

@@ -12,19 +12,26 @@ class DashBoard: UIViewController {
 
     @IBOutlet weak var nameProgectView: UIView!
     @IBOutlet weak var limitsView: UIView!
+    @IBOutlet weak var curentLimit: UIView!
     @IBOutlet weak var statisticView: UIView!
     @IBOutlet weak var pigguView: UIView!
     
     @IBOutlet weak var settingImage: UIImageView!
     @IBOutlet weak var notificationImage: UIImageView!
+    @IBOutlet weak var limitImage: UIImageView!
+    
     @IBOutlet weak var statisticUPImage: UIImageView!
     @IBOutlet weak var statisticDownImage: UIImageView!
     
     @IBOutlet weak var nameProgectLabel: UILabel!
     
+    @IBOutlet weak var curentSummLimitLabel: UILabel!
+    @IBOutlet weak var totalSummLimitLabel: UILabel!
+    
+    @IBOutlet weak var limitProgress: UIProgressView!
+    
     @IBOutlet weak var currentBalance: UILabel!
     @IBOutlet weak var balance: UILabel!
-    
     @IBOutlet weak var upIncomeLabel: UILabel!
     @IBOutlet weak var downIcnomeLabel: UILabel!
     
@@ -38,6 +45,7 @@ class DashBoard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUIIcon()
         setupUI()
         
@@ -89,6 +97,7 @@ class DashBoard: UIViewController {
     
     func setupUI() {
         limitsView.layer.cornerRadius = 16
+        curentLimit.layer.cornerRadius = 16
         statisticView.layer.cornerRadius = 16
         pigguView.layer.cornerRadius = 16
         
