@@ -24,6 +24,10 @@
 		0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */; };
 		0474D7AA2880ACA200FAA5BA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7A92880ACA200FAA5BA /* RealmManager.swift */; };
 		0474D7AD2880AD4200FAA5BA /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7AC2880AD4200FAA5BA /* Money.swift */; };
+		0474D7B42882ED9000FAA5BA /* TableViewOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7B22882ED9000FAA5BA /* TableViewOneCell.swift */; };
+		0474D7B52882ED9000FAA5BA /* TableViewOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7B32882ED9000FAA5BA /* TableViewOneCell.xib */; };
+		0474D7B82882EDAC00FAA5BA /* TableViewTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7B62882EDAC00FAA5BA /* TableViewTwoCell.swift */; };
+		0474D7B92882EDAC00FAA5BA /* TableViewTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7B72882EDAC00FAA5BA /* TableViewTwoCell.xib */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -83,6 +87,10 @@
 		0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		0474D7A92880ACA200FAA5BA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		0474D7AC2880AD4200FAA5BA /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		0474D7B22882ED9000FAA5BA /* TableViewOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewOneCell.swift; sourceTree = "<group>"; };
+		0474D7B32882ED9000FAA5BA /* TableViewOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewOneCell.xib; sourceTree = "<group>"; };
+		0474D7B62882EDAC00FAA5BA /* TableViewTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTwoCell.swift; sourceTree = "<group>"; };
+		0474D7B72882EDAC00FAA5BA /* TableViewTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewTwoCell.xib; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +252,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0474D7AF2882ED4900FAA5BA /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7B12882ED6B00FAA5BA /* TableViewTwo */,
+				0474D7B02882ED5800FAA5BA /* TableViewOne */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
+		0474D7B02882ED5800FAA5BA /* TableViewOne */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7B22882ED9000FAA5BA /* TableViewOneCell.swift */,
+				0474D7B32882ED9000FAA5BA /* TableViewOneCell.xib */,
+			);
+			path = TableViewOne;
+			sourceTree = "<group>";
+		};
+		0474D7B12882ED6B00FAA5BA /* TableViewTwo */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7B62882EDAC00FAA5BA /* TableViewTwoCell.swift */,
+				0474D7B72882EDAC00FAA5BA /* TableViewTwoCell.xib */,
+			);
+			path = TableViewTwo;
+			sourceTree = "<group>";
+		};
 		04762749284C1110003AE90F = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +357,7 @@
 		04947B8F285BB38000F01860 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7AF2882ED4900FAA5BA /* SettingCell */,
 				04947CA92870930500F01860 /* ReportCell */,
 				04947CA8287092E400F01860 /* DashBoardCell */,
 			);
@@ -524,12 +560,14 @@
 			files = (
 				04947BA02860F18B00F01860 /* SpendVC.xib in Resources */,
 				04762762284C1111003AE90F /* LaunchScreen.storyboard in Resources */,
+				0474D7B92882EDAC00FAA5BA /* TableViewTwoCell.xib in Resources */,
 				04947CC12871B2A900F01860 /* ConfirmationVC.xib in Resources */,
 				04947B982860D32700F01860 /* NotificationVC.xib in Resources */,
 				0474D7122873500200FAA5BA /* FilterVc.xib in Resources */,
 				0476275F284C1111003AE90F /* Assets.xcassets in Resources */,
 				04947CAD287096A400F01860 /* SegmentVC.xib in Resources */,
 				04947CA72870902B00F01860 /* ReportVC.xib in Resources */,
+				0474D7B52882ED9000FAA5BA /* TableViewOneCell.xib in Resources */,
 				04947C43286A3D8500F01860 /* LimitVC.xib in Resources */,
 				0440DC21285A60FE00D98BF1 /* DashBoard.xib in Resources */,
 				04947B84285BAE0A00F01860 /* HistoryVC.xib in Resources */,
@@ -602,6 +640,7 @@
 				04947B972860D32700F01860 /* NotificationVC.swift in Sources */,
 				04947B83285BAE0A00F01860 /* HistoryVC.swift in Sources */,
 				04947B9F2860F18B00F01860 /* SpendVC.swift in Sources */,
+				0474D7B42882ED9000FAA5BA /* TableViewOneCell.swift in Sources */,
 				04947B8D285BAE9900F01860 /* SettingDashBoardVC.swift in Sources */,
 				0440DC20285A60FE00D98BF1 /* DashBoard.swift in Sources */,
 				04947C42286A3D8500F01860 /* LimitVC.swift in Sources */,
@@ -613,6 +652,7 @@
 				04947B9B2860EC2000F01860 /* SettingPoints.swift in Sources */,
 				04947CBB2871AE1100F01860 /* SpendPiggyVC.swift in Sources */,
 				0474D778287C286200FAA5BA /* Passcode.swift in Sources */,
+				0474D7B82882EDAC00FAA5BA /* TableViewTwoCell.swift in Sources */,
 				0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */,
 				0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */,
 				0474D76728775B7800FAA5BA /* OverLayVC.swift in Sources */,

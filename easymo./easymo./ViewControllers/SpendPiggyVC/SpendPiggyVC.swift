@@ -52,7 +52,7 @@ class SpendPiggyVC: UIViewController {
     func textFieldMargen() {
         imageField.image = UIImage.init(named: "BYN")
         imageDateField.image = UIImage.init(named: "ic-calendar")
-
+        
         summField.layer.cornerRadius = 8
         dateField.layer.cornerRadius = 8
         
@@ -72,7 +72,7 @@ class SpendPiggyVC: UIViewController {
     
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
-
+        
     }
     
     

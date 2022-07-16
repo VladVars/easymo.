@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отчет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8o-Jp-j5u">
-                    <rect key="frame" x="16" y="55.5" width="330" height="41"/>
+                    <rect key="frame" x="16" y="55" width="330" height="41"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     </constraints>
                 </imageView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-vc-s2o">
-                    <rect key="frame" x="16" y="128.5" width="382" height="32"/>
+                    <rect key="frame" x="16" y="128" width="382" height="32"/>
                     <segments>
                         <segment title="История"/>
                         <segment title="Статистика"/>
@@ -45,7 +45,7 @@
                     </connections>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-Ps-5wz">
-                    <rect key="frame" x="0.0" y="159.5" width="414" height="702.5"/>
+                    <rect key="frame" x="0.0" y="159" width="414" height="703"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -62,7 +62,7 @@
                 <constraint firstItem="nRa-R2-SCF" firstAttribute="leading" secondItem="D8o-Jp-j5u" secondAttribute="trailing" constant="8" id="Tk1-S2-ek3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wvc-Ps-5wz" secondAttribute="trailing" id="Wa2-uv-t2j"/>
                 <constraint firstItem="TbA-vc-s2o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tRH-X9-8Hn"/>
-                <constraint firstItem="D8o-Jp-j5u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="uG2-eG-SgS"/>
+                <constraint firstItem="D8o-Jp-j5u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11" id="uG2-eG-SgS"/>
                 <constraint firstItem="nRa-R2-SCF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="z9d-9S-LMv"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>

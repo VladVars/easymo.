@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="easymo_" customModuleProvider="target">
             <connections>
+                <outlet property="tableViewOne" destination="7sa-tk-CLl" id="X8C-eP-rgG"/>
+                <outlet property="tableViewTwo" destination="g69-ne-l4n" id="x10-XO-h4W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +19,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-qB-bBA">
+                    <rect key="frame" x="16" y="55.5" width="382" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7sa-tk-CLl">
+                    <rect key="frame" x="16" y="132" width="382" height="168"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="168" id="OT9-W8-WHi"/>
+                    </constraints>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g69-ne-l4n">
+                    <rect key="frame" x="16" y="324" width="382" height="112"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="112" id="For-yO-4F4"/>
+                    </constraints>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="g69-ne-l4n" firstAttribute="top" secondItem="7sa-tk-CLl" secondAttribute="bottom" constant="24" id="4da-Oc-ZLx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g69-ne-l4n" secondAttribute="trailing" constant="16" id="A6q-aJ-X4A"/>
+                <constraint firstItem="7sa-tk-CLl" firstAttribute="top" secondItem="kcc-qB-bBA" secondAttribute="bottom" constant="35.5" id="FaP-NC-5w9"/>
+                <constraint firstItem="kcc-qB-bBA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LK8-aI-CDP"/>
+                <constraint firstItem="7sa-tk-CLl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SSl-Tg-guJ"/>
+                <constraint firstItem="g69-ne-l4n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UId-A5-hCY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7sa-tk-CLl" secondAttribute="trailing" constant="16" id="pDo-o9-LmT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kcc-qB-bBA" secondAttribute="trailing" constant="16" id="puw-pr-3aC"/>
+                <constraint firstItem="kcc-qB-bBA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="uo6-9b-5H1"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="94"/>
         </view>
     </objects>

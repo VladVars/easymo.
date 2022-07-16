@@ -17,7 +17,10 @@ class SettingDashBoardVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingTable.layer.cornerRadius = 14
         saveButton.layer.cornerRadius = 12
+        
+        settingTable.bounces = false
         
         settingTable.dataSource = self
         settingTable.delegate = self
@@ -44,5 +47,6 @@ extension SettingDashBoardVC: UITableViewDataSource {
     
 }
 extension SettingDashBoardVC: UITableViewDelegate {
+    
     
 }

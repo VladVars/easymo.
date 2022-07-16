@@ -151,7 +151,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Копилка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-8c-kVj">
-                    <rect key="frame" x="16" y="55.5" width="330" height="41"/>
+                    <rect key="frame" x="16" y="55" width="330" height="41"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -167,7 +167,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ZwD-8c-kVj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="10c-h3-YJK"/>
+                <constraint firstItem="ZwD-8c-kVj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11" id="10c-h3-YJK"/>
                 <constraint firstItem="cTQ-RD-dGl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7dA-ub-EaT"/>
                 <constraint firstItem="cTQ-RD-dGl" firstAttribute="top" secondItem="Wz7-OP-87h" secondAttribute="bottom" constant="35.5" id="7qr-Wo-Kgv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wz7-OP-87h" secondAttribute="trailing" constant="16" id="GJM-0v-9gl"/>

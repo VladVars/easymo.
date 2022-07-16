@@ -36,3 +36,32 @@ enum SettingPoints: CaseIterable {
 
     }
 }
+
+enum SettingPointsTableOne: CaseIterable {
+    case currency
+    case startMounth
+    case funds
+    
+    
+    var settingText: String {
+        switch self {
+        case .currency:
+            return "Валюта"
+        case .startMounth:
+            return "Начало месяца"
+        case .funds:
+            return "Поступления средств"
+        }
+    }
+    
+    var settingImage: UIImage? {
+        switch self {
+        case .currency:
+            return UIImage(named: "Vector")
+        case .startMounth:
+            return UIImage(named: "Vector")
+        case .funds:
+            return UIImage(named: "Vector")
+        }
+    }
+}

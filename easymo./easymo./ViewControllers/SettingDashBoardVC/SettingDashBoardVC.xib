@@ -26,8 +26,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="w84-Fd-xdV">
-                    <rect key="frame" x="0.0" y="144.5" width="414" height="168"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="w84-Fd-xdV">
+                    <rect key="frame" x="16" y="144.5" width="382" height="168"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="168" id="Wdv-GL-Vi0"/>
@@ -51,10 +51,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w84-Fd-xdV" secondAttribute="trailing" id="A3d-fd-Oip"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w84-Fd-xdV" secondAttribute="trailing" constant="16" id="A3d-fd-Oip"/>
                 <constraint firstItem="GY7-mm-Pfo" firstAttribute="top" secondItem="w84-Fd-xdV" secondAttribute="bottom" constant="32" id="BfO-z5-2ri"/>
                 <constraint firstItem="w84-Fd-xdV" firstAttribute="top" secondItem="TvE-uZ-O4b" secondAttribute="bottom" constant="35.5" id="Hqz-v2-Rl4"/>
-                <constraint firstItem="w84-Fd-xdV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LL8-ln-olc"/>
+                <constraint firstItem="w84-Fd-xdV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LL8-ln-olc"/>
                 <constraint firstItem="TvE-uZ-O4b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="baB-mT-xam"/>
                 <constraint firstItem="TvE-uZ-O4b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="ffR-xO-34o"/>
                 <constraint firstItem="GY7-mm-Pfo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fyF-cl-8lu"/>

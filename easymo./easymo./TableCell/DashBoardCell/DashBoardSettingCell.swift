@@ -15,6 +15,7 @@ class DashBoardSettingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func setupCellWith(_ type: SettingPoints) {

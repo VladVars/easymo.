@@ -9,7 +9,7 @@ import UIKit
 import PieCharts
 
 class DashBoard: UIViewController {
-
+    
     @IBOutlet weak var nameProgectView: UIView!
     @IBOutlet weak var limitsView: UIView!
     @IBOutlet weak var curentLimitView: UIView!
@@ -52,7 +52,6 @@ class DashBoard: UIViewController {
     @IBOutlet weak var chartView: PieChart!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,17 +64,16 @@ class DashBoard: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if RealmManager.read1().count > 0 {
-                    downIcnomeLabel.text = "\(RealmManager.read1()[0].spendMoney)"
-                }
+            downIcnomeLabel.text = "\(RealmManager.read1()[0].spendMoney)"
+        }
     }
-    
     
     func setupCurentLimitView() {
         if DefaultsManager.createLimit {
             addCurentLimitView()
         } else {
             curentLimitView.isHidden = true
-
+            
         }
         
     }
@@ -85,7 +83,7 @@ class DashBoard: UIViewController {
             addPiggyView()
         } else {
             piggyView.isHidden = true
-
+            
         }
     }
     
@@ -190,7 +188,6 @@ class DashBoard: UIViewController {
     }
     
 }
-//tabBarController?.selectedIndex = 2
 extension DashBoard: Updaeble {
     func updataText(text: String) {
         
