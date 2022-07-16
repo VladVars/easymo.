@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 enum SettingPoints: CaseIterable {
     case limits
@@ -57,11 +58,34 @@ enum SettingPointsTableOne: CaseIterable {
     var settingImage: UIImage? {
         switch self {
         case .currency:
-            return UIImage(named: "Vector")
+            return UIImage(named: "text")
         case .startMounth:
-            return UIImage(named: "Vector")
+            return UIImage(named: "text-2")
         case .funds:
-            return UIImage(named: "Vector")
+            return UIImage(named: "text-3")
+        }
+    }
+}
+
+enum SettingPointsTableTwo: CaseIterable {
+    case parametrInput
+    case notification
+    
+    var settingText: String{
+        switch self {
+        case .parametrInput:
+            return "Параметры входа"
+        case .notification:
+            return "Push-уведомления"
+        }
+    }
+    
+    var settingImage: UIImage? {
+        switch self {
+        case .parametrInput:
+            return UIImage(named: "right")
+        case .notification:
+            return UIImage(named: "right")
         }
     }
 }

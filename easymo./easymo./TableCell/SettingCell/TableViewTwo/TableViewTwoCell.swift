@@ -8,16 +8,18 @@
 import UIKit
 
 class TableViewTwoCell: UITableViewCell {
+    
+    @IBOutlet weak var imageSetting: UIImageView!
+    @IBOutlet weak var settingLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupCellWith(_ type: SettingPointsTableTwo) {
+        settingLabel.text = type.settingText
+        imageSetting.image = type.settingImage
     }
     
 }

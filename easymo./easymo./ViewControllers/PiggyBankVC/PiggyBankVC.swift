@@ -32,6 +32,8 @@ class PiggyBankVC: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         setupPiggyView()
     }
     
@@ -45,6 +47,13 @@ class PiggyBankVC: UIViewController {
         addImage.image = UIImage.init(named: "ic-add")
         piggyImage.image = UIImage.init(named: "ass-pig")
 
+        let tapAdd = UITapGestureRecognizer(target: self, action: #selector(addPiggy))
+        addImage.addGestureRecognizer(tapAdd)
+        addImage.isUserInteractionEnabled = true
+    }
+    @objc func addPiggy() {
+        let createPiggyBank = CreatePiggyBankVC(nibName: String(describing: CreatePiggyBankVC.self), bundle: nil)
+        present(createPiggyBank, animated: true)
     }
     
     func setupPiggyView() {

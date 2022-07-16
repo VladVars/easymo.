@@ -28,6 +28,7 @@ class SettingDashBoardVC: UIViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
+        
     }
     
 }
@@ -39,7 +40,6 @@ extension SettingDashBoardVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let settingsCell = tableView.dequeueReusableCell(withIdentifier: String(describing: DashBoardSettingCell.self), for: indexPath) as! DashBoardSettingCell
         settingsCell.setupCellWith(settingsPoints[indexPath.row])
-        
         
         return settingsCell
     }
