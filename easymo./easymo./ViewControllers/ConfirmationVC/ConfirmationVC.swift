@@ -45,6 +45,7 @@ class ConfirmationVC: UIViewController {
             NotificationCenter.default.post(name: .createPiggy, object: nil)
             DefaultsManager.createPiggy = true
         }
+        dismiss(animated: true)
         tabBarController?.selectedIndex = 0
         
     }

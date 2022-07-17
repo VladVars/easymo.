@@ -47,7 +47,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Период" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNx-eu-WEz">
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Период" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNx-eu-WEz">
                     <rect key="frame" x="16" y="260.5" width="382" height="48"/>
                     <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -56,35 +56,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaD-bN-GWu">
-                    <rect key="frame" x="16" y="428.5" width="171" height="48"/>
-                    <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803915" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="48" id="KKJ-RR-EU9"/>
-                        <constraint firstAttribute="width" constant="171" id="ruX-sk-Ntg"/>
-                    </constraints>
-                    <color key="tintColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Отмена"/>
-                    <connections>
-                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="aYb-5e-3os"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCN-6j-Lju">
-                    <rect key="frame" x="227" y="428.5" width="171" height="48"/>
-                    <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="171" id="Xdt-lL-Ans"/>
-                        <constraint firstAttribute="height" constant="48" id="jeN-mb-XGO"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Сохранить"/>
-                    <connections>
-                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="scL-VO-8Xg"/>
-                    </connections>
-                </button>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Дата окончания" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNV-mW-Meo">
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Дата окончания" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNV-mW-Meo">
                     <rect key="frame" x="16" y="324.5" width="382" height="48"/>
                     <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -100,26 +72,55 @@
                         <constraint firstAttribute="width" constant="24" id="c6L-Z6-dq6"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-tT-Eha">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-tT-Eha">
                     <rect key="frame" x="358" y="272.5" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="9kX-hX-mJb"/>
                         <constraint firstAttribute="width" constant="24" id="GMX-hg-Tm0"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X74-HV-PD4">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X74-HV-PD4">
                     <rect key="frame" x="358" y="336.5" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="6FM-0f-FqK"/>
                         <constraint firstAttribute="height" constant="24" id="eFU-6A-3Fg"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaD-bN-GWu">
+                    <rect key="frame" x="16" y="300.5" width="171" height="48"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803915" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="KKJ-RR-EU9"/>
+                        <constraint firstAttribute="width" constant="171" id="ruX-sk-Ntg"/>
+                    </constraints>
+                    <color key="tintColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Отмена"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="aYb-5e-3os"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCN-6j-Lju">
+                    <rect key="frame" x="227" y="300.5" width="171" height="48"/>
+                    <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="171" id="Xdt-lL-Ans"/>
+                        <constraint firstAttribute="height" constant="48" id="jeN-mb-XGO"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Сохранить"/>
+                    <connections>
+                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="scL-VO-8Xg"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cBb-un-59H" secondAttribute="trailing" constant="16" id="348-WT-DBk"/>
                 <constraint firstItem="wNV-mW-Meo" firstAttribute="top" secondItem="aNx-eu-WEz" secondAttribute="bottom" constant="16" id="6vA-U3-azT"/>
+                <constraint firstItem="yCN-6j-Lju" firstAttribute="top" secondItem="cBb-un-59H" secondAttribute="bottom" constant="56" id="76V-fR-Muc"/>
                 <constraint firstItem="hxF-5N-0wo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="7FM-nS-Kie"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X74-HV-PD4" secondAttribute="trailing" constant="32" id="9ih-ww-eWn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aNx-eu-WEz" secondAttribute="trailing" constant="16" id="BWA-a3-I30"/>
@@ -131,8 +132,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yCN-6j-Lju" secondAttribute="trailing" constant="16" id="L3Z-mT-9lT"/>
                 <constraint firstItem="jhu-WR-5aU" firstAttribute="top" secondItem="hxF-5N-0wo" secondAttribute="bottom" constant="35.5" id="Oia-AZ-euf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pIZ-tT-Eha" secondAttribute="trailing" constant="32" id="Ov0-U0-gOs"/>
-                <constraint firstItem="yCN-6j-Lju" firstAttribute="top" secondItem="wNV-mW-Meo" secondAttribute="bottom" constant="56" id="UHt-ie-Of9"/>
-                <constraint firstItem="NaD-bN-GWu" firstAttribute="top" secondItem="wNV-mW-Meo" secondAttribute="bottom" constant="56" id="akd-zt-bFj"/>
+                <constraint firstItem="NaD-bN-GWu" firstAttribute="top" secondItem="cBb-un-59H" secondAttribute="bottom" constant="56" id="TZl-dq-iWl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HVC-YD-W5U" secondAttribute="trailing" constant="32" id="buE-DE-eDe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wNV-mW-Meo" secondAttribute="trailing" constant="16" id="c5A-bP-eSV"/>
                 <constraint firstItem="NaD-bN-GWu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cM2-yl-Twn"/>

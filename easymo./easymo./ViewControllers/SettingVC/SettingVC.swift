@@ -66,13 +66,16 @@ extension SettingVC: UITableViewDataSource, UITableViewDelegate {
         }
 
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = #colorLiteral(red: 0.8983810544, green: 0.9182998538, blue: 0.9308556914, alpha: 1)
-        
+
         if tableView.tag == 0 {
+            
             if indexPath.row == 0 {
-                
+                let filter = FirstInputVC(nibName: String(describing: FirstInputVC.self), bundle: nil)
+                navigationController?.pushViewController(filter, animated: true)
             }
         }
     }

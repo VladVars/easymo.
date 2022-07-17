@@ -36,6 +36,16 @@
 		0474D7CC2884396A00FAA5BA /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7CB2884396A00FAA5BA /* CircleProgress.swift */; };
 		0474D7D028845E6200FAA5BA /* FirstInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7CE28845E6200FAA5BA /* FirstInputVC.swift */; };
 		0474D7D128845E6200FAA5BA /* FirstInputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7CF28845E6200FAA5BA /* FirstInputVC.xib */; };
+		0474D7D8288499A100FAA5BA /* SettingCurencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7D6288499A100FAA5BA /* SettingCurencyVC.swift */; };
+		0474D7D9288499A100FAA5BA /* SettingCurencyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7D7288499A100FAA5BA /* SettingCurencyVC.xib */; };
+		0474D7DC288499B100FAA5BA /* StartMouthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7DA288499B100FAA5BA /* StartMouthVC.swift */; };
+		0474D7DD288499B100FAA5BA /* StartMouthVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7DB288499B100FAA5BA /* StartMouthVC.xib */; };
+		0474D7E0288499C100FAA5BA /* FudsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7DE288499C100FAA5BA /* FudsVC.swift */; };
+		0474D7E1288499C100FAA5BA /* FudsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7DF288499C100FAA5BA /* FudsVC.xib */; };
+		0474D7E4288499D300FAA5BA /* ParametrsInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7E2288499D300FAA5BA /* ParametrsInputVC.swift */; };
+		0474D7E5288499D300FAA5BA /* ParametrsInputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7E3288499D300FAA5BA /* ParametrsInputVC.xib */; };
+		0474D7E92884A17D00FAA5BA /* SettingCurencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */; };
+		0474D7EA2884A17D00FAA5BA /* SettingCurencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -107,6 +117,16 @@
 		0474D7CB2884396A00FAA5BA /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		0474D7CE28845E6200FAA5BA /* FirstInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInputVC.swift; sourceTree = "<group>"; };
 		0474D7CF28845E6200FAA5BA /* FirstInputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstInputVC.xib; sourceTree = "<group>"; };
+		0474D7D6288499A100FAA5BA /* SettingCurencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCurencyVC.swift; sourceTree = "<group>"; };
+		0474D7D7288499A100FAA5BA /* SettingCurencyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCurencyVC.xib; sourceTree = "<group>"; };
+		0474D7DA288499B100FAA5BA /* StartMouthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMouthVC.swift; sourceTree = "<group>"; };
+		0474D7DB288499B100FAA5BA /* StartMouthVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMouthVC.xib; sourceTree = "<group>"; };
+		0474D7DE288499C100FAA5BA /* FudsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FudsVC.swift; sourceTree = "<group>"; };
+		0474D7DF288499C100FAA5BA /* FudsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FudsVC.xib; sourceTree = "<group>"; };
+		0474D7E2288499D300FAA5BA /* ParametrsInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametrsInputVC.swift; sourceTree = "<group>"; };
+		0474D7E3288499D300FAA5BA /* ParametrsInputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParametrsInputVC.xib; sourceTree = "<group>"; };
+		0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCurencyCell.swift; sourceTree = "<group>"; };
+		0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCurencyCell.xib; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +187,10 @@
 		0440DC1C285A60AB00D98BF1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7D52884997A00FAA5BA /* ParametrsInputVC */,
+				0474D7D42884990F00FAA5BA /* FudsVC */,
+				0474D7D3288498F600FAA5BA /* StartMouthVC */,
+				0474D7D2288498D800FAA5BA /* SettingCurencyVC */,
 				0474D7CD28845E1F00FAA5BA /* FirstInputVC */,
 				0474D7C52884089200FAA5BA /* CardPiggyBankVC */,
 				0474D7C02883FE3100FAA5BA /* ReplenishVC */,
@@ -272,6 +296,7 @@
 		0474D7AF2882ED4900FAA5BA /* SettingCell */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7E62884A15200FAA5BA /* SettingCurencyCell */,
 				0474D7B12882ED6B00FAA5BA /* TableViewTwo */,
 				0474D7B02882ED5800FAA5BA /* TableViewOne */,
 			);
@@ -348,6 +373,51 @@
 				0474D7CF28845E6200FAA5BA /* FirstInputVC.xib */,
 			);
 			path = FirstInputVC;
+			sourceTree = "<group>";
+		};
+		0474D7D2288498D800FAA5BA /* SettingCurencyVC */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7D6288499A100FAA5BA /* SettingCurencyVC.swift */,
+				0474D7D7288499A100FAA5BA /* SettingCurencyVC.xib */,
+			);
+			path = SettingCurencyVC;
+			sourceTree = "<group>";
+		};
+		0474D7D3288498F600FAA5BA /* StartMouthVC */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7DA288499B100FAA5BA /* StartMouthVC.swift */,
+				0474D7DB288499B100FAA5BA /* StartMouthVC.xib */,
+			);
+			path = StartMouthVC;
+			sourceTree = "<group>";
+		};
+		0474D7D42884990F00FAA5BA /* FudsVC */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7DE288499C100FAA5BA /* FudsVC.swift */,
+				0474D7DF288499C100FAA5BA /* FudsVC.xib */,
+			);
+			path = FudsVC;
+			sourceTree = "<group>";
+		};
+		0474D7D52884997A00FAA5BA /* ParametrsInputVC */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7E2288499D300FAA5BA /* ParametrsInputVC.swift */,
+				0474D7E3288499D300FAA5BA /* ParametrsInputVC.xib */,
+			);
+			path = ParametrsInputVC;
+			sourceTree = "<group>";
+		};
+		0474D7E62884A15200FAA5BA /* SettingCurencyCell */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */,
+				0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */,
+			);
+			path = SettingCurencyCell;
 			sourceTree = "<group>";
 		};
 		04762749284C1110003AE90F = {
@@ -630,6 +700,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0474D7E1288499C100FAA5BA /* FudsVC.xib in Resources */,
 				04947BA02860F18B00F01860 /* SpendVC.xib in Resources */,
 				04762762284C1111003AE90F /* LaunchScreen.storyboard in Resources */,
 				0474D7BF2883FDFB00FAA5BA /* TopUpHistoryCell.xib in Resources */,
@@ -640,22 +711,26 @@
 				0476275F284C1111003AE90F /* Assets.xcassets in Resources */,
 				04947CAD287096A400F01860 /* SegmentVC.xib in Resources */,
 				04947CA72870902B00F01860 /* ReportVC.xib in Resources */,
+				0474D7EA2884A17D00FAA5BA /* SettingCurencyCell.xib in Resources */,
 				0474D7B52882ED9000FAA5BA /* TableViewOneCell.xib in Resources */,
 				04947C43286A3D8500F01860 /* LimitVC.xib in Resources */,
 				0440DC21285A60FE00D98BF1 /* DashBoard.xib in Resources */,
 				04947B84285BAE0A00F01860 /* HistoryVC.xib in Resources */,
 				0474D7D128845E6200FAA5BA /* FirstInputVC.xib in Resources */,
 				04947B89285BAE5300F01860 /* PiggyBankVC.xib in Resources */,
+				0474D7D9288499A100FAA5BA /* SettingCurencyVC.xib in Resources */,
 				04947CBC2871AE1100F01860 /* SpendPiggyVC.xib in Resources */,
 				04947C9E286E258200F01860 /* CreateLimitVC.xib in Resources */,
 				0474D7C42883FE9D00FAA5BA /* ReplenishVC.xib in Resources */,
 				04947CB22870A28100F01860 /* ReportCell.xib in Resources */,
+				0474D7DD288499B100FAA5BA /* StartMouthVC.xib in Resources */,
 				04947CB72870B2B000F01860 /* CreatePiggyBankVC.xib in Resources */,
 				0474D76828775B7800FAA5BA /* OverLayVC.xib in Resources */,
 				0474D7C9288408D000FAA5BA /* CardPiggyBankVC.xib in Resources */,
 				0474D76D2877635C00FAA5BA /* InputVC.xib in Resources */,
 				04947B93285BB3B400F01860 /* DashBoardSettingCell.xib in Resources */,
 				04947B7F285BA42B00F01860 /* SettingVC.xib in Resources */,
+				0474D7E5288499D300FAA5BA /* ParametrsInputVC.xib in Resources */,
 				04947B8E285BAE9900F01860 /* SettingDashBoardVC.xib in Resources */,
 				0476275D284C1110003AE90F /* Main.storyboard in Resources */,
 			);
@@ -711,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0474D772287C0A2400FAA5BA /* RoundButton.swift in Sources */,
+				0474D7E4288499D300FAA5BA /* ParametrsInputVC.swift in Sources */,
 				04947CAC287096A400F01860 /* SegmentVC.swift in Sources */,
 				04762756284C1110003AE90F /* AppDelegate.swift in Sources */,
 				04947B972860D32700F01860 /* NotificationVC.swift in Sources */,
@@ -735,19 +811,23 @@
 				0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */,
 				0474D76728775B7800FAA5BA /* OverLayVC.swift in Sources */,
 				04762758284C1110003AE90F /* SceneDelegate.swift in Sources */,
+				0474D7D8288499A100FAA5BA /* SettingCurencyVC.swift in Sources */,
 				04947CC4287345DE00F01860 /* Updatable.swift in Sources */,
 				04947B92285BB3B400F01860 /* DashBoardSettingCell.swift in Sources */,
 				0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */,
 				04947CC02871B2A900F01860 /* ConfirmationVC.swift in Sources */,
+				0474D7DC288499B100FAA5BA /* StartMouthVC.swift in Sources */,
 				04947C3E286A37C900F01860 /* Categories.swift in Sources */,
 				0474D7AA2880ACA200FAA5BA /* RealmManager.swift in Sources */,
 				0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */,
+				0474D7E0288499C100FAA5BA /* FudsVC.swift in Sources */,
 				04947CB62870B2B000F01860 /* CreatePiggyBankVC.swift in Sources */,
 				04947CA62870902B00F01860 /* ReportVC.swift in Sources */,
 				04947C9D286E258200F01860 /* CreateLimitVC.swift in Sources */,
 				04947CB12870A28100F01860 /* ReportCell.swift in Sources */,
 				0474D7C8288408D000FAA5BA /* CardPiggyBankVC.swift in Sources */,
 				0474D7112873500200FAA5BA /* FilterVc.swift in Sources */,
+				0474D7E92884A17D00FAA5BA /* SettingCurencyCell.swift in Sources */,
 				0474D7C32883FE9D00FAA5BA /* ReplenishVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
