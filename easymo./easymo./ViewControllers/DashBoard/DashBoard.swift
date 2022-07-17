@@ -63,8 +63,8 @@ class DashBoard: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if RealmManager.read1().count > 0 {
-            downIcnomeLabel.text = "\(RealmManager.read1()[0].spendMoney)"
+        if RealmManager.readMoney().count > 0 {
+            downIcnomeLabel.text = "\(RealmManager.readMoney()[0].spendMoney)"
         }
     }
     

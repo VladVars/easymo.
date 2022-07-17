@@ -39,7 +39,7 @@ class ConfirmationVC: UIViewController {
         savePiggy.summPiggyBank = summLabel.text ?? ""
         savePiggy.namePiggyBank = goalLabel.text ?? ""
         
-        RealmManager.save3(object: savePiggy)
+        RealmManager.savePiggyBank(object: savePiggy)
         
         if savePiggy.summPiggyBank == summLabel.text, savePiggy.namePiggyBank == goalLabel.text {
             NotificationCenter.default.post(name: .createPiggy, object: nil)

@@ -8,9 +8,14 @@
 import Foundation
 import RealmSwift
 
+@objc final class ReplenishMoney: Object {
+//    SpendMoney
+    @objc dynamic var replenishMoney: String = ""
+    @objc dynamic var replenishTime: Date?
+}
 
 @objc final class Money: Object {
-//    Money
+//    SpendMoney
     @objc dynamic var replenishMoney: String = ""
     @objc dynamic var spendMoney: String = ""
     @objc dynamic var spendTime: Date?

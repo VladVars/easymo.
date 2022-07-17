@@ -40,6 +40,10 @@
                         <constraint firstAttribute="height" constant="112" id="For-yO-4F4"/>
                     </constraints>
                 </tableView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXE-cB-ne0">
+                    <rect key="frame" x="333" y="392.5" width="51" height="31"/>
+                    <color key="onTintColor" red="0.84705882349999995" green="0.34509803919999998" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </switch>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,9 +54,11 @@
                 <constraint firstItem="kcc-qB-bBA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LK8-aI-CDP"/>
                 <constraint firstItem="7sa-tk-CLl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SSl-Tg-guJ"/>
                 <constraint firstItem="g69-ne-l4n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UId-A5-hCY"/>
+                <constraint firstItem="qXE-cB-ne0" firstAttribute="top" secondItem="7sa-tk-CLl" secondAttribute="bottom" constant="92.5" id="cy6-vJ-3Vp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7sa-tk-CLl" secondAttribute="trailing" constant="16" id="pDo-o9-LmT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kcc-qB-bBA" secondAttribute="trailing" constant="16" id="puw-pr-3aC"/>
                 <constraint firstItem="kcc-qB-bBA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="uo6-9b-5H1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qXE-cB-ne0" secondAttribute="trailing" constant="32" id="z7Z-Ws-16h"/>
             </constraints>
             <point key="canvasLocation" x="139" y="94"/>
         </view>

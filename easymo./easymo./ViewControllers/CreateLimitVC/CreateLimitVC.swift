@@ -79,7 +79,7 @@ class CreateLimitVC: UIViewController {
         let saveLimit = Limit()
         saveLimit.limit = summField.text ?? ""
         saveLimit.limitTime = selectedDate
-        RealmManager.save2(object: saveLimit)
+        RealmManager.saveLimit(object: saveLimit)
         
         if saveLimit.limit == summField.text {
             NotificationCenter.default.post(name: .createLimit, object: nil)

@@ -85,7 +85,7 @@ enum SettingPointsTableTwo: CaseIterable {
         case .parametrInput:
             return UIImage(named: "right")
         case .notification:
-            return UIImage(named: "right")
+            return nil
         }
     }
 }
