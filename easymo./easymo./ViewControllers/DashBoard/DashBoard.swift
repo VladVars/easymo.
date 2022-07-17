@@ -55,6 +55,9 @@ class DashBoard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tapPiggyView = UITapGestureRecognizer(target: self, action: #selector(tapPiggy))
+        view.addGestureRecognizer(tapPiggyView)
+        
         setupCurentLimitView()
         setupPiggyView()
         setUIIcon()
@@ -63,9 +66,24 @@ class DashBoard: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
         if RealmManager.readMoney().count > 0 {
             downIcnomeLabel.text = "\(RealmManager.readMoney()[0].spendMoney)"
         }
+        
+        if RealmManager.readReplenishMoney().count > 0 {
+            upIncomeLabel.text = "\(RealmManager.readReplenishMoney()[0].replenishMoney)"
+            balance.text = "\(RealmManager.readReplenishMoney()[0].replenishMoney)"
+        }
+    }
+    
+    @objc func tapPiggy() {
+        let cardPiggy = CardPiggyBankVC(nibName: String(describing: CardPiggyBankVC.self), bundle: nil)
+        cardPiggy.curentSumm = currentSummPiggy
+        cardPiggy.totalSumm = totalSummPiggy
+        cardPiggy.namePiggy = namePiggy
+        present(cardPiggy, animated: true)
     }
     
     func setupCurentLimitView() {
@@ -105,6 +123,8 @@ class DashBoard: UIViewController {
     }
     
     @IBAction func topUpButtonAction(_ sender: Any) {
+        let replenishVC = ReplenishVC(nibName: String(describing: ReplenishVC.self), bundle: nil)
+        present(replenishVC, animated: true)
     }
     
     @IBAction func topUpPiggyAction(_ sender: Any) {

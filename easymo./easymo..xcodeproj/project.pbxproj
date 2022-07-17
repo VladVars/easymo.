@@ -32,6 +32,8 @@
 		0474D7BF2883FDFB00FAA5BA /* TopUpHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7BD2883FDFB00FAA5BA /* TopUpHistoryCell.xib */; };
 		0474D7C32883FE9D00FAA5BA /* ReplenishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7C12883FE9D00FAA5BA /* ReplenishVC.swift */; };
 		0474D7C42883FE9D00FAA5BA /* ReplenishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */; };
+		0474D7C8288408D000FAA5BA /* CardPiggyBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */; };
+		0474D7C9288408D000FAA5BA /* CardPiggyBankVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7C7288408D000FAA5BA /* CardPiggyBankVC.xib */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -99,6 +101,8 @@
 		0474D7BD2883FDFB00FAA5BA /* TopUpHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUpHistoryCell.xib; sourceTree = "<group>"; };
 		0474D7C12883FE9D00FAA5BA /* ReplenishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplenishVC.swift; sourceTree = "<group>"; };
 		0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplenishVC.xib; sourceTree = "<group>"; };
+		0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPiggyBankVC.swift; sourceTree = "<group>"; };
+		0474D7C7288408D000FAA5BA /* CardPiggyBankVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardPiggyBankVC.xib; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		0440DC1C285A60AB00D98BF1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7C52884089200FAA5BA /* CardPiggyBankVC */,
 				0474D7C02883FE3100FAA5BA /* ReplenishVC */,
 				0474D7692877632900FAA5BA /* InputVC */,
 				0474D76428775B5500FAA5BA /* OverLayVC */,
@@ -313,6 +318,15 @@
 				0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */,
 			);
 			path = ReplenishVC;
+			sourceTree = "<group>";
+		};
+		0474D7C52884089200FAA5BA /* CardPiggyBankVC */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */,
+				0474D7C7288408D000FAA5BA /* CardPiggyBankVC.xib */,
+			);
+			path = CardPiggyBankVC;
 			sourceTree = "<group>";
 		};
 		04762749284C1110003AE90F = {
@@ -615,6 +629,7 @@
 				04947CB22870A28100F01860 /* ReportCell.xib in Resources */,
 				04947CB72870B2B000F01860 /* CreatePiggyBankVC.xib in Resources */,
 				0474D76828775B7800FAA5BA /* OverLayVC.xib in Resources */,
+				0474D7C9288408D000FAA5BA /* CardPiggyBankVC.xib in Resources */,
 				0474D76D2877635C00FAA5BA /* InputVC.xib in Resources */,
 				04947B93285BB3B400F01860 /* DashBoardSettingCell.xib in Resources */,
 				04947B7F285BA42B00F01860 /* SettingVC.xib in Resources */,
@@ -707,6 +722,7 @@
 				04947CA62870902B00F01860 /* ReportVC.swift in Sources */,
 				04947C9D286E258200F01860 /* CreateLimitVC.swift in Sources */,
 				04947CB12870A28100F01860 /* ReportCell.swift in Sources */,
+				0474D7C8288408D000FAA5BA /* CardPiggyBankVC.swift in Sources */,
 				0474D7112873500200FAA5BA /* FilterVc.swift in Sources */,
 				0474D7C32883FE9D00FAA5BA /* ReplenishVC.swift in Sources */,
 			);
