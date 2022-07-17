@@ -17,6 +17,12 @@ class HistoryVC: UIViewController {
         }
     }
     
+    var replenish = RealmManager.readReplenishMoney().self {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     
     
     override func viewDidLoad() {
@@ -26,6 +32,8 @@ class HistoryVC: UIViewController {
         tableView.delegate = self
         
         tableView.register(UINib(nibName: String(describing: ReportCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReportCell.self))
+        
+        tableView.register(UINib(nibName: String(describing: TopUpHistoryCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TopUpHistoryCell.self))
     }
 
 
@@ -34,17 +42,24 @@ class HistoryVC: UIViewController {
 
 extension HistoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return money.count
+        return replenish.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
+//        let spendCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
+//
+//        spendCell.configureCell(summ: RealmManager.readMoney()[indexPath.row].spendMoney,
+//                           time: RealmManager.readMoney()[indexPath.row].spendTime!,
+//                           category: RealmManager.readMoney()[indexPath.row].category)
+//
+//        return spendCell
         
-        cell.configureCell(summ: RealmManager.readMoney()[indexPath.row].spendMoney,
-                           time: RealmManager.readMoney()[indexPath.row].spendTime!,
-                           category: RealmManager.readMoney()[indexPath.row].category)
+        let replenishCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TopUpHistoryCell.self), for: indexPath) as! TopUpHistoryCell
         
-        return cell
+        replenishCell.configureCell(summ: RealmManager.readReplenishMoney()[indexPath.row].replenishMoney,
+                           time: RealmManager.readReplenishMoney()[indexPath.row].replenishTime!)
+        
+        return replenishCell
     }
     
     

@@ -59,16 +59,22 @@ extension SettingVC: UITableViewDataSource, UITableViewDelegate {
             
         } else {
             
-            if indexPath.row % 2 == 0 {
-            
-            }
-            
             let twoCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TableViewTwoCell.self), for: indexPath) as! TableViewTwoCell
             twoCell.setupCellWith(settingPointsTwoTable[indexPath.row])
             
             return twoCell
         }
 
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = #colorLiteral(red: 0.8983810544, green: 0.9182998538, blue: 0.9308556914, alpha: 1)
+        
+        if tableView.tag == 0 {
+            if indexPath.row == 0 {
+                
+            }
+        }
     }
     
 }

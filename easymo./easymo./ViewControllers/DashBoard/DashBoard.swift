@@ -24,6 +24,11 @@ class DashBoard: UIViewController {
     @IBOutlet weak var statisticDownImage: UIImageView!
     @IBOutlet weak var piggyImage: UIImageView!
     
+    @IBOutlet weak var statisticImage2: UIImageView!
+    @IBOutlet weak var statisticImage3: UIImageView!
+    @IBOutlet weak var statisticImage1: UIImageView!
+    
+    
     
     @IBOutlet weak var namePiggy: UILabel!
     @IBOutlet weak var nameProgectLabel: UILabel!
@@ -56,7 +61,7 @@ class DashBoard: UIViewController {
         super.viewDidLoad()
         
         let tapPiggyView = UITapGestureRecognizer(target: self, action: #selector(tapPiggy))
-        view.addGestureRecognizer(tapPiggyView)
+        piggyView.addGestureRecognizer(tapPiggyView)
         
         setupCurentLimitView()
         setupPiggyView()
@@ -91,7 +96,6 @@ class DashBoard: UIViewController {
             addCurentLimitView()
         } else {
             curentLimitView.isHidden = true
-            
         }
         
     }
@@ -101,10 +105,8 @@ class DashBoard: UIViewController {
             addPiggyView()
         } else {
             piggyView.isHidden = true
-            
         }
     }
-    
     
     @objc func notificationImageDidTap() {
         let notificationVC = NotificationVC(nibName: String(describing: NotificationVC.self), bundle: nil)
@@ -120,6 +122,10 @@ class DashBoard: UIViewController {
         settingImage.image = UIImage.init(named: "SettingIcon")
         notificationImage.image = UIImage.init(named: "Notifications")
         piggyImage.image = UIImage.init(named: "ass-pig")
+        
+        statisticImage1.image = UIImage.init(named: "ic-cloth")
+        statisticImage3.image = UIImage.init(named: "transport")
+
     }
     
     @IBAction func topUpButtonAction(_ sender: Any) {

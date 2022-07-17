@@ -75,7 +75,7 @@
                 <outlet property="imageCell" destination="tic-Mv-Jz0" id="doq-qt-Ifa"/>
                 <outlet property="sumLabel" destination="d9B-H8-PdF" id="4Be-5G-BkH"/>
             </connections>
-            <point key="canvasLocation" x="112" y="66"/>
+            <point key="canvasLocation" x="111.59420289855073" y="65.625"/>
         </tableViewCell>
     </objects>
 </document>

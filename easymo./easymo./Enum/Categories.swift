@@ -10,7 +10,7 @@ import Foundation
 enum Categories: String, CaseIterable {
     case houseHold = "Быт"
     case payments = "Платежи"
-    case food = "Еда"
+    case food = "Продукты"
     case clothes = "Одежда"
     case transport = "Траспорт"
     case coffee = "Кафе"

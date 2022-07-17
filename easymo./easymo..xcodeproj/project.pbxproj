@@ -178,11 +178,11 @@
 				04947B9C2860F16F00F01860 /* SpendVC */,
 				04947B942860D2DB00F01860 /* NotificationDashBoardVC */,
 				04947B8A285BAE5C00F01860 /* SettingDashBoardVC */,
+				04947B7B285BA3F900F01860 /* SettingVC */,
 				04947B85285BAE0F00F01860 /* PiggyBankVC */,
 				04947B80285BADDA00F01860 /* HistoryVC */,
-				04947B7B285BA3F900F01860 /* SettingVC */,
-				0440DC22285A627000D98BF1 /* TabBarController */,
 				0440DC1D285A60BE00D98BF1 /* DashBoard */,
+				0440DC22285A627000D98BF1 /* TabBarController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

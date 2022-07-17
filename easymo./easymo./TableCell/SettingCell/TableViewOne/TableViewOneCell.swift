@@ -14,7 +14,7 @@ class TableViewOneCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     func setupCellWith(_ type: SettingPointsTableOne) {

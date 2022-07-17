@@ -56,7 +56,6 @@ class ReplenishVC: UIViewController {
         dismiss(animated: true)
     }
     
-    
     func textFieldMargen() {
         summImage.image = UIImage.init(named: "BYN")
         dateImage.image = UIImage.init(named: "ic-calendar")
