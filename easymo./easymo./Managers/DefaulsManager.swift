@@ -36,4 +36,13 @@ class DefaultsManager {
             defaults.set(newValue, forKey: #function)
         }
     }
+    
+//    static var isFirstLaunch: Bool {
+//        get {
+//            return defaults.value(forKey: #function) as? Bool ?? true
+//        }
+//        set {
+//            defaults.set(newValue, forKey: #function)
+//        }
+//    }
 }

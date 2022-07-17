@@ -21,22 +21,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aL-Ba-HL0">
-                    <rect key="frame" x="16" y="68" width="382" height="131"/>
+                    <rect key="frame" x="16" y="68" width="382" height="130.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расходы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14t-0k-JAi">
-                            <rect key="frame" x="16" y="38" width="69" height="21"/>
+                            <rect key="frame" x="16" y="38" width="69" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.58431372549019611" green="0.60392156862745094" blue="0.65490196078431373" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhf-7v-h7h">
-                            <rect key="frame" x="16" y="63" width="82.5" height="30"/>
+                            <rect key="frame" x="16" y="62.5" width="82.5" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-5C-lOK">
-                            <rect key="frame" x="106.5" y="73" width="31" height="18"/>
+                            <rect key="frame" x="106.5" y="72.5" width="31" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

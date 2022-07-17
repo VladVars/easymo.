@@ -19,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.scene = windowScene
         
+//        if DefaultsManager.isFirstLaunch {
+//            firsLaunch()
+//        } else {
+//            DefaultsManager.isFirstLaunch = false
+//        }
         if DefaultsManager.loginPassword {
             changeMainScreen()
         } else {
@@ -33,6 +38,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         self.scene = scene
     }
+//    @objc func firsLaunch() {
+//        guard let windowScene = scene else { return }
+//
+//        window = UIWindow(windowScene: windowScene)
+//        window?.windowScene = windowScene
+//        window?.rootViewController = UINavigationController(rootViewController: FirstInputVC(nibName: String(describing: FirstInputVC.self), bundle: nil))
+//        window?.makeKeyAndVisible()
+//    }
     
     @objc private func changeMainScreen() {
         guard let windowScene = scene else { return }
@@ -48,6 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(changeMainScreen), name: .loginSuccess, object: nil)
         
     }
+    
 
     private func createOvaerLayWindow() {
         

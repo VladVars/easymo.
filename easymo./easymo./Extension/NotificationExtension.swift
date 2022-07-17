@@ -11,5 +11,5 @@ extension Notification.Name {
     static let loginSuccess = Notification.Name("loginSuccess")
     static let createLimit = Notification.Name("createLimit")
     static let createPiggy = Notification.Name("createPiggy")
-
+    
 }

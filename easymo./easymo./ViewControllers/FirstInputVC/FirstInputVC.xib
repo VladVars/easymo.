@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstInputVC" customModule="easymo_" customModuleProvider="target">
+            <connections>
+                <outlet property="goButton" destination="RYf-dv-KWd" id="bu0-pv-4vD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="easymo." translatesAutoresizingMaskIntoConstraints="NO" id="0dS-iS-0lS">
+                    <rect key="frame" x="138.5" y="55.5" width="137" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="137" id="efZ-lx-Sbv"/>
+                        <constraint firstAttribute="height" constant="41" id="jjN-hK-r9h"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ass-pig" translatesAutoresizingMaskIntoConstraints="NO" id="lvl-Tn-2Fn">
+                    <rect key="frame" x="107" y="271.5" width="200" height="156"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="156" id="4UM-dt-SxR"/>
+                        <constraint firstAttribute="width" constant="200" id="Efo-hg-Deo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB5-cX-dWW">
+                    <rect key="frame" x="16" y="459.5" width="382" height="25.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Перед использованием приложения давайте настроим ПИН-код для входа. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKb-TL-x0T">
+                    <rect key="frame" x="40" y="493" width="334" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-dv-KWd">
+                    <rect key="frame" x="121.5" y="569" width="171" height="48"/>
+                    <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="0x6-hn-62e"/>
+                        <constraint firstAttribute="width" constant="171" id="Adr-n9-iOn"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Начать"/>
+                    <connections>
+                        <action selector="goAction:" destination="-1" eventType="touchUpInside" id="taS-hK-LAa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OB5-cX-dWW" firstAttribute="top" secondItem="lvl-Tn-2Fn" secondAttribute="bottom" constant="32" id="6z9-V1-kfJ"/>
+                <constraint firstItem="NKb-TL-x0T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="9ho-fw-TP9"/>
+                <constraint firstItem="0dS-iS-0lS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="11.5" id="BWY-lT-O98"/>
+                <constraint firstItem="lvl-Tn-2Fn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Dtb-7y-fOb"/>
+                <constraint firstItem="RYf-dv-KWd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Fix-xq-PFo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NKb-TL-x0T" secondAttribute="trailing" constant="40" id="YNc-Ou-oUx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OB5-cX-dWW" secondAttribute="trailing" constant="16" id="Zda-e9-yN4"/>
+                <constraint firstItem="0dS-iS-0lS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gvO-IV-xe9"/>
+                <constraint firstItem="lvl-Tn-2Fn" firstAttribute="top" secondItem="0dS-iS-0lS" secondAttribute="bottom" constant="175" id="kEi-Ri-ZpX"/>
+                <constraint firstItem="OB5-cX-dWW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="oVf-tP-AC9"/>
+                <constraint firstItem="NKb-TL-x0T" firstAttribute="top" secondItem="OB5-cX-dWW" secondAttribute="bottom" constant="8" id="sfY-EB-rlG"/>
+                <constraint firstItem="RYf-dv-KWd" firstAttribute="top" secondItem="NKb-TL-x0T" secondAttribute="bottom" constant="40" id="yIS-Mi-RqE"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ass-pig" width="200" height="157"/>
+        <image name="easymo." width="134" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -42,24 +42,24 @@ class HistoryVC: UIViewController {
 
 extension HistoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return replenish.count
+        return money.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let spendCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
+        let spendCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
+        
+        spendCell.configureCell(summ: RealmManager.readMoney()[indexPath.row].spendMoney,
+                           time: RealmManager.readMoney()[indexPath.row].spendTime!,
+                           category: RealmManager.readMoney()[indexPath.row].category)
+
+        return spendCell
+        
+//        let replenishCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TopUpHistoryCell.self), for: indexPath) as! TopUpHistoryCell
 //
-//        spendCell.configureCell(summ: RealmManager.readMoney()[indexPath.row].spendMoney,
-//                           time: RealmManager.readMoney()[indexPath.row].spendTime!,
-//                           category: RealmManager.readMoney()[indexPath.row].category)
+//        replenishCell.configureCell(summ: RealmManager.readReplenishMoney()[indexPath.row].replenishMoney,
+//                           time: RealmManager.readReplenishMoney()[indexPath.row].replenishTime!)
 //
-//        return spendCell
-        
-        let replenishCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TopUpHistoryCell.self), for: indexPath) as! TopUpHistoryCell
-        
-        replenishCell.configureCell(summ: RealmManager.readReplenishMoney()[indexPath.row].replenishMoney,
-                           time: RealmManager.readReplenishMoney()[indexPath.row].replenishTime!)
-        
-        return replenishCell
+//        return replenishCell
     }
     
     

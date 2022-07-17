@@ -27,7 +27,7 @@ class DashBoard: UIViewController {
     @IBOutlet weak var statisticImage2: UIImageView!
     @IBOutlet weak var statisticImage3: UIImageView!
     @IBOutlet weak var statisticImage1: UIImageView!
-    
+    @IBOutlet weak var divider: UIImageView!
     
     
     @IBOutlet weak var namePiggy: UILabel!
@@ -71,8 +71,9 @@ class DashBoard: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        
+        if RealmManager.readLimit().count > 0 {
+            totalSummLimitLabel.text = "\(RealmManager.readLimit()[0].limit)"
+        }
         if RealmManager.readMoney().count > 0 {
             downIcnomeLabel.text = "\(RealmManager.readMoney()[0].spendMoney)"
         }
@@ -81,6 +82,12 @@ class DashBoard: UIViewController {
             upIncomeLabel.text = "\(RealmManager.readReplenishMoney()[0].replenishMoney)"
             balance.text = "\(RealmManager.readReplenishMoney()[0].replenishMoney)"
         }
+    }
+    
+    func progressBar() {
+        guard let summLimit = curentSummLimitLabel.text else { return  }
+        guard let summLimitInt = Float(summLimit) else { return }
+        limitProgress.setProgress(summLimitInt, animated: true)
     }
     
     @objc func tapPiggy() {
@@ -117,6 +124,7 @@ class DashBoard: UIViewController {
         present(settingVC, animated: true)
     }
     private func setUIIcon() {
+        divider.image = UIImage.init(named: "divider")
         statisticUPImage.image = UIImage.init(named: "upIncome")
         statisticDownImage.image = UIImage.init(named: "downIncome")
         settingImage.image = UIImage.init(named: "SettingIcon")

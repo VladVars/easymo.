@@ -18,7 +18,6 @@
 		0474D76D2877635C00FAA5BA /* InputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D76B2877635C00FAA5BA /* InputVC.xib */; };
 		0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D76E2877638A00FAA5BA /* PasswordState.swift */; };
 		0474D772287C0A2400FAA5BA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D771287C0A2400FAA5BA /* RoundButton.swift */; };
-		0474D778287C286200FAA5BA /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D777287C286200FAA5BA /* Passcode.swift */; };
 		0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D779287C28FD00FAA5BA /* Pin.swift */; };
 		0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D79E2880945800FAA5BA /* DefaulsManager.swift */; };
 		0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */; };
@@ -34,6 +33,9 @@
 		0474D7C42883FE9D00FAA5BA /* ReplenishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */; };
 		0474D7C8288408D000FAA5BA /* CardPiggyBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */; };
 		0474D7C9288408D000FAA5BA /* CardPiggyBankVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7C7288408D000FAA5BA /* CardPiggyBankVC.xib */; };
+		0474D7CC2884396A00FAA5BA /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7CB2884396A00FAA5BA /* CircleProgress.swift */; };
+		0474D7D028845E6200FAA5BA /* FirstInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7CE28845E6200FAA5BA /* FirstInputVC.swift */; };
+		0474D7D128845E6200FAA5BA /* FirstInputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7CF28845E6200FAA5BA /* FirstInputVC.xib */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -87,7 +89,6 @@
 		0474D76B2877635C00FAA5BA /* InputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputVC.xib; sourceTree = "<group>"; };
 		0474D76E2877638A00FAA5BA /* PasswordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordState.swift; sourceTree = "<group>"; };
 		0474D771287C0A2400FAA5BA /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		0474D777287C286200FAA5BA /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		0474D779287C28FD00FAA5BA /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		0474D79E2880945800FAA5BA /* DefaulsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaulsManager.swift; sourceTree = "<group>"; };
 		0474D7A1288094AD00FAA5BA /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
@@ -103,6 +104,9 @@
 		0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplenishVC.xib; sourceTree = "<group>"; };
 		0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPiggyBankVC.swift; sourceTree = "<group>"; };
 		0474D7C7288408D000FAA5BA /* CardPiggyBankVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardPiggyBankVC.xib; sourceTree = "<group>"; };
+		0474D7CB2884396A00FAA5BA /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		0474D7CE28845E6200FAA5BA /* FirstInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInputVC.swift; sourceTree = "<group>"; };
+		0474D7CF28845E6200FAA5BA /* FirstInputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstInputVC.xib; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		0440DC1C285A60AB00D98BF1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7CD28845E1F00FAA5BA /* FirstInputVC */,
 				0474D7C52884089200FAA5BA /* CardPiggyBankVC */,
 				0474D7C02883FE3100FAA5BA /* ReplenishVC */,
 				0474D7692877632900FAA5BA /* InputVC */,
@@ -227,8 +232,6 @@
 			children = (
 				0474D76A2877635C00FAA5BA /* InputVC.swift */,
 				0474D76B2877635C00FAA5BA /* InputVC.xib */,
-				0474D777287C286200FAA5BA /* Passcode.swift */,
-				0474D779287C28FD00FAA5BA /* Pin.swift */,
 			);
 			path = InputVC;
 			sourceTree = "<group>";
@@ -329,6 +332,24 @@
 			path = CardPiggyBankVC;
 			sourceTree = "<group>";
 		};
+		0474D7CA2884394100FAA5BA /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0474D779287C28FD00FAA5BA /* Pin.swift */,
+				0474D7CB2884396A00FAA5BA /* CircleProgress.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		0474D7CD28845E1F00FAA5BA /* FirstInputVC */ = {
+			isa = PBXGroup;
+			children = (
+				0474D7CE28845E6200FAA5BA /* FirstInputVC.swift */,
+				0474D7CF28845E6200FAA5BA /* FirstInputVC.xib */,
+			);
+			path = FirstInputVC;
+			sourceTree = "<group>";
+		};
 		04762749284C1110003AE90F = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +371,7 @@
 		04762754284C1110003AE90F /* easymo. */ = {
 			isa = PBXGroup;
 			children = (
+				0474D7CA2884394100FAA5BA /* UIView */,
 				0474D7AB2880ACBA00FAA5BA /* Model */,
 				0474D7A02880949A00FAA5BA /* Extension */,
 				0474D79D2880943D00FAA5BA /* Managers */,
@@ -622,6 +644,7 @@
 				04947C43286A3D8500F01860 /* LimitVC.xib in Resources */,
 				0440DC21285A60FE00D98BF1 /* DashBoard.xib in Resources */,
 				04947B84285BAE0A00F01860 /* HistoryVC.xib in Resources */,
+				0474D7D128845E6200FAA5BA /* FirstInputVC.xib in Resources */,
 				04947B89285BAE5300F01860 /* PiggyBankVC.xib in Resources */,
 				04947CBC2871AE1100F01860 /* SpendPiggyVC.xib in Resources */,
 				04947C9E286E258200F01860 /* CreateLimitVC.xib in Resources */,
@@ -703,9 +726,10 @@
 				0474D76C2877635C00FAA5BA /* InputVC.swift in Sources */,
 				0474D7AD2880AD4200FAA5BA /* Money.swift in Sources */,
 				0440DC24285A62AC00D98BF1 /* TabBarController.swift in Sources */,
+				0474D7CC2884396A00FAA5BA /* CircleProgress.swift in Sources */,
+				0474D7D028845E6200FAA5BA /* FirstInputVC.swift in Sources */,
 				04947B9B2860EC2000F01860 /* SettingPoints.swift in Sources */,
 				04947CBB2871AE1100F01860 /* SpendPiggyVC.swift in Sources */,
-				0474D778287C286200FAA5BA /* Passcode.swift in Sources */,
 				0474D7B82882EDAC00FAA5BA /* TableViewTwoCell.swift in Sources */,
 				0474D7A2288094AD00FAA5BA /* NotificationExtension.swift in Sources */,
 				0474D79F2880945800FAA5BA /* DefaulsManager.swift in Sources */,
