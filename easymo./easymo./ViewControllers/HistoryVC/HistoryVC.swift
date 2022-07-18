@@ -17,14 +17,7 @@ class HistoryVC: UIViewController {
         }
     }
     
-    var replenish = RealmManager.readReplenishMoney().self {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,9 +28,7 @@ class HistoryVC: UIViewController {
         
         tableView.register(UINib(nibName: String(describing: TopUpHistoryCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TopUpHistoryCell.self))
     }
-
-
-
+    
 }
 
 extension HistoryVC: UITableViewDataSource {
@@ -48,22 +39,14 @@ extension HistoryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let spendCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReportCell.self), for: indexPath) as! ReportCell
         
-        spendCell.configureCell(summ: RealmManager.readMoney()[indexPath.row].spendMoney,
-                           time: RealmManager.readMoney()[indexPath.row].spendTime!,
-                           category: RealmManager.readMoney()[indexPath.row].category)
+        spendCell.configureCell(item: RealmManager.readMoney()[indexPath.row])
 
         return spendCell
         
-//        let replenishCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TopUpHistoryCell.self), for: indexPath) as! TopUpHistoryCell
-//
-//        replenishCell.configureCell(summ: RealmManager.readReplenishMoney()[indexPath.row].replenishMoney,
-//                           time: RealmManager.readReplenishMoney()[indexPath.row].replenishTime!)
-//
-//        return replenishCell
     }
-    
-    
 }
 extension HistoryVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

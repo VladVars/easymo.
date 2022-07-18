@@ -21,6 +21,7 @@ class SegmentVC: UIViewController {
         super.viewDidLoad()
         filterImage.image = UIImage.init(named: "ic-filter")
         
+        
         let filterTap = UITapGestureRecognizer(target: self, action: #selector(filterImageDidTap))
         filterImage.addGestureRecognizer(filterTap)
         filterImage.isUserInteractionEnabled = true
@@ -28,6 +29,7 @@ class SegmentVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         setupController()
+        segmetControl.selectedSegmentIndex = 0
 
     }
     

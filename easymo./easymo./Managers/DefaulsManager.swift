@@ -36,6 +36,14 @@ class DefaultsManager {
             defaults.set(newValue, forKey: #function)
         }
     }
+    static var faceID: Bool {
+        get {
+            return defaults.value(forKey: #function) as? Bool ?? false
+        }
+        set {
+            defaults.set(newValue, forKey: #function)
+        }
+    }
     
 //    static var isFirstLaunch: Bool {
 //        get {

@@ -68,26 +68,15 @@ class DashBoard: UIViewController {
         setUIIcon()
         setupUI()
         notification()
+        progressBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if RealmManager.readLimit().count > 0 {
-            totalSummLimitLabel.text = "\(RealmManager.readLimit()[0].limit)"
-        }
-        if RealmManager.readMoney().count > 0 {
-            downIcnomeLabel.text = "\(RealmManager.readMoney()[0].spendMoney)"
-        }
-        
-        if RealmManager.readReplenishMoney().count > 0 {
-            upIncomeLabel.text = "\(RealmManager.readReplenishMoney()[0].replenishMoney)"
-            balance.text = "\(RealmManager.readReplenishMoney()[0].replenishMoney)"
-        }
+        update()
     }
     
     func progressBar() {
-        guard let summLimit = curentSummLimitLabel.text else { return  }
-        guard let summLimitInt = Float(summLimit) else { return }
-        limitProgress.setProgress(summLimitInt, animated: true)
+       
     }
     
     @objc func tapPiggy() {
@@ -133,16 +122,18 @@ class DashBoard: UIViewController {
         
         statisticImage1.image = UIImage.init(named: "ic-cloth")
         statisticImage3.image = UIImage.init(named: "transport")
-
+        
     }
     
     @IBAction func topUpButtonAction(_ sender: Any) {
         let replenishVC = ReplenishVC(nibName: String(describing: ReplenishVC.self), bundle: nil)
+        replenishVC.delegate = self
         present(replenishVC, animated: true)
     }
     
     @IBAction func topUpPiggyAction(_ sender: Any) {
         let spendPiggyVC = SpendPiggyVC(nibName: String(describing: SpendPiggyVC.self), bundle: nil)
+        
         present(spendPiggyVC, animated: true)
     }
     
@@ -161,12 +152,15 @@ class DashBoard: UIViewController {
     
     
     @IBAction func piggyStartButton(_ sender: Any) {
+        let confirm = ConfirmationVC()
         let createPiggyBank = CreatePiggyBankVC(nibName: String(describing: CreatePiggyBankVC.self), bundle: nil)
+        confirm.delegat = self
         present(createPiggyBank, animated: true)
     }
     
     @IBAction func changeLimitAction(_ sender: Any) {
         let limit = CreateLimitVC(nibName: String(describing: CreateLimitVC.self), bundle: nil)
+        limit.delegate = self
         present(limit, animated: true)
     }
     
@@ -216,13 +210,47 @@ class DashBoard: UIViewController {
     
     @objc func addCurentLimitView() {
         curentLimitView.isHidden = false
+        
     }
     @objc func addPiggyView() {
         piggyView.isHidden = false
+        namePiggy.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
+        totalSummPiggy.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
     }
     
 }
-extension DashBoard: Updaeble {
+extension DashBoard: Update {
+    func update() {
+        if RealmManager.readLimit().count > 0 {
+            totalSummLimitLabel.text = "\(RealmManager.readLimit()[0].limit)"
+        }
+        
+        if RealmManager.readMoney().count > 0 {
+            var summSpend = 0
+            var summReplenish = 0
+            
+            for item in RealmManager.readMoney() {
+                if item.isSpendMoney {
+                    summSpend += item.spendMoney
+                    summReplenish -= item.spendMoney
+                } else {
+                    summReplenish += item.spendMoney
+                }
+            }
+            statisticLabel.text = "\(summSpend)"
+            curentSummLimitLabel.text = "\(summSpend)"
+            upIncomeLabel.text = "\(summReplenish)"
+            downIcnomeLabel.text = "\(summSpend)"
+            balance.text = "\(summReplenish)"
+        }
+        
+        if RealmManager.readPiggyBank().count > 0 {
+            namePiggy.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
+            totalSummPiggy.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
+        }
+        
+    }
+    
     func updataText(text: String) {
         
     }
@@ -242,3 +270,4 @@ extension DashBoard: Updaeble {
 //moneyProgress.setProgress(moneyPercent, animated: true)
 //
 //salaryLabel.text = "Зарплата за день: \(person.salary) руб."
+//upIncomeLabel.text = "\(RealmManager.readMoney().filter({!$0.isSpendMoney}).first?.spendMoney ?? 0)"

@@ -13,7 +13,7 @@ class FirstInputVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         goButton.layer.cornerRadius = 12
-        
+
     }
 
     @IBAction func goAction(_ sender: Any) {

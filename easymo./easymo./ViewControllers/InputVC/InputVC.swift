@@ -17,7 +17,6 @@ class InputVC: UIViewController {
     
     let context = LAContext()
     
-    
     var passwordText = "" {
         didSet {
             updateStack(by: passwordText)
@@ -147,10 +146,12 @@ class InputVC: UIViewController {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate to proceed.") { (success, error) in
                 if success {
                     DispatchQueue.main.async {
-                        // Что-то сделать
-                        NotificationCenter.default.post(name: .loginSuccess, object: nil)
-                        DefaultsManager.loginPassword = true
-                        self.dismiss(animated: true, completion: nil)
+                        if DefaultsManager.faceID == true {
+                            NotificationCenter.default.post(name: .loginSuccess, object: nil)
+                            DefaultsManager.loginPassword = true
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                       
                     }
                 } else {
                     guard let error = error else { return }

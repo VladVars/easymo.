@@ -29,10 +29,21 @@ class SettingVC: UIViewController {
         tableViewOne.tag = 0
         tableViewTwo.tag = 1
         
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.9158933759, green: 0.2990999222, blue: 0.5363475084, alpha: 1)
+        
         tableViewOne.register(UINib(nibName: String(describing: TableViewOneCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TableViewOneCell.self))
 
         
         tableViewTwo.register(UINib(nibName: String(describing: TableViewTwoCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TableViewTwoCell.self))
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
 }
@@ -74,10 +85,24 @@ extension SettingVC: UITableViewDataSource, UITableViewDelegate {
         if tableView.tag == 0 {
             
             if indexPath.row == 0 {
-                let filter = FirstInputVC(nibName: String(describing: FirstInputVC.self), bundle: nil)
+                let filter = SettingCurencyVC(nibName: String(describing: SettingCurencyVC.self), bundle: nil)
+                navigationController?.pushViewController(filter, animated: true)
+            } else if indexPath.row == 1 {
+                let filter = StartMouthVC(nibName: String(describing: StartMouthVC.self), bundle: nil)
+                navigationController?.pushViewController(filter, animated: true)
+            } else {
+                let filter = FudsVC(nibName: String(describing: FudsVC.self), bundle: nil)
                 navigationController?.pushViewController(filter, animated: true)
             }
+        } else {
+            if indexPath.row == 0 {
+                let filter = ParametrsInputVC(nibName: String(describing: ParametrsInputVC.self), bundle: nil)
+                navigationController?.pushViewController(filter, animated: true)
+            } else {
+                
+            }
         }
+    
     }
     
 }

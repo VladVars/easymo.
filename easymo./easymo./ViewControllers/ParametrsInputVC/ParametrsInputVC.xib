@@ -21,14 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Параметры входа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drd-wA-Gig">
-                    <rect key="frame" x="134" y="62" width="146.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcl-Vm-fF5">
-                    <rect key="frame" x="16" y="117" width="382" height="56"/>
+                    <rect key="frame" x="16" y="64" width="382" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Использовать Face ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2Z-Gs-PNw">
                             <rect key="frame" x="16" y="17" width="176.5" height="22"/>
@@ -36,7 +30,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bik-ot-kn0">
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bik-ot-kn0">
                             <rect key="frame" x="317" y="12.5" width="51" height="31"/>
                             <color key="onTintColor" red="0.84705882349999995" green="0.34509803919999998" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -55,14 +49,14 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-cb-hSm">
-                    <rect key="frame" x="32" y="181" width="350" height="62.5"/>
+                    <rect key="frame" x="32" y="128" width="350" height="62.5"/>
                     <string key="text">По умолчанию приложение будет использовать функцию ПИН-кода для предоставления доступа. Включите эту функцию, чтобы использовать Face ID в качестве подтверждения личности</string>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-l1-SbT">
-                    <rect key="frame" x="16" y="267.5" width="382" height="56"/>
+                    <rect key="frame" x="16" y="214.5" width="382" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сменить ПИН-код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8D-ej-mtW">
                             <rect key="frame" x="16" y="17" width="150.5" height="22"/>
@@ -95,12 +89,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ibZ-cb-hSm" secondAttribute="trailing" constant="32" id="0ta-mL-Is3"/>
                 <constraint firstItem="ibZ-cb-hSm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="2wh-aR-Zwo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jcl-Vm-fF5" secondAttribute="trailing" constant="16" id="7hz-3o-3nn"/>
+                <constraint firstItem="jcl-Vm-fF5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="COI-ZU-K7z"/>
                 <constraint firstItem="EHw-l1-SbT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Cfr-1X-ww8"/>
-                <constraint firstItem="drd-wA-Gig" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="giE-rM-2O4"/>
                 <constraint firstItem="ibZ-cb-hSm" firstAttribute="top" secondItem="jcl-Vm-fF5" secondAttribute="bottom" constant="8" id="hVz-Ou-0NQ"/>
-                <constraint firstItem="jcl-Vm-fF5" firstAttribute="top" secondItem="drd-wA-Gig" secondAttribute="bottom" constant="34" id="k64-pS-duv"/>
                 <constraint firstItem="jcl-Vm-fF5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mKp-3z-R5I"/>
-                <constraint firstItem="drd-wA-Gig" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="mfq-rt-rz9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EHw-l1-SbT" secondAttribute="trailing" constant="16" id="ntf-pP-8fb"/>
                 <constraint firstItem="EHw-l1-SbT" firstAttribute="top" secondItem="ibZ-cb-hSm" secondAttribute="bottom" constant="24" id="rps-fa-1Rg"/>
             </constraints>

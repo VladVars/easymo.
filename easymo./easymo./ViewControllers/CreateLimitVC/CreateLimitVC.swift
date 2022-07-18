@@ -20,6 +20,7 @@ class CreateLimitVC: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
+    weak var delegate: Update?
     
     private var piker = UIDatePicker()
     private var selectedDate: Date?
@@ -77,19 +78,21 @@ class CreateLimitVC: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         
         let saveLimit = Limit()
-        saveLimit.limit = summField.text ?? ""
+        guard let limit = Int(summField.text ?? "") else { return }
+        
+        saveLimit.limit = limit
         saveLimit.limitTime = selectedDate
         RealmManager.saveLimit(object: saveLimit)
         
-        if saveLimit.limit == summField.text {
+        if saveLimit.limit == limit {
             NotificationCenter.default.post(name: .createLimit, object: nil)
             DefaultsManager.createLimit = true
         }
         
+        delegate?.update()
         summField.text = ""
         dateField.text = ""
         
-        dismissKeyboard()
     }
     
     @IBAction func cancelAction(_ sender: Any) {

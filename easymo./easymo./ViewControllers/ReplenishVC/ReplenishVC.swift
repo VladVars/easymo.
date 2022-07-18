@@ -18,6 +18,7 @@ class ReplenishVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancellationButton: UIButton!
     
+    weak var delegate: Update?
     
     private var piker = UIDatePicker()
     private var selectedDate: Date?
@@ -44,15 +45,24 @@ class ReplenishVC: UIViewController {
     
     
     @IBAction func saveAction(_ sender: Any) {
-        let saveReplenish = ReplenishMoney()
-        saveReplenish.replenishMoney = summField.text ?? ""
-        saveReplenish.replenishTime = selectedDate
+        let saveReplenish = Money()
+        guard let summ = Int(summField.text ?? "") else { return }
+        saveReplenish.isSpendMoney = false
+        saveReplenish.spendMoney = summ
+        saveReplenish.spendTime = selectedDate
+        saveReplenish.category = "Мой кошелек"
         
-        RealmManager.saveReplenishMoney(object: saveReplenish)
+        RealmManager.saveMoney(object: saveReplenish)
         
+        summField.text = ""
+        dateField.text = ""
+        
+        delegate?.update()
+
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        delegate?.update()
         dismiss(animated: true)
     }
     
@@ -76,6 +86,10 @@ class ReplenishVC: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
         dateField.text = formatter.string(from: piker.date)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
 }

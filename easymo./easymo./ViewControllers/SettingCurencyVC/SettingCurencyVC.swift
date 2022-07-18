@@ -9,21 +9,37 @@ import UIKit
 
 class SettingCurencyVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var settingPoints = SettingPointsCurency.allCases
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Валюта"
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.layer.cornerRadius = 14
+        
+        tableView.register(UINib(nibName: String(describing: SettingCurencyCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SettingCurencyCell.self))
+        
     }
 
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SettingCurencyVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return settingPoints.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SettingCurencyCell.self), for: indexPath) as! SettingCurencyCell
+        
+        cell.setupCellWith(settingPoints[indexPath.row])
+        
+        return cell
+    }
+    
+    
 }

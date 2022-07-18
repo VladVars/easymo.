@@ -15,6 +15,8 @@ class StartMouthVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Начало месяца"
+        
         numberField.delegate = self
         
         numberField.layer.cornerRadius = 8

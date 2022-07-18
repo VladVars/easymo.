@@ -12,11 +12,6 @@ import RealmSwift
 final class RealmManager {
     private static let realm = try! Realm()
     
-    static func readReplenishMoney() -> [ReplenishMoney] {
-        let result = realm.objects(ReplenishMoney.self)
-        return Array(result)
-    }
-    
     static func readMoney() -> [Money] {
         let result = realm.objects(Money.self)
         return Array(result)
@@ -28,12 +23,6 @@ final class RealmManager {
     static func readPiggyBank() -> [PiggyBank] {
         let result = realm.objects(PiggyBank.self)
         return Array(result)
-    }
-    
-    static func saveReplenishMoney(object: ReplenishMoney) {
-       try? realm.write {
-           realm.add(object)
-        }
     }
     
     static func saveMoney(object: Money) {

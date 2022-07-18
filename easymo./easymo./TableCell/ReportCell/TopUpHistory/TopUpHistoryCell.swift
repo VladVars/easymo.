@@ -26,7 +26,6 @@ class TopUpHistoryCell: UITableViewCell {
 
     func configureCell(summ: String, time: Date, category: String = "Мой кошелек") {
         sumLabel.text = summ
-        sumLabel.textColor = #colorLiteral(red: 0.1058823529, green: 0.7294117647, blue: 0.431372549, alpha: 1)
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
         dateLabel.text = formatter.string(from: time)

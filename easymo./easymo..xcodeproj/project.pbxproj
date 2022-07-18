@@ -46,6 +46,7 @@
 		0474D7E5288499D300FAA5BA /* ParametrsInputVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7E3288499D300FAA5BA /* ParametrsInputVC.xib */; };
 		0474D7E92884A17D00FAA5BA /* SettingCurencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */; };
 		0474D7EA2884A17D00FAA5BA /* SettingCurencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */; };
+		0474D7EC2885788600FAA5BA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7EB2885788600FAA5BA /* NotificationManager.swift */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -83,7 +84,7 @@
 		04947CBC2871AE1100F01860 /* SpendPiggyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04947CBA2871AE1100F01860 /* SpendPiggyVC.xib */; };
 		04947CC02871B2A900F01860 /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04947CBE2871B2A900F01860 /* ConfirmationVC.swift */; };
 		04947CC12871B2A900F01860 /* ConfirmationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04947CBF2871B2A900F01860 /* ConfirmationVC.xib */; };
-		04947CC4287345DE00F01860 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04947CC3287345DE00F01860 /* Updatable.swift */; };
+		04947CC4287345DE00F01860 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04947CC3287345DE00F01860 /* Update.swift */; };
 		1E310CD2B1FE8F1D54D5CA26 /* Pods_easymo_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4994769393401489B5DB4BA /* Pods_easymo_.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		0474D7E3288499D300FAA5BA /* ParametrsInputVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParametrsInputVC.xib; sourceTree = "<group>"; };
 		0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCurencyCell.swift; sourceTree = "<group>"; };
 		0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCurencyCell.xib; sourceTree = "<group>"; };
+		0474D7EB2885788600FAA5BA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +168,7 @@
 		04947CBA2871AE1100F01860 /* SpendPiggyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpendPiggyVC.xib; sourceTree = "<group>"; };
 		04947CBE2871B2A900F01860 /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
 		04947CBF2871B2A900F01860 /* ConfirmationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationVC.xib; sourceTree = "<group>"; };
-		04947CC3287345DE00F01860 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		04947CC3287345DE00F01860 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		058A066785F16C2425D34116 /* Pods-easymo..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easymo..debug.xcconfig"; path = "Target Support Files/Pods-easymo./Pods-easymo..debug.xcconfig"; sourceTree = "<group>"; };
 		E4994769393401489B5DB4BA /* Pods_easymo_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_easymo_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BF25BF5240E0E949D8A890 /* Pods-easymo..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easymo..release.xcconfig"; path = "Target Support Files/Pods-easymo./Pods-easymo..release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				0474D79E2880945800FAA5BA /* DefaulsManager.swift */,
 				0474D7A92880ACA200FAA5BA /* RealmManager.swift */,
+				0474D7EB2885788600FAA5BA /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -618,7 +621,7 @@
 		04947CC2287345A400F01860 /* Protokol */ = {
 			isa = PBXGroup;
 			children = (
-				04947CC3287345DE00F01860 /* Updatable.swift */,
+				04947CC3287345DE00F01860 /* Update.swift */,
 			);
 			path = Protokol;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				04947B8D285BAE9900F01860 /* SettingDashBoardVC.swift in Sources */,
 				0440DC20285A60FE00D98BF1 /* DashBoard.swift in Sources */,
 				04947C42286A3D8500F01860 /* LimitVC.swift in Sources */,
+				0474D7EC2885788600FAA5BA /* NotificationManager.swift in Sources */,
 				04947B7E285BA42B00F01860 /* SettingVC.swift in Sources */,
 				04947B88285BAE5300F01860 /* PiggyBankVC.swift in Sources */,
 				0474D76C2877635C00FAA5BA /* InputVC.swift in Sources */,
@@ -812,7 +816,7 @@
 				0474D76728775B7800FAA5BA /* OverLayVC.swift in Sources */,
 				04762758284C1110003AE90F /* SceneDelegate.swift in Sources */,
 				0474D7D8288499A100FAA5BA /* SettingCurencyVC.swift in Sources */,
-				04947CC4287345DE00F01860 /* Updatable.swift in Sources */,
+				04947CC4287345DE00F01860 /* Update.swift in Sources */,
 				04947B92285BB3B400F01860 /* DashBoardSettingCell.swift in Sources */,
 				0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */,
 				04947CC02871B2A900F01860 /* ConfirmationVC.swift in Sources */,

@@ -89,3 +89,36 @@ enum SettingPointsTableTwo: CaseIterable {
         }
     }
 }
+
+enum SettingPointsCurency: CaseIterable {
+    case byn
+    case dollar
+    case euro
+    case rudl
+    
+    var settingText: String {
+        switch self {
+        case .byn:
+            return "BYN Белорусский рубль"
+        case .dollar:
+            return "$ Dollar"
+        case .euro:
+            return "€ Euro"
+        case .rudl:
+            return "₽ Рубль"
+        }
+    }
+    
+    var settingImage: UIImage? {
+        switch self {
+        case .byn:
+            return UIImage(named: "ic-checkmark")
+        case .dollar:
+            return UIImage(named: "ic-checkmark")
+        case .euro:
+            return UIImage(named: "ic-checkmark")
+        case .rudl:
+            return UIImage(named: "ic-checkmark")
+        }
+    }
+}

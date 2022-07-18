@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingCurencyVC" customModule="easymo_" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="dsd-fd-LIa" id="kLk-5Z-8G6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,20 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Валюта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHp-Jr-K3Z">
-                    <rect key="frame" x="176.5" y="62" width="61" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбранная валюта будет отображаться в приложении как основная валюта доходов и расходов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYX-bC-JOI">
-                    <rect key="frame" x="32" y="117" width="350" height="47"/>
+                    <rect key="frame" x="32" y="64" width="350" height="47"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-fd-LIa">
-                    <rect key="frame" x="16" y="188" width="382" height="224"/>
+                    <rect key="frame" x="16" y="135" width="382" height="224"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="224" id="vVn-eu-XZh"/>
@@ -41,12 +36,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="gHp-Jr-K3Z" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ahs-5l-rUB"/>
-                <constraint firstItem="SYX-bC-JOI" firstAttribute="top" secondItem="gHp-Jr-K3Z" secondAttribute="bottom" constant="34" id="EYM-rf-tbT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SYX-bC-JOI" secondAttribute="trailing" constant="32" id="NhL-QI-b6J"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dsd-fd-LIa" secondAttribute="trailing" constant="16" id="Okk-Iy-tVZ"/>
+                <constraint firstItem="SYX-bC-JOI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Qor-le-wAO"/>
                 <constraint firstItem="SYX-bC-JOI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Xbq-Wi-pfP"/>
-                <constraint firstItem="gHp-Jr-K3Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="hSW-ag-tna"/>
                 <constraint firstItem="dsd-fd-LIa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uFa-54-t6i"/>
                 <constraint firstItem="dsd-fd-LIa" firstAttribute="top" secondItem="SYX-bC-JOI" secondAttribute="bottom" constant="24" id="zil-di-Los"/>
             </constraints>

@@ -21,36 +21,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Начало месяца" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34d-r0-esX">
-                    <rect key="frame" x="144.5" y="62" width="125" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1q-FZ-xnb">
-                    <rect key="frame" x="32" y="117" width="350" height="62.5"/>
+                    <rect key="frame" x="32" y="64" width="350" height="62.5"/>
                     <string key="text">Установите дату с которой Вы считаете начало своих расходов. Приложение будет автоматически считать Ваши доходы и расходы за месяц с текущей даты до следующего месяца</string>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите число" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YfE-kc-qEq">
-                    <rect key="frame" x="16" y="203.5" width="382" height="48"/>
+                    <rect key="frame" x="16" y="150.5" width="382" height="48"/>
                     <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="YjX-h4-Zkd"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы можете ввести данные от 1 до 31, равно как и количество календарных дней в месяце" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHV-zN-IBb">
-                    <rect key="frame" x="32" y="259.5" width="350" height="31.5"/>
+                    <rect key="frame" x="32" y="206.5" width="350" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0e-XA-g5e">
-                    <rect key="frame" x="16" y="347" width="171" height="48"/>
+                    <rect key="frame" x="16" y="294" width="171" height="48"/>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="0js-QN-iaS"/>
@@ -64,7 +58,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-da-XIZ">
-                    <rect key="frame" x="227" y="347" width="171" height="48"/>
+                    <rect key="frame" x="227" y="294" width="171" height="48"/>
                     <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="171" id="Z7J-aE-4ZZ"/>
@@ -81,9 +75,6 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="34d-r0-esX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="144-Lt-1nG"/>
-                <constraint firstItem="34d-r0-esX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="30o-Fs-WR0"/>
-                <constraint firstItem="F1q-FZ-xnb" firstAttribute="top" secondItem="34d-r0-esX" secondAttribute="bottom" constant="34" id="Ch5-eF-pFV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YHV-zN-IBb" secondAttribute="trailing" constant="32" id="E5s-UX-P91"/>
                 <constraint firstItem="YHV-zN-IBb" firstAttribute="top" secondItem="YfE-kc-qEq" secondAttribute="bottom" constant="8" id="FBz-7j-swl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F1q-FZ-xnb" secondAttribute="trailing" constant="32" id="JpJ-iD-lfn"/>
@@ -95,6 +86,7 @@
                 <constraint firstItem="YHV-zN-IBb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="iAi-OS-MfJ"/>
                 <constraint firstItem="YfE-kc-qEq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jtD-bm-O7V"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gn3-da-XIZ" secondAttribute="trailing" constant="16" id="kid-n4-CVs"/>
+                <constraint firstItem="F1q-FZ-xnb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="n3b-nS-noJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YfE-kc-qEq" secondAttribute="trailing" constant="16" id="xyn-1C-gAe"/>
                 <constraint firstItem="gn3-da-XIZ" firstAttribute="top" secondItem="YHV-zN-IBb" secondAttribute="bottom" constant="56" id="yc1-Bi-rjf"/>
             </constraints>

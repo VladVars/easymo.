@@ -19,7 +19,7 @@ class TabBarController: UITabBarController {
         let dashBoardVC = DashBoard(nibName: String(describing: DashBoard.self), bundle: nil)
         let segmentVC = SegmentVC(nibName: String(describing: SegmentVC.self), bundle: nil)
         let piggyBankVC = PiggyBankVC(nibName: String(describing: PiggyBankVC.self), bundle: nil)
-        let settingVC = SettingVC(nibName: String(describing: SettingVC.self), bundle: nil)
+        let settingVC = UINavigationController(rootViewController: SettingVC(nibName: String(describing: SettingVC.self), bundle: nil) )
         
         dashBoardVC.tabBarItem = UITabBarItem(title: "Главная", image: UIImage.init(named: "home"), tag: 0)
         segmentVC.tabBarItem = UITabBarItem(title: "Отчет", image: UIImage.init(named: "report"), tag: 1)

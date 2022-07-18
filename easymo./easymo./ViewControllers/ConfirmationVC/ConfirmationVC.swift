@@ -21,6 +21,8 @@ class ConfirmationVC: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
+    weak var delegat: Update?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cancelButton.layer.cornerRadius = 12
@@ -36,12 +38,16 @@ class ConfirmationVC: UIViewController {
     }
     @IBAction func saveAction(_ sender: Any) {
         let savePiggy = PiggyBank()
-        savePiggy.summPiggyBank = summLabel.text ?? ""
+        guard let summ = Int(summLabel.text ?? "") else { return }
+        
+        savePiggy.summPiggyBank = summ
         savePiggy.namePiggyBank = goalLabel.text ?? ""
         
         RealmManager.savePiggyBank(object: savePiggy)
         
-        if savePiggy.summPiggyBank == summLabel.text, savePiggy.namePiggyBank == goalLabel.text {
+        delegat?.update()
+        
+        if savePiggy.summPiggyBank == summ, savePiggy.namePiggyBank == goalLabel.text {
             NotificationCenter.default.post(name: .createPiggy, object: nil)
             DefaultsManager.createPiggy = true
         }

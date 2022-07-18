@@ -62,7 +62,6 @@ class PiggyBankVC: UIViewController {
             addPiggyView()
         } else {
             piggyView.isHidden = true
-
         }
     }
     
@@ -83,6 +82,9 @@ class PiggyBankVC: UIViewController {
     
     @objc func addPiggyView() {
         piggyView.isHidden = false
+        namePiggyLabel.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
+        totalSummLabel.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
+
     }
     
 }

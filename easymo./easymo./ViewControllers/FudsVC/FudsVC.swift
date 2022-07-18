@@ -16,6 +16,8 @@ class FudsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Поступления средств"
+        
         numberField.delegate = self
         
         numberField.layer.cornerRadius = 8

@@ -21,36 +21,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поступления средств" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymp-7Y-wme">
-                    <rect key="frame" x="118" y="62" width="178" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-F9-9zT">
-                    <rect key="frame" x="32" y="117" width="350" height="78"/>
+                    <rect key="frame" x="32" y="64" width="350" height="78"/>
                     <string key="text">Данный раздел предполагает дату, на которую приходится большая часть постоянного заработка. Если Вы получаете постоянную заработную плату, то в поле стоит указать число, когда приходит заработная плата</string>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите число" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twS-Uy-wk0">
-                    <rect key="frame" x="16" y="219" width="382" height="48"/>
+                    <rect key="frame" x="16" y="166" width="382" height="48"/>
                     <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="fIh-A6-L9J"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы можете ввести данные от 1 до 31, равно как и количество календарных дней в месяце" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-5W-fQn">
-                    <rect key="frame" x="32" y="275" width="350" height="31.5"/>
+                    <rect key="frame" x="32" y="222" width="350" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdj-KZ-NqP">
-                    <rect key="frame" x="16" y="362.5" width="171" height="48"/>
+                    <rect key="frame" x="16" y="309.5" width="171" height="48"/>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="171" id="N5T-eo-Zx2"/>
@@ -64,7 +58,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQ6-O9-uqb">
-                    <rect key="frame" x="227" y="362.5" width="171" height="48"/>
+                    <rect key="frame" x="227" y="309.5" width="171" height="48"/>
                     <color key="backgroundColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="1Hr-zQ-5Ck"/>
@@ -82,17 +76,15 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="DQ6-O9-uqb" firstAttribute="top" secondItem="ieV-5W-fQn" secondAttribute="bottom" constant="56" id="1L7-q7-sU7"/>
-                <constraint firstItem="Ymp-7Y-wme" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="2Yp-XX-LRv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fl3-F9-9zT" secondAttribute="trailing" constant="32" id="6k6-FO-tsx"/>
                 <constraint firstItem="Kdj-KZ-NqP" firstAttribute="top" secondItem="ieV-5W-fQn" secondAttribute="bottom" constant="56" id="GGe-Su-dIm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DQ6-O9-uqb" secondAttribute="trailing" constant="16" id="IWt-tJ-s8P"/>
                 <constraint firstItem="twS-Uy-wk0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="J14-Cb-pnt"/>
-                <constraint firstItem="Fl3-F9-9zT" firstAttribute="top" secondItem="Ymp-7Y-wme" secondAttribute="bottom" constant="34" id="KoJ-8K-MPF"/>
+                <constraint firstItem="Fl3-F9-9zT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="KUY-7Z-8zK"/>
                 <constraint firstItem="ieV-5W-fQn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="MEs-gV-DWR"/>
                 <constraint firstItem="Fl3-F9-9zT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="VKU-Wb-pt8"/>
                 <constraint firstItem="twS-Uy-wk0" firstAttribute="top" secondItem="Fl3-F9-9zT" secondAttribute="bottom" constant="24" id="XXW-sB-RtP"/>
                 <constraint firstItem="Kdj-KZ-NqP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aOi-mP-kjH"/>
-                <constraint firstItem="Ymp-7Y-wme" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bhf-iV-3FR"/>
                 <constraint firstItem="DQ6-O9-uqb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kdj-KZ-NqP" secondAttribute="trailing" constant="16" id="ct3-Su-58o"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="twS-Uy-wk0" secondAttribute="trailing" constant="16" id="oau-oQ-UVb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ieV-5W-fQn" secondAttribute="trailing" constant="32" id="uSw-b1-VTA"/>

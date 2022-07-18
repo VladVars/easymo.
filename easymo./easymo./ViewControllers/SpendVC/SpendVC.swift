@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SpendVC: UIViewController {
     
     @IBOutlet weak var summField: UITextField!
@@ -17,9 +18,6 @@ class SpendVC: UIViewController {
     @IBOutlet weak var dateImage: UIImageView!
     @IBOutlet weak var categorieImage: UIImageView!
     
-    
-    
-    
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancellationButton: UIButton!
     
@@ -27,9 +25,9 @@ class SpendVC: UIViewController {
     private var piker = UIDatePicker()
     private var selectedDate: Date?
     
-    weak var delegate: Updaeble?
+    weak var delegate: Update?
     
-    private var categories: [Categories] = Categories.allCases
+    private var categories = Categories.allCases
     private var categoriesPicker = UIPickerView()
     private var selectedCategories: Categories?
     
@@ -88,9 +86,12 @@ class SpendVC: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
     @IBAction func saveButtonAction(_ sender: Any) {
         let saveMoney = Money()
-        saveMoney.spendMoney = summField.text ?? ""
+        guard let summ = Int(summField.text ?? "") else { return }
+        saveMoney.isSpendMoney = true
+        saveMoney.spendMoney = summ
         saveMoney.spendTime = selectedDate
         saveMoney.category = categorieField.text ?? ""
         RealmManager.saveMoney(object: saveMoney)
@@ -99,12 +100,13 @@ class SpendVC: UIViewController {
         dateField.text = ""
         categorieField.text = ""
         
-        dismissKeyboard()
-        
+        delegate?.update()
+
         
     }
     
     @IBAction func cancellationButtonAction(_ sender: Any) {
+        delegate?.update()
         dismiss(animated: true)
     }
     

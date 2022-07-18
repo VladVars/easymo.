@@ -8,16 +8,21 @@
 import UIKit
 
 class SettingCurencyCell: UITableViewCell {
-
+    
+    @IBOutlet weak var viewImage: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setupCellWith(_ type: SettingPointsCurency) {
+        nameLabel.text = type.settingText
+        viewImage.image = type.settingImage
     }
     
 }
