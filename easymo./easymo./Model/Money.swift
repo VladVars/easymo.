@@ -24,6 +24,7 @@ import RealmSwift
 
 @objc final class PiggyBank: Object {
 //    PiggyBank
+    @objc dynamic var imagePiggyBank: Data = Data()
     @objc dynamic var summPiggyBank: Int = 0
     @objc dynamic var spendPiggyBank: Int = 0
     @objc dynamic var namePiggyBank: String = ""

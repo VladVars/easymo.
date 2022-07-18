@@ -30,6 +30,9 @@ class FudsVC: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: Any) {
+        guard let number = Int(numberField.text ?? "1") else { return }
+        if number < 1 || number > 31 { return }
+        DefaultsManager.fundsDay = number
     }
     
 

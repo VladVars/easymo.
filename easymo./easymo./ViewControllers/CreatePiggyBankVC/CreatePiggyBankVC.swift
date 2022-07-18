@@ -29,7 +29,6 @@ class CreatePiggyBankVC: UIViewController {
     private var imagePicker = UIImagePickerController()
     private var images = UIImage()
     
-    private var switchCondition = "Нет"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +38,20 @@ class CreatePiggyBankVC: UIViewController {
         
         textFieldMargen()
         setupUI()
-//        summBank()
+        
+        summField.addTarget(self, action: #selector(valueDidChange), for: .allEvents)
+        periodField.addTarget(self, action: #selector(valueDidChange), for: .allEvents)
+
     }
     
-    func summBank() {
-        guard let summ = summField.text else { return }
-        let totSumm = Int(summ) ?? 0
-        guard let period = periodField.text else { return }
-        let totPeriod = Int(period) ?? 0
-        let result = totSumm / totPeriod
+    @objc func valueDidChange() {
+        guard let summ = Int(summField.text ?? "") else { return }
+        guard let period = Int(periodField.text ?? "") else { return }
+        let result = summ / period
         summLabel.text = "\(result)"
     }
+    
+    
     
     func setupUI() {
         cancelButton.layer.cornerRadius = 12
@@ -87,13 +89,7 @@ class CreatePiggyBankVC: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func swichAction(_ sender: Any) {
-        if switchOutlet.isOn {
-            switchCondition = "Да"
-        } else {
-            switchCondition = "Нет"
-        }
-    }
+
     
     @IBAction func addAction(_ sender: Any) {
         let alertController: UIAlertController = UIAlertController(title: nil, message: "Источник изображения:", preferredStyle: .actionSheet)
@@ -123,7 +119,8 @@ class CreatePiggyBankVC: UIViewController {
         confirmationVC.imageView.image = imageView.image
         confirmationVC.goalLabel.text = goalField.text
         confirmationVC.summLabel.text = summField.text
-        confirmationVC.notificationLabel.text = switchCondition
+        confirmationVC.notificationLabel.text = switchOutlet.isOn ? "Да" : "Нет"
+        confirmationVC.switchCondition = switchOutlet.isOn
     }
     
     @IBAction func cancelAction(_ sender: Any) {

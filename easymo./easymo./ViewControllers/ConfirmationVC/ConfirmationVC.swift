@@ -22,6 +22,8 @@ class ConfirmationVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     weak var delegat: Update?
+    var switchCondition = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,9 @@ class ConfirmationVC: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         let savePiggy = PiggyBank()
         guard let summ = Int(summLabel.text ?? "") else { return }
-        
+        if let image = imageView.image {
+            savePiggy.imagePiggyBank = image.jpegData(compressionQuality: 1) ?? Data()
+        }
         savePiggy.summPiggyBank = summ
         savePiggy.namePiggyBank = goalLabel.text ?? ""
         
@@ -47,12 +51,17 @@ class ConfirmationVC: UIViewController {
         
         delegat?.update()
         
+        if switchCondition {
+//            setup Notification
+            NotificationManager.setNotification(day: DefaultsManager.fundsDay)
+        }
+        
         if savePiggy.summPiggyBank == summ, savePiggy.namePiggyBank == goalLabel.text {
             NotificationCenter.default.post(name: .createPiggy, object: nil)
             DefaultsManager.createPiggy = true
         }
-        dismiss(animated: true)
-        tabBarController?.selectedIndex = 0
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+//        tabBarController?.selectedIndex = 0
         
     }
 }

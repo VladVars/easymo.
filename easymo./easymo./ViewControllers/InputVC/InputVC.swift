@@ -43,14 +43,9 @@ class InputVC: UIViewController {
             controllerType = .create
         }
         infoLabel.text = controllerType.rawValue
-        
-        //        var error: NSError?
-        //        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-        //            biometricButton.alpha = 0
-        //        } else {
-        //            biometricButton.alpha = 1
-        //        }
-        faceID()
+        if DefaultsManager.faceID == true {
+            faceID()
+        }
         setupPin()
     }
     
@@ -146,11 +141,10 @@ class InputVC: UIViewController {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate to proceed.") { (success, error) in
                 if success {
                     DispatchQueue.main.async {
-                        if DefaultsManager.faceID == true {
+                        
                             NotificationCenter.default.post(name: .loginSuccess, object: nil)
                             DefaultsManager.loginPassword = true
                             self.dismiss(animated: true, completion: nil)
-                        }
                        
                     }
                 } else {

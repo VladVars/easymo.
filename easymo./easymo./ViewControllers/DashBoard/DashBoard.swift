@@ -39,6 +39,13 @@ class DashBoard: UIViewController {
     @IBOutlet weak var limitProgress: UIProgressView!
     @IBOutlet weak var piggyProgress: UIProgressView!
     
+    @IBOutlet weak var category1: UILabel!
+    @IBOutlet weak var category2: UILabel!
+    @IBOutlet weak var category3: UILabel!
+
+    @IBOutlet weak var categorySumm1: UILabel!
+    @IBOutlet weak var categorySumm2: UILabel!
+    @IBOutlet weak var categorySumm3: UILabel!
     
     @IBOutlet weak var totalSummPiggy: UILabel!
     @IBOutlet weak var currentSummPiggy: UILabel!
@@ -60,23 +67,51 @@ class DashBoard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapPiggyView = UITapGestureRecognizer(target: self, action: #selector(tapPiggy))
-        piggyView.addGestureRecognizer(tapPiggyView)
-        
         setupCurentLimitView()
         setupPiggyView()
         setUIIcon()
         setupUI()
         notification()
-        progressBar()
+        
+    }
+    
+    func setupCategory() {
+        let categorySet = Set(RealmManager.readMoney().filter({$0.isSpendMoney}).map({$0.category}))
+        var array = [(category: String, summ: Int)]()
+        let spendTransaction = RealmManager.readMoney().filter({$0.isSpendMoney})
+        
+        for item in categorySet {
+            var summ = 0
+            for transaction in spendTransaction {
+                if transaction.category == item {
+                    summ += transaction.spendMoney
+                }
+                
+            }
+            array.append((item, summ))
+        }
+        let sortedArray = array.sorted(by: {$0.summ > $1.summ})
+        categorySumm1.text = spendTransaction
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         update()
+
     }
     
     func progressBar() {
-       
+        guard let totLimitSumm = Int(totalSummLimitLabel.text ?? "") else { return }
+        guard let curLimitSumm = Int(curentSummLimitLabel.text ?? "") else { return }
+
+        let moneyPercent = Float(curLimitSumm * 100 / totLimitSumm) / 100
+        limitProgress.setProgress(moneyPercent, animated: true)
+        
+        if curLimitSumm >= totLimitSumm {
+//            alert limit
+        }
+        
     }
     
     @objc func tapPiggy() {
@@ -108,6 +143,7 @@ class DashBoard: UIViewController {
         let notificationVC = NotificationVC(nibName: String(describing: NotificationVC.self), bundle: nil)
         present(notificationVC, animated: true)
     }
+    
     @objc func settingImageDidTap() {
         let settingVC = SettingDashBoardVC(nibName: String(describing: SettingDashBoardVC.self), bundle: nil)
         present(settingVC, animated: true)
@@ -195,6 +231,9 @@ class DashBoard: UIViewController {
         settingImage.addGestureRecognizer(settingImageTap)
         settingImage.isUserInteractionEnabled = true
         
+        let tapPiggyView = UITapGestureRecognizer(target: self, action: #selector(tapPiggy))
+        piggyView.addGestureRecognizer(tapPiggyView)
+        
         currentBalance.textColor = UIColor(cgColor: CGColor(red: 0.59, green: 0.6, blue: 0.64, alpha: 1.0))
         
         let paragraphStyle = NSMutableParagraphStyle()
@@ -248,6 +287,8 @@ extension DashBoard: Update {
             namePiggy.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
             totalSummPiggy.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
         }
+        progressBar()
+
         
     }
     

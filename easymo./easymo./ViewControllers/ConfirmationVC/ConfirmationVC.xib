@@ -32,7 +32,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ass-pig" translatesAutoresizingMaskIntoConstraints="NO" id="vmu-uS-I23">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ass-pig" translatesAutoresizingMaskIntoConstraints="NO" id="vmu-uS-I23">
                     <rect key="frame" x="16" y="136.5" width="382" height="156"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="156" id="vvN-aY-47f"/>

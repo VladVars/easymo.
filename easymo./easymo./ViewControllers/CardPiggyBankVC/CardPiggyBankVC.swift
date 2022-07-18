@@ -23,7 +23,14 @@ class CardPiggyBankVC: UIViewController {
         super.viewDidLoad()
         cangeButton.layer.cornerRadius = 12
         replenishButton.layer.cornerRadius = 12
-
+        setupPiggy()
+        
+    }
+    
+    func setupPiggy() {
+        piggyImage.image = UIImage(data: RealmManager.readPiggyBank()[0].imagePiggyBank)
+        
+        
     }
 
     @IBAction func replenishAction(_ sender: Any) {

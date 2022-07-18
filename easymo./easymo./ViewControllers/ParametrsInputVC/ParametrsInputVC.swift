@@ -21,7 +21,11 @@ class ParametrsInputVC: UIViewController {
         
         let tap = UIGestureRecognizer(target: self, action: #selector(tapPIN))
         viewPIN.addGestureRecognizer(tap)
+        
+        switchOutlet.isOn = DefaultsManager.faceID
     }
+   
+    
     @objc func tapPIN() {
         let inputVC = InputVC(nibName: String(describing: InputVC.self), bundle: nil)
         navigationController?.pushViewController(inputVC, animated: true)

@@ -44,6 +44,22 @@ class DefaultsManager {
             defaults.set(newValue, forKey: #function)
         }
     }
+    static var startMonthDay: Int {
+        get {
+            return defaults.value(forKey: #function) as? Int ?? 1
+        }
+        set {
+            defaults.set(newValue, forKey: #function)
+        }
+    }
+    static var fundsDay: Int {
+        get {
+            return defaults.value(forKey: #function) as? Int ?? 1
+        }
+        set {
+            defaults.set(newValue, forKey: #function)
+        }
+    }
     
 //    static var isFirstLaunch: Bool {
 //        get {
