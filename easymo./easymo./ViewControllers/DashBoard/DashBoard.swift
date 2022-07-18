@@ -90,9 +90,25 @@ class DashBoard: UIViewController {
             }
             array.append((item, summ))
         }
-        let sortedArray = array.sorted(by: {$0.summ > $1.summ})
-        categorySumm1.text = spendTransaction
         
+        let sortedArray = array.sorted(by: {$0.summ > $1.summ})
+        if sortedArray.count >= 1 {
+        categorySumm1.text = "\(sortedArray[0].summ)"
+            category1.text = "\(sortedArray[0].category)"
+            statisticImage1.image = imageFromCategory(category: sortedArray[0].category)
+        }
+        if sortedArray.count >= 2 {
+        categorySumm2.text = "\(sortedArray[1].summ)"
+            category2.text = "\(sortedArray[1].category)"
+            statisticImage2.image = imageFromCategory(category: sortedArray[1].category)
+
+        }
+        if sortedArray.count >= 3 {
+        categorySumm3.text = "\(sortedArray[2].summ)"
+            category3.text = "\(sortedArray[2].category)"
+            statisticImage3.image = imageFromCategory(category: sortedArray[2].category)
+
+        }
         
     }
     
@@ -288,7 +304,7 @@ extension DashBoard: Update {
             totalSummPiggy.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
         }
         progressBar()
-
+        setupCategory()
         
     }
     

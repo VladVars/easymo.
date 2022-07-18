@@ -47,6 +47,7 @@
 		0474D7E92884A17D00FAA5BA /* SettingCurencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */; };
 		0474D7EA2884A17D00FAA5BA /* SettingCurencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */; };
 		0474D7EC2885788600FAA5BA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7EB2885788600FAA5BA /* NotificationManager.swift */; };
+		0474D7EF2886047300FAA5BA /* CategoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7EE2886047300FAA5BA /* CategoryImage.swift */; };
 		04762756284C1110003AE90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762755284C1110003AE90F /* AppDelegate.swift */; };
 		04762758284C1110003AE90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04762757284C1110003AE90F /* SceneDelegate.swift */; };
 		0476275D284C1110003AE90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0476275B284C1110003AE90F /* Main.storyboard */; };
@@ -129,6 +130,7 @@
 		0474D7E72884A17D00FAA5BA /* SettingCurencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCurencyCell.swift; sourceTree = "<group>"; };
 		0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCurencyCell.xib; sourceTree = "<group>"; };
 		0474D7EB2885788600FAA5BA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		0474D7EE2886047300FAA5BA /* CategoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImage.swift; sourceTree = "<group>"; };
 		04762752284C1110003AE90F /* easymo..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easymo..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04762755284C1110003AE90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04762757284C1110003AE90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				0474D771287C0A2400FAA5BA /* RoundButton.swift */,
+				0474D7EE2886047300FAA5BA /* CategoryImage.swift */,
 			);
 			path = SwiftFile;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				0474D77A287C28FD00FAA5BA /* Pin.swift in Sources */,
 				04947CC02871B2A900F01860 /* ConfirmationVC.swift in Sources */,
 				0474D7DC288499B100FAA5BA /* StartMouthVC.swift in Sources */,
+				0474D7EF2886047300FAA5BA /* CategoryImage.swift in Sources */,
 				04947C3E286A37C900F01860 /* Categories.swift in Sources */,
 				0474D7AA2880ACA200FAA5BA /* RealmManager.swift in Sources */,
 				0474D76F2877638A00FAA5BA /* PasswordState.swift in Sources */,

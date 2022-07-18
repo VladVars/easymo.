@@ -22,7 +22,7 @@ class ReportCell: UITableViewCell {
         
         
     }
-    
+
     func configureCell(item: Money) {
         
         sumLabel.text = "\(item.spendMoney)"
@@ -32,39 +32,7 @@ class ReportCell: UITableViewCell {
             sumLabel.textColor = #colorLiteral(red: 0.1058823529, green: 0.7294117647, blue: 0.431372549, alpha: 1)
         }
         categorieLabel.text = item.category
-        if categorieLabel.text == "Быт" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Платежи" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Продукты" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Одежда" {
-            imageCell.image = UIImage.init(named: "ic-cloth")
-        }
-        if categorieLabel.text == "Траспорт" {
-            imageCell.image = UIImage.init(named: "transport")
-        }
-        if categorieLabel.text == "Кафе" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Досуг" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Непредвиденные расходы" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Саморазвитие" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Авто" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
-        if categorieLabel.text == "Здоровье" {
-            imageCell.image = UIImage.init(named: "upIncome")
-        }
+        imageCell.image = imageFromCategory(category: item.category)
         
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"

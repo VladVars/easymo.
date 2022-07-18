@@ -19,4 +19,5 @@ enum Categories: String, CaseIterable {
     case selfDevelopment = "Саморазвитие"
     case car = "Авто"
     case health = "Здоровье"
+    
 }
