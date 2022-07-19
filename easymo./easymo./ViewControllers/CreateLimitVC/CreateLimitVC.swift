@@ -90,12 +90,16 @@ class CreateLimitVC: UIViewController {
         }
         
         delegate?.update()
+        
         summField.text = ""
         dateField.text = ""
         
+        dismiss(animated: true)
+
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        delegate?.update()
         dismiss(animated: true)
     }
     

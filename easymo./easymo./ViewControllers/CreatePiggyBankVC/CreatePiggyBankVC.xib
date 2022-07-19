@@ -135,10 +135,6 @@
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6SZ-gp-W8Q">
                     <rect key="frame" x="349" y="574.5" width="51" height="31"/>
                     <color key="onTintColor" red="0.84705882349999995" green="0.34509803919999998" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <connections>
-                        <action selector="swichAction:" destination="-1" eventType="valueChanged" id="eeE-dB-7Qj"/>
-                        <action selector="switchAction:" destination="-1" eventType="valueChanged" id="Xyx-H5-Rdv"/>
-                    </connections>
                 </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPy-go-HeU">
                     <rect key="frame" x="16" y="662" width="171" height="48"/>

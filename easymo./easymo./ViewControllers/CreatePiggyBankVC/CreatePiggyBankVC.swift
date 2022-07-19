@@ -119,6 +119,8 @@ class CreatePiggyBankVC: UIViewController {
         confirmationVC.imageView.image = imageView.image
         confirmationVC.goalLabel.text = goalField.text
         confirmationVC.summLabel.text = summField.text
+        confirmationVC.dateLabel.text = periodField.text
+        confirmationVC.accumulationLabel.text = summLabel.text
         confirmationVC.notificationLabel.text = switchOutlet.isOn ? "Да" : "Нет"
         confirmationVC.switchCondition = switchOutlet.isOn
     }

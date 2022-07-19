@@ -42,7 +42,7 @@ class DashBoard: UIViewController {
     @IBOutlet weak var category1: UILabel!
     @IBOutlet weak var category2: UILabel!
     @IBOutlet weak var category3: UILabel!
-
+    
     @IBOutlet weak var categorySumm1: UILabel!
     @IBOutlet weak var categorySumm2: UILabel!
     @IBOutlet weak var categorySumm3: UILabel!
@@ -66,13 +66,9 @@ class DashBoard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupCurentLimitView()
-        setupPiggyView()
         setUIIcon()
         setupUI()
         notification()
-        
     }
     
     func setupCategory() {
@@ -93,41 +89,63 @@ class DashBoard: UIViewController {
         
         let sortedArray = array.sorted(by: {$0.summ > $1.summ})
         if sortedArray.count >= 1 {
-        categorySumm1.text = "\(sortedArray[0].summ)"
+            categorySumm1.text = "\(sortedArray[0].summ)"
             category1.text = "\(sortedArray[0].category)"
             statisticImage1.image = imageFromCategory(category: sortedArray[0].category)
         }
         if sortedArray.count >= 2 {
-        categorySumm2.text = "\(sortedArray[1].summ)"
+            categorySumm2.text = "\(sortedArray[1].summ)"
             category2.text = "\(sortedArray[1].category)"
             statisticImage2.image = imageFromCategory(category: sortedArray[1].category)
-
+            
         }
         if sortedArray.count >= 3 {
-        categorySumm3.text = "\(sortedArray[2].summ)"
+            categorySumm3.text = "\(sortedArray[2].summ)"
             category3.text = "\(sortedArray[2].category)"
             statisticImage3.image = imageFromCategory(category: sortedArray[2].category)
-
+            
         }
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         update()
-
+        
     }
     
-    func progressBar() {
+    func progressBarLimit() {
         guard let totLimitSumm = Int(totalSummLimitLabel.text ?? "") else { return }
         guard let curLimitSumm = Int(curentSummLimitLabel.text ?? "") else { return }
-
-        let moneyPercent = Float(curLimitSumm * 100 / totLimitSumm) / 100
-        limitProgress.setProgress(moneyPercent, animated: true)
+        
+        let limitPercent = Float(curLimitSumm * 100 / totLimitSumm) / 100
+        limitProgress.setProgress(limitPercent, animated: true)
         
         if curLimitSumm >= totLimitSumm {
-//            alert limit
+            let alert = UIAlertController(title: "Ваш лимит превышен", message: "Если вам не хватает, вы можете задать лимит больше", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Ок", style: .cancel)
+            
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
         }
+       
         
+    }
+    
+    func progressBarPiggy() {
+        guard let totPiggySumm = Int(totalSummPiggy.text ?? "") else { return }
+        guard let curPiggySumm = Int(currentSummPiggy.text ?? "") else { return }
+        
+        let piggyPercent = Float(curPiggySumm * 100 / totPiggySumm) / 100
+        piggyProgress.setProgress(piggyPercent, animated: true)
+        
+        if curPiggySumm >= totPiggySumm {
+           
+//            let alert = UIAlertController(title: "Поздравляем!", message: "Вы накопили на \(RealmManager.readPiggyBank()[0].namePiggyBank)", preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "Ок", style: .cancel)
+//
+//            alert.addAction(cancelAction)
+//            present(alert, animated: true)
+        }
     }
     
     @objc func tapPiggy() {
@@ -185,7 +203,7 @@ class DashBoard: UIViewController {
     
     @IBAction func topUpPiggyAction(_ sender: Any) {
         let spendPiggyVC = SpendPiggyVC(nibName: String(describing: SpendPiggyVC.self), bundle: nil)
-        
+        spendPiggyVC.delegate = self
         present(spendPiggyVC, animated: true)
     }
     
@@ -269,15 +287,16 @@ class DashBoard: UIViewController {
     }
     @objc func addPiggyView() {
         piggyView.isHidden = false
-        namePiggy.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
-        totalSummPiggy.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
+        
     }
     
 }
 extension DashBoard: Update {
     func update() {
         if RealmManager.readLimit().count > 0 {
-            totalSummLimitLabel.text = "\(RealmManager.readLimit()[0].limit)"
+            if (RealmManager.readLimit().first != nil) {
+                totalSummLimitLabel.text = "\(RealmManager.readLimit().last?.limit ?? 0)"
+            }
         }
         
         if RealmManager.readMoney().count > 0 {
@@ -300,31 +319,24 @@ extension DashBoard: Update {
         }
         
         if RealmManager.readPiggyBank().count > 0 {
+            var summPiggy = 0
+            
+            for item in RealmManager.readPiggyBank() {
+                if item.spendPiggyBank >= 0 {
+                    summPiggy += item.spendPiggyBank
+                }
+            }
             namePiggy.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
+            currentSummPiggy.text = "\(summPiggy)"
             totalSummPiggy.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
         }
-        progressBar()
+        setupCurentLimitView()
+        setupPiggyView()
+        progressBarLimit()
+        progressBarPiggy()
+
         setupCategory()
         
     }
-    
-    func updataText(text: String) {
-        
-    }
-    
-    func changeTitleView(title: String) {
-        
-    }
-    
-    
-    func updateViewColor(color: UIColor) {
-        
-    }
-    
-    
 }
-//let moneyPercent = Float(person.money * 100 / 3000) / 100
-//moneyProgress.setProgress(moneyPercent, animated: true)
-//
-//salaryLabel.text = "Зарплата за день: \(person.salary) руб."
-//upIncomeLabel.text = "\(RealmManager.readMoney().filter({!$0.isSpendMoney}).first?.spendMoney ?? 0)"
+

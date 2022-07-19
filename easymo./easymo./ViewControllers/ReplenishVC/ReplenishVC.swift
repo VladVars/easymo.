@@ -58,6 +58,7 @@ class ReplenishVC: UIViewController {
         dateField.text = ""
         
         delegate?.update()
+        dismiss(animated: true)
 
     }
     
@@ -116,3 +117,4 @@ extension ReplenishVC: UITextFieldDelegate {
         textField.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9568627451, alpha: 1)
     }
 }
+

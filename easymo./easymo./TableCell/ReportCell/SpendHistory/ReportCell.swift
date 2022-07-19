@@ -34,6 +34,7 @@ class ReportCell: UITableViewCell {
         categorieLabel.text = item.category
         imageCell.image = imageFromCategory(category: item.category)
         
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
         

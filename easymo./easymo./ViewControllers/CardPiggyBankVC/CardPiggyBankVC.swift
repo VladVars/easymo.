@@ -23,11 +23,11 @@ class CardPiggyBankVC: UIViewController {
         super.viewDidLoad()
         cangeButton.layer.cornerRadius = 12
         replenishButton.layer.cornerRadius = 12
-        setupPiggy()
-        
+        setupPiggyImage()
+        update()
     }
     
-    func setupPiggy() {
+    func setupPiggyImage() {
         piggyImage.image = UIImage(data: RealmManager.readPiggyBank()[0].imagePiggyBank)
         
         
@@ -40,8 +40,25 @@ class CardPiggyBankVC: UIViewController {
     
     
     @IBAction func cangeAction(_ sender: Any) {
-        
+        dismiss(animated: true)
     }
     
 
+}
+
+extension CardPiggyBankVC: Update {
+    func update() {
+        if RealmManager.readPiggyBank().count > 0 {
+            var summPiggy = 0
+            
+            for item in RealmManager.readPiggyBank() {
+                if item.spendPiggyBank >= 0 {
+                    summPiggy += item.spendPiggyBank
+                }
+            }
+            namePiggy.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
+            curentSumm.text = "\(summPiggy)"
+            totalSumm.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
+        }
+    }
 }

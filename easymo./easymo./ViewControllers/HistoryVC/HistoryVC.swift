@@ -26,7 +26,6 @@ class HistoryVC: UIViewController {
         
         tableView.register(UINib(nibName: String(describing: ReportCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReportCell.self))
         
-        tableView.register(UINib(nibName: String(describing: TopUpHistoryCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TopUpHistoryCell.self))
     }
     
 }

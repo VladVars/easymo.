@@ -28,13 +28,32 @@ class PiggyBankVC: UIViewController {
     @IBOutlet weak var piggyProgress: UIProgressView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
     }
     override func viewWillAppear(_ animated: Bool) {
+        update()
         setupPiggyView()
+    }
+    
+    func progressBarPiggy() {
+        guard let totPiggySumm = Int(totalSummLabel.text ?? "") else { return }
+        guard let curPiggySumm = Int(currentSummLabel.text ?? "") else { return }
+        
+        let piggyPercent = Float(curPiggySumm * 100 / totPiggySumm) / 100
+        piggyProgress.setProgress(piggyPercent, animated: true)
+        
+        if curPiggySumm >= totPiggySumm {
+           
+            let alert = UIAlertController(title: "Поздравляем!", message: "Вы накопили на \(RealmManager.readPiggyBank()[0].namePiggyBank)", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Ок", style: .cancel)
+            
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
+        }
     }
     
     func setupUI() {
@@ -82,9 +101,26 @@ class PiggyBankVC: UIViewController {
     
     @objc func addPiggyView() {
         piggyView.isHidden = false
-        namePiggyLabel.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
-        totalSummLabel.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
+        
 
     }
     
+}
+
+extension PiggyBankVC: Update {
+    func update() {
+        if RealmManager.readPiggyBank().count > 0 {
+            var summPiggy = 0
+            
+            for item in RealmManager.readPiggyBank() {
+                if item.spendPiggyBank >= 0 {
+                    summPiggy += item.spendPiggyBank
+                }
+            }
+            namePiggyLabel.text = "\(RealmManager.readPiggyBank()[0].namePiggyBank)"
+            currentSummLabel.text = "\(summPiggy)"
+            totalSummLabel.text = "\(RealmManager.readPiggyBank()[0].summPiggyBank)"
+        }
+        progressBarPiggy()
+    }
 }

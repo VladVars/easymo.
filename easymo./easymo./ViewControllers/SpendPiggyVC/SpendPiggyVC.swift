@@ -24,6 +24,8 @@ class SpendPiggyVC: UIViewController {
     private var piker = UIDatePicker()
     private var selectedDate: Date?
     
+    weak var delegate: Update?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         summField.delegate = self
@@ -71,15 +73,24 @@ class SpendPiggyVC: UIViewController {
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        delegate?.update()
         dismiss(animated: true)
         
     }
     
     
     @IBAction func spendAction(_ sender: Any) {
+        let sependPiggy = PiggyBank()
+        guard let summ = Int(summField.text ?? "") else { return }
+        sependPiggy.spendPiggyBank = summ
+        sependPiggy.piggyTime = selectedDate
+        RealmManager.savePiggyBank(object: sependPiggy)
         
+        summField.text = ""
+        dateField.text = ""
         
-        
+        delegate?.update()
+        dismiss(animated: true)
     }
     
     

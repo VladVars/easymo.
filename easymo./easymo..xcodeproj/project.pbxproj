@@ -27,8 +27,6 @@
 		0474D7B52882ED9000FAA5BA /* TableViewOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7B32882ED9000FAA5BA /* TableViewOneCell.xib */; };
 		0474D7B82882EDAC00FAA5BA /* TableViewTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7B62882EDAC00FAA5BA /* TableViewTwoCell.swift */; };
 		0474D7B92882EDAC00FAA5BA /* TableViewTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7B72882EDAC00FAA5BA /* TableViewTwoCell.xib */; };
-		0474D7BE2883FDFB00FAA5BA /* TopUpHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7BC2883FDFB00FAA5BA /* TopUpHistoryCell.swift */; };
-		0474D7BF2883FDFB00FAA5BA /* TopUpHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7BD2883FDFB00FAA5BA /* TopUpHistoryCell.xib */; };
 		0474D7C32883FE9D00FAA5BA /* ReplenishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7C12883FE9D00FAA5BA /* ReplenishVC.swift */; };
 		0474D7C42883FE9D00FAA5BA /* ReplenishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */; };
 		0474D7C8288408D000FAA5BA /* CardPiggyBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */; };
@@ -110,8 +108,6 @@
 		0474D7B32882ED9000FAA5BA /* TableViewOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewOneCell.xib; sourceTree = "<group>"; };
 		0474D7B62882EDAC00FAA5BA /* TableViewTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTwoCell.swift; sourceTree = "<group>"; };
 		0474D7B72882EDAC00FAA5BA /* TableViewTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewTwoCell.xib; sourceTree = "<group>"; };
-		0474D7BC2883FDFB00FAA5BA /* TopUpHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpHistoryCell.swift; sourceTree = "<group>"; };
-		0474D7BD2883FDFB00FAA5BA /* TopUpHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUpHistoryCell.xib; sourceTree = "<group>"; };
 		0474D7C12883FE9D00FAA5BA /* ReplenishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplenishVC.swift; sourceTree = "<group>"; };
 		0474D7C22883FE9D00FAA5BA /* ReplenishVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplenishVC.xib; sourceTree = "<group>"; };
 		0474D7C6288408D000FAA5BA /* CardPiggyBankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPiggyBankVC.swift; sourceTree = "<group>"; };
@@ -336,15 +332,6 @@
 			path = SpendHistory;
 			sourceTree = "<group>";
 		};
-		0474D7BB2883FD7800FAA5BA /* TopUpHistory */ = {
-			isa = PBXGroup;
-			children = (
-				0474D7BC2883FDFB00FAA5BA /* TopUpHistoryCell.swift */,
-				0474D7BD2883FDFB00FAA5BA /* TopUpHistoryCell.xib */,
-			);
-			path = TopUpHistory;
-			sourceTree = "<group>";
-		};
 		0474D7C02883FE3100FAA5BA /* ReplenishVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +411,13 @@
 				0474D7E82884A17D00FAA5BA /* SettingCurencyCell.xib */,
 			);
 			path = SettingCurencyCell;
+			sourceTree = "<group>";
+		};
+		0474D7F02886E35300FAA5BA /* ReportCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReportCell;
 			sourceTree = "<group>";
 		};
 		04762749284C1110003AE90F = {
@@ -579,7 +573,7 @@
 		04947CA92870930500F01860 /* ReportCell */ = {
 			isa = PBXGroup;
 			children = (
-				0474D7BB2883FD7800FAA5BA /* TopUpHistory */,
+				0474D7F02886E35300FAA5BA /* ReportCell */,
 				0474D7BA2883FD7400FAA5BA /* SpendHistory */,
 			);
 			path = ReportCell;
@@ -709,7 +703,6 @@
 				0474D7E1288499C100FAA5BA /* FudsVC.xib in Resources */,
 				04947BA02860F18B00F01860 /* SpendVC.xib in Resources */,
 				04762762284C1111003AE90F /* LaunchScreen.storyboard in Resources */,
-				0474D7BF2883FDFB00FAA5BA /* TopUpHistoryCell.xib in Resources */,
 				0474D7B92882EDAC00FAA5BA /* TableViewTwoCell.xib in Resources */,
 				04947CC12871B2A900F01860 /* ConfirmationVC.xib in Resources */,
 				04947B982860D32700F01860 /* NotificationVC.xib in Resources */,
@@ -799,7 +792,6 @@
 				04947B83285BAE0A00F01860 /* HistoryVC.swift in Sources */,
 				04947B9F2860F18B00F01860 /* SpendVC.swift in Sources */,
 				0474D7B42882ED9000FAA5BA /* TableViewOneCell.swift in Sources */,
-				0474D7BE2883FDFB00FAA5BA /* TopUpHistoryCell.swift in Sources */,
 				04947B8D285BAE9900F01860 /* SettingDashBoardVC.swift in Sources */,
 				0440DC20285A60FE00D98BF1 /* DashBoard.swift in Sources */,
 				04947C42286A3D8500F01860 /* LimitVC.swift in Sources */,

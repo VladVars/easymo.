@@ -92,8 +92,8 @@
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03.03.2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFA-oc-ipB">
-                    <rect key="frame" x="16" y="436.5" width="382" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFA-oc-ipB">
+                    <rect key="frame" x="16" y="436.5" width="10" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата окончания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-vW-ssE">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок накопления" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-vW-ssE">
                     <rect key="frame" x="16" y="416.5" width="382" height="16"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -138,6 +138,12 @@
                         <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="OXk-8O-oTu"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Месяца" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qb-mt-oNi">
+                    <rect key="frame" x="32" y="438.5" width="49.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <color key="textColor" red="0.58431372550000005" green="0.60392156860000001" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -152,9 +158,9 @@
                 <constraint firstItem="UFA-oc-ipB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9Th-AI-7ca"/>
                 <constraint firstItem="3N0-mY-brf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9px-QN-Wjf"/>
                 <constraint firstItem="UFA-oc-ipB" firstAttribute="top" secondItem="LKo-vW-ssE" secondAttribute="bottom" constant="4" id="CXg-fH-zHj"/>
+                <constraint firstItem="6Qb-mt-oNi" firstAttribute="bottom" secondItem="UFA-oc-ipB" secondAttribute="bottom" id="DcP-6H-1Cr"/>
                 <constraint firstItem="fnF-ON-iWp" firstAttribute="leading" secondItem="Mow-KH-GF9" secondAttribute="trailing" constant="4" id="F4x-x1-w6E"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j1p-At-Dco" secondAttribute="trailing" constant="16" id="GTl-pg-eRW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UFA-oc-ipB" secondAttribute="trailing" constant="16" id="JdN-VQ-Eu7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g1S-GV-s4M" secondAttribute="trailing" constant="16" id="JsJ-hQ-KpZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6qS-fs-gub" secondAttribute="trailing" constant="16" id="K6e-jz-RxW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vmu-uS-I23" secondAttribute="trailing" constant="16" id="KHE-Mr-pdD"/>
@@ -171,6 +177,7 @@
                 <constraint firstItem="Zy7-kX-OhT" firstAttribute="top" secondItem="vmu-uS-I23" secondAttribute="bottom" constant="16" id="aKv-xp-JtJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tvx-x7-JQd" secondAttribute="trailing" constant="16" id="cIg-Al-cyl"/>
                 <constraint firstItem="cOv-lt-RAg" firstAttribute="top" secondItem="tvx-x7-JQd" secondAttribute="bottom" constant="56" id="e8q-r0-clT"/>
+                <constraint firstItem="6Qb-mt-oNi" firstAttribute="leading" secondItem="UFA-oc-ipB" secondAttribute="trailing" constant="6" id="eaC-p3-JXP"/>
                 <constraint firstItem="yWB-Yd-Nag" firstAttribute="top" secondItem="b0p-zF-OpG" secondAttribute="bottom" constant="6" id="fSP-H5-cjz"/>
                 <constraint firstItem="Ngx-uT-h0M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mKB-ZH-NXk"/>
                 <constraint firstItem="Ngx-uT-h0M" firstAttribute="top" secondItem="b0p-zF-OpG" secondAttribute="bottom" constant="4" id="mPh-Ox-Ft4"/>

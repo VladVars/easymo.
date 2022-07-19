@@ -8,7 +8,7 @@
 import UIKit
 
 class ConfirmationVC: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var goalLabel: UILabel!
@@ -23,26 +23,26 @@ class ConfirmationVC: UIViewController {
     
     weak var delegat: Update?
     var switchCondition = false
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cancelButton.layer.cornerRadius = 12
         saveButton.layer.cornerRadius = 12
         imageView.layer.cornerRadius = 16
-
-
+        
+        
     }
-
+    
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
-
+        
     }
     @IBAction func saveAction(_ sender: Any) {
         let savePiggy = PiggyBank()
         guard let summ = Int(summLabel.text ?? "") else { return }
         if let image = imageView.image {
-            savePiggy.imagePiggyBank = image.jpegData(compressionQuality: 1) ?? Data()
+        savePiggy.imagePiggyBank = image.jpegData(compressionQuality: 1) ?? Data()
         }
         savePiggy.summPiggyBank = summ
         savePiggy.namePiggyBank = goalLabel.text ?? ""
@@ -52,7 +52,6 @@ class ConfirmationVC: UIViewController {
         delegat?.update()
         
         if switchCondition {
-//            setup Notification
             NotificationManager.setNotification(day: DefaultsManager.fundsDay)
         }
         
@@ -61,7 +60,7 @@ class ConfirmationVC: UIViewController {
             DefaultsManager.createPiggy = true
         }
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
-//        tabBarController?.selectedIndex = 0
         
     }
 }
+

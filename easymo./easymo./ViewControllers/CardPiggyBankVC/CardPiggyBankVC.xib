@@ -81,7 +81,7 @@
                     </constraints>
                     <color key="tintColor" red="0.84705877299999999" green="0.34509804840000002" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Назад"/>
                     <connections>
                         <action selector="cangeAction:" destination="-1" eventType="touchUpInside" id="FO1-ng-1yo"/>
                     </connections>

@@ -33,7 +33,7 @@ class StartMouthVC: UIViewController {
         guard let number = Int(numberField.text ?? "1") else { return }
         if number < 1 || number > 31 { return }
         DefaultsManager.startMonthDay = number
-        
+        numberField.text = ""
     }
     
 
