@@ -24,7 +24,10 @@ class CardPiggyBankVC: UIViewController {
         cangeButton.layer.cornerRadius = 12
         replenishButton.layer.cornerRadius = 12
         setupPiggyImage()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         update()
+
     }
     
     func setupPiggyImage() {

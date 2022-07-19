@@ -49,7 +49,6 @@ class ConfirmationVC: UIViewController {
         
         RealmManager.savePiggyBank(object: savePiggy)
         
-        delegat?.update()
         
         if switchCondition {
             NotificationManager.setNotification(day: DefaultsManager.fundsDay)
@@ -59,6 +58,8 @@ class ConfirmationVC: UIViewController {
             NotificationCenter.default.post(name: .createPiggy, object: nil)
             DefaultsManager.createPiggy = true
         }
+        delegat?.update()
+
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
         
     }
