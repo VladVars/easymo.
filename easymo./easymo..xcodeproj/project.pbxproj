@@ -413,13 +413,6 @@
 			path = SettingCurencyCell;
 			sourceTree = "<group>";
 		};
-		0474D7F02886E35300FAA5BA /* ReportCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReportCell;
-			sourceTree = "<group>";
-		};
 		04762749284C1110003AE90F = {
 			isa = PBXGroup;
 			children = (
@@ -573,7 +566,6 @@
 		04947CA92870930500F01860 /* ReportCell */ = {
 			isa = PBXGroup;
 			children = (
-				0474D7F02886E35300FAA5BA /* ReportCell */,
 				0474D7BA2883FD7400FAA5BA /* SpendHistory */,
 			);
 			path = ReportCell;

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PieCharts
 
 class DashBoard: UIViewController {
     
@@ -68,7 +67,6 @@ class DashBoard: UIViewController {
         super.viewDidLoad()
         setUIIcon()
         setupUI()
-        notification()
     }
     
     func setupCategory() {
@@ -109,6 +107,7 @@ class DashBoard: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        notification()
         update()
         
     }
@@ -306,7 +305,6 @@ extension DashBoard: Update {
             for item in RealmManager.readMoney() {
                 if item.isSpendMoney {
                     summSpend += item.spendMoney
-                    summReplenish -= item.spendMoney
                 } else {
                     summReplenish += item.spendMoney
                 }
@@ -315,7 +313,7 @@ extension DashBoard: Update {
             curentSummLimitLabel.text = "\(summSpend)"
             upIncomeLabel.text = "\(summReplenish)"
             downIcnomeLabel.text = "\(summSpend)"
-            balance.text = "\(summReplenish)"
+            balance.text = "\(summReplenish - summSpend)"
         }
         
         if RealmManager.readPiggyBank().count > 0 {
