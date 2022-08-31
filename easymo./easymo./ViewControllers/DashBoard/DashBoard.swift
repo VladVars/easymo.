@@ -60,7 +60,6 @@ class DashBoard: UIViewController {
     @IBOutlet weak var spendButton: UIButton!
     @IBOutlet weak var piggyStartOutlet: UIButton!
     
-    @IBOutlet weak var chartView: PieChart!
     
     
     override func viewDidLoad() {

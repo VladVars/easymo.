@@ -7,5 +7,4 @@ target 'easymo.' do
 
   pod 'PieCharts'
 pod 'RealmSwift'
-
 end
