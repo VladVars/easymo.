@@ -45,20 +45,30 @@ class ReplenishVC: UIViewController {
     
     
     @IBAction func saveAction(_ sender: Any) {
-        let saveReplenish = Money()
-        guard let summ = Int(summField.text ?? "") else { return }
-        saveReplenish.isSpendMoney = false
-        saveReplenish.spendMoney = summ
-        saveReplenish.spendTime = selectedDate
-        saveReplenish.category = "Мой кошелек"
         
-        RealmManager.saveMoney(object: saveReplenish)
-        
-        summField.text = ""
-        dateField.text = ""
-        
-        delegate?.update()
-        dismiss(animated: true)
+        if summField.text == "" || dateField.text == "" {
+            let alert = UIAlertController(title: "Ошибка", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let okButtonAlert = UIAlertAction(title: "Ок", style: .cancel)
+            
+            alert.addAction(okButtonAlert)
+            present(alert, animated: true)
+             
+        } else {
+            let saveReplenish = Money()
+            guard let summ = Int(summField.text ?? "") else { return }
+            saveReplenish.isSpendMoney = false
+            saveReplenish.spendMoney = summ
+            saveReplenish.spendTime = selectedDate
+            saveReplenish.category = "Мой кошелек"
+            
+            RealmManager.saveMoney(object: saveReplenish)
+            
+            summField.text = ""
+            dateField.text = ""
+            
+            delegate?.update()
+            dismiss(animated: true)
+        }
 
     }
     

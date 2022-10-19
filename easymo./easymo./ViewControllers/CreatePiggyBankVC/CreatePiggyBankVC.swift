@@ -114,15 +114,30 @@ class CreatePiggyBankVC: UIViewController {
         
     }
     @IBAction func saveAction(_ sender: Any) {
-        let confirmationVC = ConfirmationVC(nibName: String(describing: ConfirmationVC.self), bundle: nil)
-        present(confirmationVC, animated: true)
-        confirmationVC.imageView.image = imageView.image
-        confirmationVC.goalLabel.text = goalField.text
-        confirmationVC.summLabel.text = summField.text
-        confirmationVC.dateLabel.text = periodField.text
-        confirmationVC.accumulationLabel.text = summLabel.text
-        confirmationVC.notificationLabel.text = switchOutlet.isOn ? "Да" : "Нет"
-        confirmationVC.switchCondition = switchOutlet.isOn
+        
+        if goalField.text == "" || summField.text == "" || periodField.text == "" {
+            
+            let alert = UIAlertController(title: "Ошибка", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let okButtonAlert = UIAlertAction(title: "Ок", style: .cancel)
+            
+            alert.addAction(okButtonAlert)
+            present(alert, animated: true)
+            
+        } else {
+            let confirmationVC = ConfirmationVC(nibName: String(describing: ConfirmationVC.self), bundle: nil)
+            present(confirmationVC, animated: true)
+            if imageView.image == nil {
+                confirmationVC.imageView.image = UIImage(named: "ass-pig")
+            } else {
+                confirmationVC.imageView.image = imageView.image
+            }
+            confirmationVC.goalLabel.text = goalField.text
+            confirmationVC.summLabel.text = summField.text
+            confirmationVC.dateLabel.text = periodField.text
+            confirmationVC.accumulationLabel.text = summLabel.text
+            confirmationVC.notificationLabel.text = switchOutlet.isOn ? "Да" : "Нет"
+            confirmationVC.switchCondition = switchOutlet.isOn
+        }
     }
     
     @IBAction func cancelAction(_ sender: Any) {

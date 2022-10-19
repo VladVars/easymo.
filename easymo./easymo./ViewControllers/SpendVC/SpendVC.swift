@@ -88,20 +88,29 @@ class SpendVC: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
-        let saveMoney = Money()
-        guard let summ = Int(summField.text ?? "") else { return }
-        saveMoney.isSpendMoney = true
-        saveMoney.spendMoney = summ
-        saveMoney.spendTime = selectedDate
-        saveMoney.category = categorieField.text ?? ""
-        RealmManager.saveMoney(object: saveMoney)
         
-        summField.text = ""
-        dateField.text = ""
-        categorieField.text = ""
-        
-        delegate?.update()
-
+        if summField.text == "" || dateField.text == "" || categorieField.text == "" {
+            
+            let alert = UIAlertController(title: "Ошибка", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let okButtonAlert = UIAlertAction(title: "Ок", style: .cancel)
+            alert.addAction(okButtonAlert)
+            present(alert, animated: true)
+            
+        } else {
+            let saveMoney = Money()
+            guard let summ = Int(summField.text ?? "") else { return }
+            saveMoney.isSpendMoney = true
+            saveMoney.spendMoney = summ
+            saveMoney.spendTime = selectedDate
+            saveMoney.category = categorieField.text ?? ""
+            RealmManager.saveMoney(object: saveMoney)
+            
+            summField.text = ""
+            dateField.text = ""
+            categorieField.text = ""
+            
+            delegate?.update()
+        }
         
     }
     

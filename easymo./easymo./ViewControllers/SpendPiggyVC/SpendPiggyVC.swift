@@ -80,19 +80,27 @@ class SpendPiggyVC: UIViewController {
     
     
     @IBAction func spendAction(_ sender: Any) {
-        let sependPiggy = PiggyBank()
-        guard let summ = Int(summField.text ?? "") else { return }
-        sependPiggy.spendPiggyBank = summ
-        sependPiggy.piggyTime = selectedDate
-        RealmManager.savePiggyBank(object: sependPiggy)
-        
-        summField.text = ""
-        dateField.text = ""
-        
-        delegate?.update()
-        dismiss(animated: true)
+        if summField.text == "" || dateField.text == "" {
+            let alert = UIAlertController(title: "Ок", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let okButtonAlert = UIAlertAction(title: "Ок", style: .cancel)
+            
+            alert.addAction(okButtonAlert)
+            present(alert, animated: true)
+            
+        } else {
+            let sependPiggy = PiggyBank()
+            guard let summ = Int(summField.text ?? "") else { return }
+            sependPiggy.spendPiggyBank = summ
+            sependPiggy.piggyTime = selectedDate
+            RealmManager.savePiggyBank(object: sependPiggy)
+            
+            summField.text = ""
+            dateField.text = ""
+            
+            delegate?.update()
+            dismiss(animated: true)
+        }
     }
-    
     
 }
 extension SpendPiggyVC: UITextFieldDelegate {

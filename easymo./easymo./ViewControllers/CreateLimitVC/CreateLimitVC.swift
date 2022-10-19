@@ -77,24 +77,31 @@ class CreateLimitVC: UIViewController {
     
     @IBAction func saveAction(_ sender: Any) {
         
-        let saveLimit = Limit()
-        guard let limit = Int(summField.text ?? "") else { return }
-        
-        saveLimit.limit = limit
-        saveLimit.limitTime = selectedDate
-        RealmManager.saveLimit(object: saveLimit)
-        
-        if saveLimit.limit == limit {
-            NotificationCenter.default.post(name: .createLimit, object: nil)
-            DefaultsManager.createLimit = true
+        if summField.text == "" {
+            let alert = UIAlertController(title: "Ошибка", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let okButtonAlert = UIAlertAction(title: "ОК", style: .cancel)
+            
+            alert.addAction(okButtonAlert)
+            present(alert, animated: true)
+            
+        } else {
+            
+            let saveLimit = Limit()
+            guard let limit = Int(summField.text ?? "") else { return }
+            
+            saveLimit.limit = limit
+            saveLimit.limitTime = selectedDate
+            RealmManager.saveLimit(object: saveLimit)
+            
+            if saveLimit.limit == limit {
+                NotificationCenter.default.post(name: .createLimit, object: nil)
+                DefaultsManager.createLimit = true
+            }
+            
+            delegate?.update()
+            summField.text = ""
+            dismiss(animated: true)
         }
-        
-        delegate?.update()
-        
-        summField.text = ""
-        dateField.text = ""
-        
-        dismiss(animated: true)
 
     }
     
