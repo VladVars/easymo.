@@ -81,7 +81,7 @@ class SpendPiggyVC: UIViewController {
     
     @IBAction func spendAction(_ sender: Any) {
         if summField.text == "" || dateField.text == "" {
-            let alert = UIAlertController(title: "Ок", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Ок", message: "Поля неa могут быть пустыми!", preferredStyle: .alert)
             let okButtonAlert = UIAlertAction(title: "Ок", style: .cancel)
             
             alert.addAction(okButtonAlert)
