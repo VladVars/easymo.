@@ -54,7 +54,7 @@ extension ReportVC: UITableViewDataSource, UITableViewDelegate {
             spendCell.configureCell(item: replenish[indexPath.row])
             
         }
-                
+        
         return spendCell
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
